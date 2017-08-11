@@ -167,7 +167,8 @@ input:-webkit-autofill {
 	background : url(../img/box3.jpg) no-repeat center right;
 }
 .content .box,.content-grid .box{
-	background-size : auto 100%;
+	/*background-size : auto 100%;*/
+	background-size : cover;
 	height          : 420px;
 	border          : 1px solid #fff;
 	box-shadow      : 3px 3px 10px #ccc;
