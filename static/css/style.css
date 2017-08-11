@@ -1,0 +1,387 @@
+body{
+	box-sizing  : content-box;
+	font-family : 'Avenir', Helvetica, Arial, sans-serif;
+	color       : #333;
+	overflow-x  : hidden;
+}
+a,a:visited{
+	color           : #333;
+	text-decoration : none;
+}
+a:hover{
+	text-decoration : none;
+	color           : #23d0ea;
+}
+hr{
+	height        : 4px;
+	border        : none;
+	border-top    : 2px solid #666; 
+	width         : 70px;
+	margin-top    : 10px; 
+	margin-bottom : 0px;
+}
+p.text{
+	font-size : 3vw;
+}
+i{
+	margin-left : 5px;
+}
+input:-webkit-autofill {
+	-webkit-box-shadow : 0 0 0px 1000px white inset;
+}
+.container{
+	margin : 0 60px;
+}
+.clearfloat:after{
+	clear    : both;
+	content  : "";
+	display  : block;
+	overflow : hidden;
+	height   : 0;
+}
+
+
+/*  导航 开始  */
+.header{
+	background-color : #fff;
+	border-bottom    : 1px solid #eee;
+	z-index          : 1;
+	position         : fixed;
+	top              : 0;
+	left             : 0;
+	right            : 0;
+}
+.header .logo img{
+	width       : 200px;
+	float       : left;
+	margin-left : 20px;
+}
+.header .nav .navbar{
+	float       : right;
+	list-style  : none;
+}
+.header .navbar{
+	margin-bottom : 0px;
+	padding-right : 20px;
+}
+.header .navbar li{
+	display      : inline-block;
+	font-size    : 16px;
+	margin-right : 20px;
+	line-height  : 80px;
+}
+.header .navbar li:hover .dropdown{
+	display : block;
+}
+.header .dropdown{
+	padding     : 0px;
+	margin-left : -15px;
+	position    : absolute;
+	display     : none;
+}
+.header .dropdown li{
+	background-color : rgba(255,255,255,.9);
+	margin           : 0px;
+	display          : block;
+	padding          : 0px 15px;
+	line-height      : 50px;
+}
+.header-grid {
+	padding          : 0 20px;
+	display          : none;
+	background-color : #fff;
+	position         : relative;
+}
+.header-grid .logo{
+	display : inline-block;
+	margin  : 0 auto;
+}
+.header-grid .logo img{
+	width      : 20vw;
+	margin-top : 10px;
+}
+.header-grid .menu{
+	float       : right;
+	list-style  : none;
+	line-height : 50px;
+}
+.header-grid .menu li{
+	display      : inline-block;
+	margin-right : 30px;
+}
+.header-grid .menu .dropdown{
+	background-color : #fff;
+	z-index          : 3;
+	width            : 100%;
+	padding          : 0px;
+	position         : absolute;
+	top              : 50px;
+	left             : 0;
+	display          : none;
+}
+.header-grid .dropdown li{
+	display    : block;
+	margin     : 0;
+	text-align : center;
+}
+.header-grid .menu .fa{
+	font-size   : 15px;
+	line-height : 50px;
+}
+.header-grid .dropdown .li-grid{
+	border-bottom : 1px solid #eee;
+	border-top    : 1px solid #eee;
+}
+
+
+
+/*  banner 开始  */
+.banner{
+	background      : url(../img/index-banner.jpg) no-repeat top center;
+	background-size : 100% auto; 
+	margin-top      : 80px;
+}
+.banner:after{
+	content : "";
+	display : block;
+	padding : 25%;
+}
+
+
+/*  content 开始  */
+.content .row,.content-grid .row{
+	padding  : 0px 60px;
+	position : relative;
+	top      : -70px;
+}
+.content-grid{
+	display : none;
+}
+.content .box-1,.content-grid .box-1{
+	background : url(../img/box1.jpg) no-repeat top right;
+}
+.content .box-2,.content-grid .box-2{
+	background : url(../img/box2.jpg) no-repeat top center;
+}
+.content .box-3,.content-grid .box-3{
+	background : url(../img/box3.jpg) no-repeat center right;
+}
+.content .box,.content-grid .box{
+	background-size : auto 100%;
+	height          : 420px;
+	border          : 1px solid #fff;
+	box-shadow      : 3px 3px 10px #ccc;
+}
+.content .inner,.content-grid .inner{
+	background-color : rgba(255,255,255,.7);
+	height           : 100%;
+	text-align       : center;
+	padding          : 5vw 2vw;
+	display          : none;
+	font-size        : 18px;
+}
+.content .box:hover .inner,.content-grid .box:hover .inner{
+	display : block;
+}
+.content .inner .title,.content-grid .inner .title{
+	font-weight : bold;
+}
+.content .inner .innerText,.content-grid .inner .innerText{
+	margin-top  : 2vw;
+	word-wrap   : keep-all;
+	color       : #7f8c8d;
+	line-height : 30px;
+}
+.content .inner .moreBtn,.content-grid .inner .moreBtn{
+	width         : 150px;
+	margin        : 0 auto;
+	padding       : 7px;
+	border-radius : 50px;
+	border        : 1px solid #7f8c8d;
+	margin-top    : 60px;
+	color         : #7f8c8d;
+}
+
+
+
+/*  register 开始  */
+.registe{
+	border     : 1px solid #eee;	
+	text-align : center;
+	padding    : 40px 0px;
+}
+.registe .text-title{
+	font-size : 4vw;
+}
+.registe .button{
+	background-color : #23d0ea;
+	margin           : 40px auto 20px;
+	color            : #fff;
+	font-size        : 2vw;
+	width            : 40vw;
+	border-radius    : 50px;
+	padding          : 15px;
+	cursor           : pointer;
+}
+
+
+/*  footer 开始  */
+.footer{
+	background-color : #333;
+	height           : 400px;
+	text-align       : left;
+	padding          : 40px 60px;
+}
+.footer .title{
+	color     : #fff;
+	font-size : 18px;
+}
+.footer .sub-title{
+	color     : #999;
+	font-size : 16px;
+}
+.footer input,.footer textarea{
+	margin  : 20px 0;
+	display : block;
+	width   : 500px;
+	outline : none;
+	padding : 10px 15px;
+	border  : none;
+	resize  : none;
+}
+.footer .send{
+	color            : #fff;
+	background-color : #23d0ea;
+	width            : 150px;
+	text-align       : center;
+	padding          : 7px 15px;
+	border-radius    : 25px;
+	cursor           : pointer;
+}
+
+
+/*  响应 开始  */
+@media screen and (max-width: 570px) and (min-width: 320px){
+	body{
+		/*background-color: red;*/
+		/*display : none;*/
+		font-size : 16px;
+	}
+	.header,.content .row{
+		display : none;
+	}
+	.header-grid,.content-grid,.content-grid .box .inner{
+		display : block;
+	}
+	.banner{
+		margin-top : 0px;
+	}
+	.content-grid .row{
+		position : relative;
+		top      : 0;
+		padding  : 20px;
+	}
+	.content-grid .box{
+		height : 300px;
+	}
+	.content-grid .inner .moreBtn{
+		margin-top : 30px;
+		font-size  : 14px;
+	}
+	.registe .button{
+		width : 70vw;
+	}
+	.footer{
+		text-align : center;
+		padding    : 20px 0px;
+		font-size  : 14px;
+		height     : 300px;
+	}
+	.footer input, .footer textarea{
+		width   : 300px;
+		margin  : 0 auto 10px;
+		padding : 5px 10px;
+	}
+	.footer .send{
+		margin : 20px auto 0;
+	}
+}
+@media screen and (max-width: 840px) and (min-width: 570px){
+	/*body{
+		background-color : yellow;
+	}*/
+	.header .logo img{
+		width      : 15%;
+		margin-top : 10px;
+	}
+	.header .navbar {
+		padding : 0px;
+	}
+	.header .navbar li{
+		line-height : 60px;
+	}
+	.header .navbar a{
+		font-size : 11px;
+	}
+	.banner{
+		margin-top : 60px;
+	}
+	.content .row{
+		display : none;
+	}
+	.content-grid{
+		display : block;
+	}
+	.content-grid .row{
+		position       : relative;
+		top            : 0;
+		padding-bottom : 50px;
+	}
+	.content-grid .box{
+		height              : 300px;
+		background-position : top center;
+		background-size     : 100% auto;
+	}
+	.content-grid .inner .moreBtn{
+		margin-top : 30px;
+		font-size  : 14px;
+	}
+	.footer{
+		text-align : center;
+	}
+	.footer input, .footer textarea{
+		width  : 400px;
+		margin : 0 auto 20px;
+	}
+	.footer .send{
+		margin : 0 auto;
+	}
+	
+}
+@media screen and (min-width: 840px) and (max-width: 1024px){
+	/*body{
+		background-color: blue;
+	}*/
+	.header .logo img{
+		width      : 15%;
+		margin-top : 12px;
+	}
+	.content .box{
+		height : 400px;
+	}
+	.content .inner{
+		padding   : 30px 10px;
+		font-size : 16px;
+	}
+	.content .inner .moreBtn{
+		margin-top : 30px;
+	}
+	.content{
+		height : 300px;
+	}
+	.registe .enter{
+		margin-top : 30px;
+	}
+}
+
+
