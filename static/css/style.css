@@ -213,6 +213,10 @@ input:-webkit-autofill {
 .registe .text-title{
 	font-size : 4vw;
 }
+.registe .registe-a{
+	color           :#fff;
+	text-decoration : none;
+}
 .registe .button{
 	background-color : #23d0ea;
 	margin           : 40px auto 20px;
