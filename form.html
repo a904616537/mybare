@@ -6,39 +6,148 @@
         <meta name="description"content=""> 
         <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-        <meta http-equiv="Window-target"content="_top">
+        <meta http-equiv="Window-target" content="_top">
         <title>MYbarre</title>
         <link rel="stylesheet" href="static/css/normalize.css" type="text/css" />
         <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
+    <style type="text/css">
+        .table{  
+            width           :100%;  
+            height          :200px;  
+            border          :2px solid #333;  
+            border-collapse : collapse;  
+            text-align      :center;  
+            table-layout    : fixed;  
+        }  
+        .table td{  
+            border : 1px solid #000;  
+        } 
+        .form .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+            vertical-align : middle;
+        }
+    </style>
+    
+        
+
     <body>
         <div class="form">
-        	<h2>MYbarre Instructor Application Form</h2>
-        	<div class="item">
-        		<div class="form-title">
-        			Personal Details
-        		</div>
-        		<div class="form-inner">
-        			<span>First Name:</span><input type="text" class="inputType">
-        			<!-- <span>Last Name:</span><input type="text" class="inputType">
-	        		<span>Email:</span><input type="email" class="inputType">
-	        		<span>Address:</span><input type="text" class="inputType">
-	        		<span>Date of birth:</span><input type="text" class="inputType">
-	        		<span>Nationality:</span><input type="text" class="inputType">
-	        		<span>Occupation:</span><input type="text" class="inputType">
-	        		<span>Phone Number:</span><input type="text" class="inputType"> -->
-        		</div>
-        	</div>
-        	<div class="item">
-        		<div class="form-title">
-        			Studio Details(if you currently instruct or have plan to launch MYbarre please complete the studios details)
-        		</div>
-				<div class="form-inner">
-					<span></span>
-				</div>	
-        	</div>		
+        	<div class="container">
+                <h2>MYbarre Instructor Application Form</h2>
+                <div class="item">
+                    <div class="form-title">
+                        Personal Details
+                    </div>
+                    <div class="form-inner">
+                        <p>First Name: <input type="text" class="input-type"></p>
+                        <p>Last Name: <input type="text" class="input-type"></p>
+                        <p>Email: <input type="email" class="input-type"></p>
+                        <p>Address: <input type="text" class="input-type"></p>
+                        <p>Date Of Birth: <input type="text" class="input-type"></p>
+                        <p>Nationality: <input type="text" class="input-type"></p>
+                        <p>Occupation: <input type="text" class="input-type"></p>
+                        <p>Phone Number: <input type="text" class="input-type"></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="form-title">
+                        Studio Details(if you currently instruct or have plan to launch MYbarre please complete the studios details)
+                    </div>
+                    <div class="form-inner">
+                        <p>Studio Name: <input type="text" class="input-type"></p>
+                        <p>Studio Address: <input type="text" class="input-type"></p>
+                        <p>Manager Name: <input type="text" class="input-type"></p>
+                        <p>Studio Phone Number: <input type="text" class="input-type"></p>
+                    </div>  
+                </div>  
+                <div class="item">
+                    <div class="form-title">
+                        Background and Motivation
+                    </div>
+                    <div class="form-inner">
+                        <p>How did you find out about the Mybarre Instructor Training Course?</p>
+                        <textarea class="textarea-type"></textarea>
+                        <p>Please elaborate on your motivation for joining the training?</p>
+                        <textarea class="textarea-type"></textarea>
+                        <p>Please list your exercised fitness disciplines, certification level and years of experience</p>
+                        <table cellspacing="0" cellpadding="0" class="table">  
+                            <tr>  
+                                <td>Discipline</td>  
+                                <td>Certification / Level</td>  
+                                <td>Years of experience</td>  
+                            </tr>  
+                            <tr>  
+                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input"></td>  
+                            </tr>  
+                            <tr>  
+                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input"></td>  
+                            </tr>  
+                            <tr>  
+                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input"></td>  
+                            </tr>  
+                        </table>  
+                        <p>Do you have any prior Mybarre, bellet or pilates experience?</p>
+                        <textarea class="textarea-type"></textarea>
+                        <p>Is there anything else you would like to share with us about yourself or fitness / dance experience</p>
+                        <textarea class="textarea-type"></textarea>
+                    </div>  
+                </div>  
+                <div class="item">
+                    <div class="form-title">
+                        Practical Information
+                    </div>
+                    <div class="form-inner">
+                        <p>Do you have a VPN？<input type="radio" value="Yes" name="vpn">Yes <input type="radio" value="No" name="vpn">No</p>
+                        <p>What device do you use for downloading your music？<input type="text" class="input-type"></p>
+                        <p>Do you use QQ？<input type="radio" value="Yes" name="qq">Yes <input type="radio" value="No" name="qq">No</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="form-title">
+                        Medical Information
+                    </div>
+                    <div class="form-inner">
+                        <p>Have you ever been told you have a heart condition？<input type="radio" value="Yes" name="heart">Yes <input type="radio" value="No" name="heart">No</p>
+                        <p>Have you ever experienced chest pain,dizziness or loss of consciousness during or after a physical expercise workout？<input type="radio" value="Yes" name="workout">Yes <input type="radio" value="No" name="workout">No</p>
+                        <p>Have you or do you currently take any medicines for high blood pressure？<input type="radio" value="Yes" name="high-blood">Yes <input type="radio" value="No" name="high-blood">No</p>
+                        <p>In case you have answered any of the above questions positively (with "yes"), please make sure to get cleared by a doctor attending the MYbarre Instructor Training Course.</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="form-title">
+                        Agreement Objective
+                    </div>
+                    <div class="form-inner">
+                        <p>
+                            At your MYbarre Instructor training you will be required to sign a confidentiality,noncompete and brand usage agreement. In submitting your application form and making payment for the course you agree to the following principles:
+                        </p>
+                        <p>
+                            The information you recive (manuals, website access and digital media) before and on the course is to be classed as confidential and not to be shared, anyone teaching MYbarre must partake in the course, pass exam and pay the MYbarre instructor licence fee to have this information.
+                        </p>
+                        <p>
+                            That after completion of the MYbarre course and exam you will pay annual membership to become a MYbarre Licenced Instructor, and as a current MYbarre Licenced Instructor you must use MYbarre format, choreography and principles in all MYbarre classes.
+                        </p>
+                        <p>
+                            You will adhere to brand guidlelines, in that your classes may only be marketed and named as MYbarre (or any other MYbarre programme that becomes available) you cannot teach any other barre fitness programme under any other name/brand while you are a MYbarre Licenced Instructor.
+                        </p>
+                        <p>
+                            The full document will be included in your training manual and once signed will be submitted to the Mybarre Master Trainer.
+                        </p>
+                    </div>
+                </div>          
+                
+                <!-- submit -->
+                 <button type="button" class="btn btn-info">Enter</button>
+                 <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);">Back</button>
+            </div>
         </div>
 
 
