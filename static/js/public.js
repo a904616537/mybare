@@ -14,6 +14,3 @@ $('.floatBox>.item-box').on('mouseleave',function(){
     $(this).find('.hide-box').fadeOut();
 });
 
-
-
-

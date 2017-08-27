@@ -4,14 +4,14 @@ body{
 	/*font-family : "Futura LT W01 Book", Futura, Trebuchet, Arial, sans-serif;*/
 	color       : #333;
 	overflow-x  : hidden;
-}F
+}
 a,a:visited{
 	color           : #333;
 	text-decoration : none;
 }                 
 a:hover{
 	text-decoration : none;
-	color           : #1962FF;
+	color           : #00B0CB;
 }
 hr{
 	height        : 4px;
@@ -53,8 +53,8 @@ input:-webkit-autofill {
 	right            : 0;
 }
 .header .related{
-	background-color : #26282F;
-	color            : #999;
+	background-color : #9AA5AA;
+	color            : #D6D3D4;
 	line-height      : 40px;
 	padding-right    : 40px;
 }
@@ -80,7 +80,7 @@ input:-webkit-autofill {
 .header .navbar{
 	margin-bottom : 0px;
 	padding-right : 20px;
-	outline: none;
+	outline       : none;
 }
 .header .navbar li{
 	display      : inline-block;
@@ -224,6 +224,7 @@ input:-webkit-autofill {
 	border        : 1px solid #7f8c8d;
 	margin-top    : 30px;
 	color         : #7f8c8d;
+	cursor        : pointer;
 }
 
 
@@ -232,7 +233,7 @@ input:-webkit-autofill {
 .registe{
 	text-align       : center;
 	padding          : 100px 0px;
-	background-color : #000;
+	background-color : #53565B;
 	color            : #fff;
 }
 .text-title{
@@ -247,7 +248,7 @@ input:-webkit-autofill {
 	text-decoration : none;
 }
 .registe .button{
-	background-color : #1962FF;
+	background-color : #00B0CB;
 	margin           : 40px auto 20px;
 	color            : #fff;
 	font-size        : 1.5vw;
@@ -280,8 +281,7 @@ input:-webkit-autofill {
 
 /*  footer 开始  */
 .footer{
-	background-color : #000;
-	/*height           : 400px;*/
+	background-color : #53565B;
 	text-align       : left;
 	padding          : 40px 60px;
 }
@@ -304,7 +304,7 @@ input:-webkit-autofill {
 }
 .footer .send{
 	color            : #fff;
-	background-color : #1962FF;
+	background-color : #00B0CB;
 	width            : 150px;
 	text-align       : center;
 	padding          : 7px 15px;
@@ -401,20 +401,145 @@ input:-webkit-autofill {
 	font-size : 2vw;
 }
 .team-content .item p{
-	font-size : 1.3vw;
+	font-size   : 1.3vw;
+	line-height : 30px;
 }
 .team-content img{
 	width          : 100%;
 	vertical-align : middle;
 }
+.team-content .ann-pic{
+	line-height : 429px;
+}
+.team-content .siri-pic{
+	line-height : 325px;
+}
+
+
+/*  workout  */
+.banner-title{
+	width        : 25%;
+	text-align   : center;
+	float        : right;
+	margin-top   : 20vw;
+	margin-right : 10vw;
+}
+.banner-title .title{
+	font-size   : 4vw;
+	line-height : 120%;
+}
+.banner-title .text{
+	font-size : 1.2vw;
+	color     : #333;
+}
+.workout-banner{
+	background      : url(../img/team-banner.jpg) no-repeat top center;
+	background-size : 100% auto; 
+}
+.workout-banner:after{
+	content : "";
+	display : block;
+	padding : 25%;
+}
+
+
+
+/*  instructor  */
+.instructor-banner{
+	background      : url(../img/team-banner.jpg) no-repeat top center;
+	background-size : 100% auto; 
+}
+.instructor-banner:after{
+	content : "";
+	display : block;
+	padding : 25%;
+}
+.instructor-banner .banner-title{
+	width        : 25%;
+	text-align   : center;
+	float        : right;
+	margin-top   : 20vw;
+	margin-right : 10vw;
+}
+.instructor-content .instructor-text{
+	margin-top : 30px;
+	font-size  : 1.5vw;
+}
+.instructor-content li,.instructor-content .click{
+	font-size : 16px;
+}
+.instructor-content .button{
+	text-align : center;
+}
+.instructor-content .instructor-btn{
+	border  : 1px solid #53565B;
+	display : inline-block;
+	padding : 10px 20px;
+	margin  : 30px;
+}
+.instructor-content .instructor-btn:hover{
+	border-color : #00B0CB;
+}
+
+
+/*  video  */
+.video-banner{
+	background      : url(../img/team-banner.jpg) no-repeat top center;
+	background-size : 100% auto; 
+}
+.video-banner:after{
+	content : "";
+	display : block;
+	padding : 25%;
+}
+.video-content{
+	text-align : center;
+	padding    : 8vw 5vw;
+}
+.video-content .item{
+	margin-top      : 30px;
+	font-size       : 1.5vw;
+	text-align      : left;
+}
+.video-content .item .box{
+	background-size : cover;
+	height          : 20vw;
+}
+.video-content .item1{
+	background : url(../img/alice.jpg) top center;
+}
+.video-content .item2{
+	background : url(../img/ann.jpg) top center;
+}
+.video-content .item3{
+	background : url(../img/siri.jpg) top center;
+}
+.video-content .item p{
+	line-height : 50px;
+	margin      : 0px;
+}
+.video-content .inner{
+	background-color : rgba(255,255,255,.8);
+	height           : 20vw;
+	display          : none;
+	text-align       : center;
+
+}
+.video-content .inner .icon{
+	line-height : 20vw;
+	font-size   : 4vw;
+	color       : #00B0CB;
+}
+.video-content .item:hover .inner{
+	display : block;
+}
+
 
 
 
 /*  响应 开始  */
-@media screen and (max-width : 570px) and (min-width: 320px){
+@media screen and (max-width : 580px) and (min-width: 320px){
 	body{
-		/*background-color: red;*/
-		/*display : none;*/
 		font-size : 14px;
 	}
 	.header,.content .row{
@@ -466,8 +591,26 @@ input:-webkit-autofill {
 	.evaluate .glyphicon.glyphicon-chevron-right,.evaluate .glyphicon.glyphicon-chevron-left{
 		padding-top : 10px;
 	}
+	.team-content .ann-pic{
+		line-height : 200px;
+	}
+	.team-content .siri-pic{
+		line-height : 200px;
+	}
+	.workout-banner:after{
+		background-color : rgba(255,255,255,.6);
+	}
+	.workout-banner .banner-title{
+		width       : 50%;
+		float       : none;
+		margin      : 0;
+		position    : absolute;
+		top         : 20vw;
+		left        : 50%;
+		margin-left : -125px;
+	}
 }
-@media screen and (max-width: 840px) and (min-width: 570px){
+@media screen and (max-width: 840px) and (min-width: 580px){
 	.header .logo img{
 		width      : 15%;
 		margin-top : 10px;
@@ -516,6 +659,18 @@ input:-webkit-autofill {
 	}
 	.footer .qrcode{
 		width : 30%;
+	}
+	.workout-banner:after{
+		background-color : rgba(255,255,255,.6);
+	}
+	.workout-banner .banner-title{
+		width       : 40%;
+		float       : none;
+		margin      : 0;
+		position    : absolute;
+		top         : 20vw;
+		left        : 50%;
+		margin-left : -125px;
 	}
 }
 @media screen and (min-width: 840px) and (max-width: 1024px){
