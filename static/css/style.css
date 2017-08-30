@@ -53,7 +53,7 @@ input:-webkit-autofill {
 	right            : 0;
 }
 .header .related{
-	background-color : #9AA5AA;
+	background-color : #53565B;
 	color            : #D6D3D4;
 	line-height      : 40px;
 	padding-right    : 40px;
@@ -232,7 +232,7 @@ input:-webkit-autofill {
 /*  register 开始  */
 .registe{
 	text-align       : center;
-	padding          : 100px 0px;
+	padding          : 70px 0px;
 	background-color : #53565B;
 	color            : #fff;
 }
@@ -262,10 +262,10 @@ input:-webkit-autofill {
 /* evaluate 开始 */
 .evaluate{
 	text-align : center;
-	padding    : 100px 0;
+	padding    : 70px 0;
 }
 .evaluate #carousel-example-generic .img{
-	height : 20vw;
+	height : 15vw;
 }
 .evaluate .carousel-control.right,.evaluate .carousel-control.left{
 	background-image : none;
@@ -427,6 +427,7 @@ input:-webkit-autofill {
 .banner-title .title{
 	font-size   : 4vw;
 	line-height : 120%;
+	margin-top  : 10px;
 }
 .banner-title .text{
 	font-size : 1.2vw;
@@ -446,24 +447,29 @@ input:-webkit-autofill {
 
 /*  instructor  */
 .instructor-banner{
-	background      : url(../img/team-banner.jpg) no-repeat top center;
+	background      : url(../img/team-banner.jpg) no-repeat scroll 0px -70px;
 	background-size : 100% auto; 
 }
 .instructor-banner:after{
 	content : "";
 	display : block;
-	padding : 25%;
+	padding : 20%;
 }
 .instructor-banner .banner-title{
-	width        : 25%;
-	text-align   : center;
-	float        : right;
-	margin-top   : 20vw;
-	margin-right : 10vw;
+	width            : 25%;
+	background-color : rgba(255,255,255,.4);
+	text-align       : center;
+	float            : right;
+	margin-top       : 15vw;
+	margin-right     : 10vw;
+}
+.instructor-content{
+	padding : 30px 0;
 }
 .instructor-content .instructor-text{
-	margin-top : 30px;
-	font-size  : 1.5vw;
+	margin-bottom : 30px;
+	font-size     : 20px;
+	line-height   : 30px;
 }
 .instructor-content li,.instructor-content .click{
 	font-size : 16px;
@@ -472,66 +478,91 @@ input:-webkit-autofill {
 	text-align : center;
 }
 .instructor-content .instructor-btn{
-	border  : 1px solid #53565B;
-	display : inline-block;
-	padding : 10px 20px;
-	margin  : 30px;
+	display          : inline-block;
+	padding          : 10px;
+	margin           : 0px 30px 30px;
+	background-color : #00B0CB;
+	width            : 300px;
 }
 .instructor-content .instructor-btn:hover{
-	border-color : #00B0CB;
+	background-color : rgba(0,176,203,.7);
+}
+.instructor-content .instructor-btn a{
+	color : #fff;
 }
 
 
-/*  video  */
-.video-banner{
-	background      : url(../img/team-banner.jpg) no-repeat top center;
-	background-size : 100% auto; 
-}
-.video-banner:after{
-	content : "";
-	display : block;
-	padding : 25%;
-}
-.video-content{
-	text-align : center;
-	padding    : 8vw 5vw;
-}
-.video-content .item{
+/*  user  */
+.user-content .item{
 	margin-top      : 30px;
 	font-size       : 1.5vw;
 	text-align      : left;
 }
-.video-content .item .box{
+.user-content .item .box{
 	background-size : cover;
 	height          : 20vw;
 }
-.video-content .item1{
+.user-content .item1{
 	background : url(../img/alice.jpg) top center;
 }
-.video-content .item2{
+.user-content .item2{
 	background : url(../img/ann.jpg) top center;
 }
-.video-content .item3{
+.user-content .item3{
 	background : url(../img/siri.jpg) top center;
 }
-.video-content .item p{
-	line-height : 50px;
-	margin      : 0px;
-}
-.video-content .inner{
+.user-content .inner{
 	background-color : rgba(255,255,255,.8);
 	height           : 20vw;
 	display          : none;
 	text-align       : center;
-
 }
-.video-content .inner .icon{
+.user-content .inner .icon{
 	line-height : 20vw;
 	font-size   : 4vw;
 	color       : #00B0CB;
 }
-.video-content .item:hover .inner{
+.user-content .item:hover .inner{
 	display : block;
+}
+
+
+/*  video  */
+.video-content,.pic-content,.user-content{
+	padding : 150px 60px 50px;
+}
+.video-content .text-title,.pic-content .text-title,.user-content .user-title{
+	text-align : center;
+}
+.video-content .video-list,.pic-content .pic-list,.user-content .user-list{
+	margin-top : 30px;
+}
+.video-content .list-title,.pic-content .list-title{
+	font-size   : 18px;
+	line-height : 50px;
+	font-weight : bold;
+}
+.video-content .video-style{
+	width  : 100%;
+	height : 16vw;
+}
+.video-content .panel-body p,.pic-content .panel-body p,.user-content .item p{
+	line-height : 50px;
+	font-size   : 16px;
+	margin      : 0px;
+}
+.panel{
+	border     : none;
+	box-shadow : none;
+}
+.panel-default{
+	border-color : #fff;
+}
+
+
+/*  pic  */
+.pic-content .panel-img{
+	width : 100%;
 }
 
 
@@ -609,6 +640,15 @@ input:-webkit-autofill {
 		left        : 50%;
 		margin-left : -125px;
 	}
+	.video-content,.pic-content,.user-content{
+		padding : 0px;
+	}
+	.video-content .text-title,.pic-content .text-title,.user-content .user-title{
+		font-size : 18px;
+	}
+	.video-content .video-style{
+		height : 52vw;
+	}
 }
 @media screen and (max-width: 840px) and (min-width: 580px){
 	.header .logo img{
@@ -672,6 +712,9 @@ input:-webkit-autofill {
 		left        : 50%;
 		margin-left : -125px;
 	}
+	.video-content .video-style{
+		height : 22vw;
+	}
 }
 @media screen and (min-width: 840px) and (max-width: 1024px){
 	.header .logo img{
@@ -687,10 +730,10 @@ input:-webkit-autofill {
 		font-size  : 1.5vw;
 	}
 	.footer .pages{
-		margin-top: 25px;
+		margin-top : 25px;
 	}
 	.footer .qrcode{
-		width: 30%;
+		width : 30%;
 	}
 	.registe .enter{
 		margin-top : 30px;

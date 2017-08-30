@@ -36,7 +36,6 @@
             background : rgba(255,255,255,.8); 
             display    : none;
         }
-
     </style>
 
     <body>
@@ -44,7 +43,6 @@
             <div class="related clearfloat">
                 <div class="item">
                     <i class="fa fa-weixin"></i>
-                    <i class="fa fa-weibo"></i>
                     <i class="fa fa-linkedin"></i>
                     <i class="fa fa-facebook"></i>
                 </div>
@@ -70,13 +68,12 @@
                     </li>
                     <li><a href="#">GALLERY<i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="video.html">MYbarre Video</a></li>
-                            <li><a href="pic.html">MYbarre Picture</a></li>
+                            <li><a href="video.html">MYbarre Videos</a></li>
+                            <li><a href="pic.html">MYbarre Pictures</a></li>
                         </ul>
                     </li>
                     <li><a href="#">STORE</a></li>
                     <li><a href="#footer"><i class="fa fa-envelope-o"></i></a></li>
-                    <!-- <li><a href="#" data-toggle="modal" data-target="#myModal" class="login-icon"><i class="fa fa-user"></i></a></li> -->
                     <li><a href="login.html" class="login-icon"><i class="fa fa-user"></i></a></li>
                 </ul>
             </div>   
@@ -84,7 +81,7 @@
         <!-- 响应式导航显示 -->
         <div class="header-grid clearfloat">
             <div class="logo">
-                <img src="static/img/logo.png" alt="MYbarre">
+                <a href="index.html"><img src="static/img/logo.png" alt="logo"></a>
             </div>
             <div class="menu">
                 <li><a href="#"><i class="fa fa-user"></i></a></li>
@@ -99,7 +96,9 @@
                         <li><a href="train.html">HOST A MYbarre TRAINING</a></li>
                         <li><a href="faq.html">INSTRUCTOR TRAINING FAQ</a></li>
                         <li class="li-grid"><a href="#">GALLERY</a></li>
-                        <li class="li-grid" style="border: 0px;"><a href="#">STORE</a></li>
+                        <li><a href="video.html">MYbarre Videos</a></li>
+                        <li><a href="pic.html">MYbarre Pictures</a></li>
+                        <li class="li-grid"  style="border-bottom: 0px;"><a href="#">STORE</a></li>
                         <li class="li-grid"><a href="#footer">CONTACT US</a></li>
                     </ul>
                 </li>
@@ -158,8 +157,6 @@
         </div>
 
 
-
-        
             
 
         <div class="content-grid">
@@ -215,7 +212,7 @@
             <div class="inner">
                 <img src="static/img/logo-white.png" alt="MYbarre"/>
                 <p class="text">HERE SOME AWESOME SLOGAN</p>
-                <div class="button" id="member"><a href="form.html" class="registe-a">Become A MYbarre Instructor</a></div>
+                <div class="button" id="member"><a href="instructor.html" class="registe-a">Become A MYbarre Instructor</a></div>
             </div>
         </div>
         <!-- 注册结束 -->
@@ -271,7 +268,7 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="title">CONTACT MYbarre.</div>
-                    <p class="sub-title">Send email to MYbarre</p>
+                    <p class="sub-title" style="color:#53565B;">Send email to MYbarre</p>
                     <input type="text" name="name" placeholder="NAME" >
                     <input type="email" name="email" placeholder="EMAIL">
                     <textarea placeholder="MESSAGE"></textarea>
@@ -280,8 +277,8 @@
                 <div class="col-md-4 pages">
                     <div class="title">PAGES.</div>
                     <ul class="footer-list">
-                        <li><a href="#">Homepage</a></li>
-                        <li><a href="#">MYbarre Workout</a></li>
+                        <li><a href="index.html">Homepage</a></li>
+                        <li><a href="workout.html">MYbarre Workout</a></li>
                         <li><a href="#">Founders</a></li>
                         <li><a href="#">Gallery</a></li>
                         <li><a href="#">Locations</a></li>
@@ -302,29 +299,6 @@
             </div> 
         </div>
 
-
-
-        <!-- Login Modal -->
-        <!-- <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title" id="myModalLabel">Log In</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p class="modal-text">Account</p>
-                        <input type="text" name="input-login"> 
-                        <p class="modal-text">Password</p>
-                        <input type="text" name="input-login"> 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <a href="pay.html"><button type="button" class="btn btn-primary">Log In</button></a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
 
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
