@@ -13,6 +13,42 @@
         <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
+
+    <style type="text/css">
+        .faq-content {
+            padding   : 40px 0;
+            font-size : 16px;
+        }
+        .faq-content ul{
+            list-style   : none;
+            padding      : 0;
+            margin-right : 20px;
+            float        : left;
+            line-height  : 30px;
+        }
+        .faq-content .scrollspy-example{
+            float : left;
+            position: relative;
+            height: 1000px;
+            overflow: auto;
+        }
+        .faq-content .faq-title{
+            font-weight : bold;
+            line-height : 30px;
+            font-size   : 18px;
+        }
+        .faq-content .faq-hr{
+            border     : none;
+            border-top : 1px solid #ccc;
+            margin     : 5px 0;
+            width      : 100%;
+        }
+        .active a{
+            color: #00B0CB;
+        }
+        .faq-content .scrollspy-example::-webkit-scrollbar {display:none}
+    </style>
+
     <body>
         <div class="header">
             <div class="related clearfloat">
@@ -48,7 +84,7 @@
                             <li><a href="pic.html">MYbarre Pictures</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">STORE</a></li>
+                    <li><a href="store.html">STORE</a></li>
                     <li><a href="#footer"><i class="fa fa-envelope-o"></i></a></li>
                     <li><a href="login.html" class="login-icon"><i class="fa fa-user"></i></a></li>
                 </ul>
@@ -74,7 +110,7 @@
                         <li class="li-grid"><a href="#">GALLERY</a></li>
                         <li><a href="video.html">MYbarre Videos</a></li>
                         <li><a href="pic.html">MYbarre Pictures</a></li>
-                        <li class="li-grid" style="border-bottom: 0px;"><a href="#">STORE</a></li>
+                        <li class="li-grid" style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
                         <li class="li-grid"><a href="#footer">CONTACT US</a></li>
                     </ul>
                 </li>
@@ -84,11 +120,85 @@
         <!-- 导航结束 -->
 
 
-        <div class="workout-banner"></div>
+        <div class="faq-banner"></div>
 
-        <div class="workout-content">
+        <div class="faq-content">
             <div class="container">
-                
+                <div class="row" id="navbarExample">
+                    <div class="col-md-4">
+                        <ul class="nav">
+                            <li class="active"><a href="#1">What is MYbarre?</a></li>
+                            <li class=""><a href="#2">How long is the training?</a></li>
+                            <li class=""><a href="#3">What does the training include?</a></li>
+                            <li class=""><a href="#4">How is the course structured?</a></li>
+                            <li class=""><a href="#5">How much is the training?</a></li>
+                            <li class=""><a href="#6">Are there any prerequisites prior to attending an instructor training?</a></li>
+                            <li class=""><a href="#7">Will I be certified after after 3 day Instructor Training?</a></li>
+                            <li class=""><a href="#8">How do I become a Certified Instructor?</a></li>
+                            <li class=""><a href="#9">How long after the training do I have to submit my test out video?</a></li>
+                            <li class=""><a href="#10">What is the Instructor License?</a></li>
+                            <li class=""><a href="#11">How long is a MYbarre License valid?</a></li>
+                            <li class=""><a href="#12">Where can i teach MYbarre?</a></li>
+                            <li class=""><a href="#13">Do I need any other certifications before I can teach?</a></li>
+                            <li class=""><a href="#14">I signed up for the training but I can no longer make it. Do I get a refund?</a></li>
+                            <li class=""><a href="#15">What are the requirements to bring MYbarre to my studio?</a></li>
+                            <li class=""><a href="#16">What support is available for my studio to run MYbarre?</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-8 scrollspy-example">
+                        <div data-spy="scroll" data-target="#navbarExample" data-offset="50" class="scrollspy-example">
+                            <div class="faq-title" id="1">What is MYbarre?</div>
+                        <hr class="faq-hr">
+                        <p>MYbarre is a high-energy and creative exercise program which incorporates elements of Pilates, ballet dance, and fitness training to provide students with an invigorating, fun and graceful workout. While there are many barre programs out there, we believe the MYbarre format is a challenging yet fun fitness model, that delivers consistency and results every time. It’s also the 1st barre training designed and delivered in China.</p>
+                        <div class="faq-title" id="2">How long is the training?</div>
+                        <hr class="faq-hr">
+                        <p>It is a comprehensive 3-day training program, each day runs approx 9 hours.</p>
+                        <div class="faq-title" id="3">What does the training include?</div>
+                        <hr class="faq-hr">
+                        <p>You will receive pre-training education videos to help you prepare and 2 MYbarre Instructor manuals for instruction on coaching and choreography. The course will be a mix of practical master classes, theory workshops and small group exercises.</p>
+                        <div class="faq-title" id="4">How is the course structured?</div>
+                        <hr class="faq-hr">
+                        <p>Each day you will spend time learning and practicing. You will also have homework to prepare and present the next day, so plan to work on your MYbarre class preparations in the evenings after the course and/or in the mornings before we begin daily. Right at the start of the training, you will receive some basic terminology information, along with music recommendations. It is essential that the materials are reviewed beforehand, and you have your music downloaded on a device, so you can use to practice upon the duration of the training. </p>
+                        <div class="faq-title" id="5">How much is the training?</div>
+                        <hr class="faq-hr">
+                        <p>4000RMB for the 3 day training.</p>
+                        <div class="faq-title" id="6">Are there any prerequisites prior to attending an instructor training?</div>
+                        <hr class="faq-hr">
+                        <p>While instructors of all abilities and backgrounds will benefit from the MYbarre Instructor Training, experience instructing Pilates, yoga, dance, and/or barre is beneficial but not essential. If you do not hold this you are required to have attended a minimum of 20 MYbarre classes.</p>
+                        <div class="faq-title" id="7">Will I be certified after after 3 day Instructor Training?</div>
+                        <hr class="faq-hr">
+                        <p>No, students who complete the MYbarre Instructor Training will receive a certificate of completion to show they are an ‘Instructor in Training’.</p>
+                        <div class="faq-title" id="8">How do I become a Certified Instructor?</div>
+                        <hr class="faq-hr">
+                        <p>Following the intensive course training, you will be expected to practice what you’ve learned by filming / submitting a 60-minute class for examination. On passing the examination, you will be issued with your Instructor Certificate, and should you wish to proceed and teach classes, you will be required to purchase your annual Instructor License. </p>
+                        <div class="faq-title" id="9">How long after the training do I have to submit my test out video?</div>
+                        <hr class="faq-hr">
+                        <p>Anytime within 60 days of completing the course. As a suggestion, we recommend you allocate at least 30 hours of practice, before submitting your examination video.</p>
+                        <div class="faq-title" id="10">What is the Instructor License?</div>
+                        <hr class="faq-hr">
+                        <p>In addition to your one-off instructor training, there is an annual MYbarre license fee at 1,800RMB per instructor. As a MYbarre instructor, you will be provided with new choreography plans and video materials quarterly, along with a basic digital marketing template to use on promoting your classes, as well as recommendations for online playlists. </p>
+                        <div class="faq-title" id="11">How long is a MYbarre License valid?</div>
+                        <hr class="faq-hr">
+                        <p>Your MYbarre License is valid for one year. It must be renewed and kept up to date to remain certified and licensed. As with any occupation, a professional fitness instructor is expected to keep up-to-date on knowledge and skills in their field.  Within our MYbarre community, we strive to keep you at the front of barre choreography, always motivated with new ideas for classes, and provide you with the knowledge of ‘why’ your clients will get results if they stick with us.</p>
+                        <div class="faq-title" id="12">Where can i teach MYbarre?</div>
+                        <hr class="faq-hr">
+                        <p>If you are a certified and currently hold a MYbarre Instructor license, you are entitled to use the MYbarre choreography, class format, and teaching techniques in your classes. There is a non-compete agreement in place, which confirms your agreement that MYbarre will be the only barre training program in your studio. </p>
+                        <div class="faq-title" id="13">Do I need any other certifications before I can teach?</div>
+                        <hr class="faq-hr">
+                        <p>The MYbarre program teaches and emphasizes safety, specific to a barre fitness workouts so it’s considered a specialty certificate, rather than a fitness qualification. Depending on your chosen studio, you may need a general group exercise or personal training certificate to teach there. You should check with your studio/employer.</p>
+                        <div class="faq-title" id="14">I signed up for the training but I can no longer make it. Do I get a refund?</div>
+                        <hr class="faq-hr">
+                        <p>Once payment is made and the spot confirmed there is no refund, but if you cannot attend the course you originally signed up for, you can attend another one within 12 months for no extra charge. </p>
+                        <div class="faq-title" id="15">What are the requirements to bring MYbarre to my studio?</div>
+                        <hr class="faq-hr">
+                        <p>Providing there is no other Barre programme running at your studio and you are a Licensed Instructor, you can open MYbarre classes at your studio.  </p>
+                        <div class="faq-title" id="16">What support is available for my studio to run MYbarre?</div>
+                        <hr class="faq-hr">
+                        <p>There is a marketing package available to purchase to support your studio in promoting the MYbarre Program. By purchasing this, your studio will become a ‘Partner Studio’ and feature on the MYbarre website. There are also other benefits such as discounts on purchasing MYbarre equipment, and the opportunity to be a host to further your education and training courses.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -127,5 +237,11 @@
                 </div>
             </div> 
         </div>
+
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="static/js/public.js"></script>
+
+
     </body>
 </html>
