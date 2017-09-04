@@ -15,7 +15,8 @@ $(function() {
 			if(result.status) {
 				var s = result.videos > 0?result.videos - 1 : 0;
 				if(s == 0) {
-					videojs(document.querySelector('.video-js'));
+					// videojs(document.querySelector('.video-js'));
+					$.getScript("./static/js/video.min.js");
 				}
 				for (var i = 0; i < result.videos.length; i++)
 				{
@@ -29,8 +30,8 @@ $(function() {
 		                <p>'+video.name+'</p>\
 		            </div>')
 		            if(s == i) {
-		            	videojs(document.querySelector('.video-js'));
-		            	// $.getScript("./static/js/video.min.js"); 
+		            	// videojs(document.querySelector('.video-js'));
+		            	$.getScript("./static/js/video.min.js");
 		            }
 				}
 			}
