@@ -567,6 +567,17 @@ input:-webkit-autofill {
 
 
 
+/*  faq  */
+.faq-banner{
+	background      : url(../img/team-banner.jpg) no-repeat scroll 0px -70px;
+	background-size : 100% auto; 
+}
+.faq-banner:after{
+	content : "";
+	display : block;
+	padding : 20%;
+}
+
 
 /*  响应 开始  */
 @media screen and (max-width : 580px) and (min-width: 320px){
