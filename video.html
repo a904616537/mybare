@@ -51,7 +51,7 @@
                     </li>
                     <li><a href="#">STORE</a></li>
                     <li><a href="#footer"><i class="fa fa-envelope-o"></i></a></li>
-                    <li><a href="login.html" class="login-icon"><i class="fa fa-user"></i></a></li>
+                    <li id="user"><a href="login.html" class="login-icon"><i class="fa fa-user"></i></a></li>
                 </ul>
             </div>   
         </div>
@@ -95,76 +95,13 @@
                         <div class="panel-heading" role="tab" id="headingOne">
                             <h4 class="panel-title">
                                 <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Collapsible Group Item #1
+                                Collapsible Group Item Public
                                 </a>
                             </h4>
                         </div>
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
                             <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered video-style" controls preload="none"
-                                            poster=""
-                                            data-setup="{}">
-                                            <source src="static/video/MYbarre adidas ROS small.mp4" type='video/mp4' />
-                                        </video>
-                                        <p>Basic Moves</p>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered video-style" controls preload="none"
-                                            poster=" "
-                                            data-setup="{}">
-                                            <source src="static/video/MYbarre adidas ROS small.mp4" type='video/mp4' />
-                                        </video>
-                                        <p>Basic Moves</p>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered video-style" controls preload="none"
-                                            poster=" "
-                                            data-setup="{}">
-                                            <source src="static/video/MYbarre adidas ROS small.mp4" type='video/mp4' />
-                                        </video>
-                                        <p>Basic Moves</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading" role="tab" id="headingThree">
-                            <h4 class="panel-title">
-                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                  Collapsible Group Item #2
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                            <div class="panel-body">
-                                <div class="row">
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered video-style" controls preload="none"
-                                            poster=""
-                                            data-setup="{}">
-                                            <source src="static/video/MYbarre adidas ROS small.mp4" type='video/mp4' />
-                                        </video>
-                                        <p>Basic Moves</p>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered video-style" controls preload="none"
-                                            poster=" "
-                                            data-setup="{}">
-                                            <source src="static/video/MYbarre adidas ROS small.mp4" type='video/mp4' />
-                                        </video>
-                                        <p>Basic Moves</p>
-                                    </div>
-                                    <div class="col-md-4 col-sm-6 col-xs-12">
-                                        <video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered video-style" controls preload="none"
-                                            poster=" "
-                                            data-setup="{}">
-                                            <source src="static/video/MYbarre adidas ROS small.mp4" type='video/mp4' />
-                                        </video>
-                                        <p>Basic Moves</p>
-                                    </div>
+                                <div class="row" id="videos">
                                 </div>
                             </div>
                         </div>
@@ -213,8 +150,10 @@
 
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="static/js/video.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
+        <script type="text/javascript" src="static/js/video.js"></script>
         <script type="text/javascript">
             videojs.options.flash.swf = "video-js.swf";
             videojs("example_video_1", {}, function(){
