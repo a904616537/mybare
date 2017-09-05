@@ -46,6 +46,9 @@
         .active a{
             color: #00B0CB;
         }
+        .fixed{
+            background-color: red;
+        }
         .faq-content .scrollspy-example::-webkit-scrollbar {display:none}
     </style>
 
@@ -241,7 +244,15 @@
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
-
+        <script type="text/javascript">
+            $(window).scroll(function(){
+                var topScroll = document.body.scrollTop;
+                var toTop = document.getElementById("navbarExample");
+                if(topScroll > toTop){
+                    console.log('123');
+                }
+            })
+        </script>
 
     </body>
 </html>

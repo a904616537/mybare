@@ -233,7 +233,7 @@ input:-webkit-autofill {
 .registe{
 	text-align       : center;
 	padding          : 70px 0px;
-	background-color : #53565B;
+	background-color : #000;
 	color            : #fff;
 }
 .text-title{
@@ -455,14 +455,6 @@ input:-webkit-autofill {
 	display : block;
 	padding : 20%;
 }
-.instructor-banner .banner-title{
-	width            : 25%;
-	background-color : rgba(255,255,255,.4);
-	text-align       : center;
-	float            : right;
-	margin-top       : 15vw;
-	margin-right     : 10vw;
-}
 .instructor-content{
 	padding : 30px 0;
 }
@@ -474,7 +466,7 @@ input:-webkit-autofill {
 .instructor-content li,.instructor-content .click{
 	font-size : 16px;
 }
-.instructor-content .button{
+.instructor-content .button,.instructor-content .title{
 	text-align : center;
 }
 .instructor-content .instructor-btn{
@@ -546,19 +538,11 @@ input:-webkit-autofill {
 	width  : 100%;
 	height : 16vw;
 }
-.video-content .panel-body p,.pic-content .panel-body p,.user-content .item p{
+.video-content p,.pic-content p,.user-content .item p{
 	line-height : 50px;
 	font-size   : 16px;
 	margin      : 0px;
 }
-.panel{
-	border     : none;
-	box-shadow : none;
-}
-.panel-default{
-	border-color : #fff;
-}
-
 
 /*  pic  */
 .pic-content .panel-img{
