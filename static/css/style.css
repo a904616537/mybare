@@ -491,11 +491,13 @@ input:-webkit-autofill {
 	text-align      : left;
 }
 .user-content .item .box{
-	background-size : cover;
+	/*background-size : cover;*/
+	background-size: 100% auto;
 	height          : 20vw;
 }
 .user-content .item1{
-	background : url(../img/alice.jpg) top center;
+
+	/*background : url(../img/alice.jpg) top center;*/
 }
 .user-content .item2{
 	background : url(../img/ann.jpg) top center;

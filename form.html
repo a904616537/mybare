@@ -36,19 +36,21 @@
         <div class="form">
         	<div class="container">
                 <h2>MYbarre Instructor Application Form</h2>
+                <form id="myfrom" action="" method="post">
+                
                 <div class="item">
                     <div class="form-title">
                         Personal Details
                     </div>
                     <div class="form-inner">
-                        <p>First Name: <input type="text" class="input-type"></p>
-                        <p>Last Name: <input type="text" class="input-type"></p>
-                        <p>Email: <input type="email" class="input-type"></p>
-                        <p>Address: <input type="text" class="input-type"></p>
-                        <p>Date Of Birth: <input type="text" class="input-type"></p>
-                        <p>Nationality: <input type="text" class="input-type"></p>
-                        <p>Occupation: <input type="text" class="input-type"></p>
-                        <p>Phone Number: <input type="text" class="input-type"></p>
+                        <p>First Name: <input type="text" class="input-type" name="first_name"></p>
+                        <p>Last Name: <input type="text" class="input-type" name="last_name"></p>
+                        <p>Email: <input type="email" class="input-type" name="email"></p>
+                        <p>Address: <input type="text" class="input-type" name="address"></p>
+                        <p>Date Of Birth: <input type="text" class="input-type" name="birth"></p>
+                        <p>Nationality: <input type="text" class="input-type" name="nationality"></p>
+                        <p>Occupation: <input type="text" class="input-type" name="occupation"></p>
+                        <p>Phone Number: <input type="text" class="input-type" name="phone"></p>
                     </div>
                 </div>
                 <div class="item">
@@ -56,10 +58,10 @@
                         Studio Details (if you currently instruct or have plan to launch MYbarre please complete the studios details, if not leave blank)
                     </div>
                     <div class="form-inner">
-                        <p>Studio Name: <input type="text" class="input-type"></p>
-                        <p>Studio Address: <input type="text" class="input-type"></p>
-                        <p>Manager Name: <input type="text" class="input-type"></p>
-                        <p>Studio Phone Number: <input type="text" class="input-type"></p>
+                        <p>Studio Name: <input type="text" class="input-type" name="studio_name"></p>
+                        <p>Studio Address: <input type="text" class="input-type" name="studio_address"></p>
+                        <p>Manager Name: <input type="text" class="input-type" name="manager"></p>
+                        <p>Studio Phone Number: <input type="text" class="input-type" name="studio_phone"></p>
                     </div>  
                 </div>  
                 <div class="item">
@@ -68,10 +70,12 @@
                     </div>
                     <div class="form-inner">
                         <p>How did you find out about the MYbarre Instructor Training Course?</p>
-                        <textarea class="textarea-type"></textarea>
+                        <textarea class="textarea-type" name="motivation1"></textarea>
                         <p>Please elaborate on your motivation for joining the training?</p>
-                        <textarea class="textarea-type"></textarea>
+
+                        <textarea class="textarea-type" name="motivation2"></textarea>
                         <p>Please list your exercised fitness disciplines, certification level and years of experience.</p>
+
                         <table cellspacing="0" cellpadding="0" class="table">  
                             <tr>  
                                 <td>Discipline</td>  
@@ -79,25 +83,27 @@
                                 <td>Years of experience</td>  
                             </tr>  
                             <tr>  
-                                <td><input type="text" class="table-input"></td>  
-                                <td><input type="text" class="table-input"></td>  
-                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input" name="discipline"></td>
+                                <td><input type="text" class="table-input" name="level"></td>
+                                <td><input type="text" class="table-input" name="years"></td>
                             </tr>  
                             <tr>  
-                                <td><input type="text" class="table-input"></td>  
-                                <td><input type="text" class="table-input"></td>  
-                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input" name="discipline"></td>
+                                <td><input type="text" class="table-input" name="level"></td>
+                                <td><input type="text" class="table-input" name="years"></td>
                             </tr>  
                             <tr>  
-                                <td><input type="text" class="table-input"></td>  
-                                <td><input type="text" class="table-input"></td>  
-                                <td><input type="text" class="table-input"></td>  
+                                <td><input type="text" class="table-input" name="discipline"></td>
+                                <td><input type="text" class="table-input" name="level"></td>
+                                <td><input type="text" class="table-input" name="years"></td>
                             </tr>  
                         </table>  
+
                         <p>Do you have any prior MYbarre, ballet or pilates experience?</p>
-                        <textarea class="textarea-type"></textarea>
+                        <textarea class="textarea-type" name="bellet"></textarea>
                         <p>Is there anything else you would like to share with us about yourself or fitness / dance experience?</p>
-                        <textarea class="textarea-type"></textarea>
+                        <textarea class="textarea-type" name="share_experience"></textarea>
+
                     </div>  
                 </div>  
                 <div class="item">
@@ -105,9 +111,9 @@
                         Practical Information
                     </div>
                     <div class="form-inner">
-                        <p>Do you have a VPN？<input type="radio" value="Yes" name="vpn">Yes <input type="radio" value="No" name="vpn">No</p>
-                        <p>What device do you use for downloading your music？<input type="text" class="input-type"></p>
-                        <p>Do you use QQ？<input type="radio" value="Yes" name="qq">Yes <input type="radio" value="No" name="qq">No</p>
+                        <p>Do you have a VPN？<input type="radio" value="Yes" name="isvpn">Yes <input type="radio" value="No" name="isvpn">No</p>
+                        <p>What device do you use for downloading your music？<input type="text" class="input-type" name="music"></p>
+                        <p>Do you use QQ？<input type="radio" value="Yes" name="QQ">Yes <input type="radio" value="No" name="QQ">No</p>
                     </div>
                 </div>
                 <div class="item">
@@ -115,9 +121,9 @@
                         Medical Information
                     </div>
                     <div class="form-inner">
-                        <p>Have you ever been told you have a heart condition？<input type="radio" value="Yes" name="heart">Yes <input type="radio" value="No" name="heart">No</p>
+                        <p>Have you ever been told you have a heart condition？<input type="radio" value="Yes" name="heart_condition">Yes <input type="radio" value="No" name="heart_condition">No</p>
                         <p>Have you ever experienced chest pain, dizziness or loss of consciousness during or after a physical exercise workout?<input type="radio" value="Yes" name="workout">Yes <input type="radio" value="No" name="workout">No</p>
-                        <p>Have you or do you currently take any medicines for high blood pressure？<input type="radio" value="Yes" name="high-blood">Yes <input type="radio" value="No" name="high-blood">No</p>
+                        <p>Have you or do you currently take any medicines for high blood pressure？<input type="radio" value="Yes" name="high_blood">Yes <input type="radio" value="No" name="high_blood">No</p>
                         <p>In case you have answered any of the above questions positively (with “yes”), please make sure to get cleared by a doctor before attending the MYbarre Instructor Training Course.</p>
                     </div>
                 </div>
@@ -145,14 +151,16 @@
                 </div>          
                 
                 <!-- submit -->
-                 <button type="button" class="btn btn-info">Enter</button>
+                 <button type="button" id="register" class="btn btn-info">Enter</button>
                  <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);">Back</button>
+                 </form>
             </div>
         </div>
 
 
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
     </body>
 </html>
