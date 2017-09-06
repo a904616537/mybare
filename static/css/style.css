@@ -39,6 +39,11 @@ input:-webkit-autofill {
 	overflow : hidden;
 	height   : 0;
 }
+.panel{
+	-webkit-box-shadow : none;
+	box-shadow         : none;
+	border             : none;
+}
 
 
 /*  导航 开始  */
@@ -498,16 +503,6 @@ input:-webkit-autofill {
 	background-size: 100% auto;
 	height          : 20vw;
 }
-.user-content .item1{
-
-	/*background : url(../img/alice.jpg) top center;*/
-}
-.user-content .item2{
-	background : url(../img/ann.jpg) top center;
-}
-.user-content .item3{
-	background : url(../img/siri.jpg) top center;
-}
 .user-content .inner{
 	background-color : rgba(255,255,255,.8);
 	height           : 20vw;
@@ -522,6 +517,7 @@ input:-webkit-autofill {
 .user-content .item:hover .inner{
 	display : block;
 }
+
 
 
 /*  video  */

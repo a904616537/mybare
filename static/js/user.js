@@ -8,7 +8,7 @@ function getvideos (level){
 		url   : apiUrl + '/video/level/' + level,
 		async : false,
 		error : function(request) {
-			alert('For failure！')
+			swal('Oops...','For failure！', 'error');
 		},
 		success : function(result) {
 			console.log('result', result)
@@ -66,7 +66,7 @@ $(function() {
 		url   : apiUrl + '/user/level/' + cookie.user._id,
 		async : false,
 		error : function(request) {
-			alert('For failure！')
+			swal('Oops','For failure！','error');
 		},
 		success : function(result) {
 			getvideos(result.level);

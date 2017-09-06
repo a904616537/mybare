@@ -7,7 +7,7 @@ $(function() {
 		url   : apiUrl + '/video/level/0',
 		async : false,
 		error : function(request) {
-			alert('For failure！')
+			swal('Oops...','For failure！','error');
 		},
 		success : function(result) {
 			console.log('result', result)

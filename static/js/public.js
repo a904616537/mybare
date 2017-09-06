@@ -14,7 +14,7 @@ $('.floatBox>.item-box').on('mouseleave',function(){
     $(this).find('.hide-box').fadeOut();
 });
 
-
+// 注册
 $("#register").on('click',function(){
 	$.ajax({
 		cache : false,
@@ -23,18 +23,20 @@ $("#register").on('click',function(){
 		data  : $('#myfrom').serialize(),
 		async : false,
 		error : function(request) {
-			alert('提交失败！')
+			swal('Oops..', 'Submission failed!', 'error');
 		},
 		success : function(data) {
 			if(data.status){
-				alert('Submit success!')
+				swal('Success!', 'Please check your registered email', 'success');
 				window.location.replace("/index.html");
 			}
-			else alert('Submission failed, mobile phone number or email has been registered！')
+			swal('Oops...', 'Submission failed, mobile phone number or email has been registered！', 'error');
+
 		}
 	});
 });
 
+// 登录
 $("#login").on('click',function(){
 	var body = $('#loginfrom').serialize();
 	$.ajax({
@@ -44,7 +46,7 @@ $("#login").on('click',function(){
 		data  : body,
 		async : false,
 		error : function(request) {
-			alert('Login failed！')
+			swal('Oops...', 'Login failed！', 'error');
 		},
 		success : function(data) {
 			if(data.status) {
@@ -56,11 +58,13 @@ $("#login").on('click',function(){
 				}
 				window.location.replace("index.html");
 			}
-			else alert('Login failed, please try again!')
+			else swal('Oops...', 'Login failed, please try again!', 'error');
+
 		}
 	});
 });
 
+// cookie
 $(function() {
 	var cookieuser = $.cookie('user');
 	if(typeof cookieuser != 'undefined') {
