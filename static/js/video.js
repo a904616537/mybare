@@ -16,7 +16,7 @@ $(function() {
 				var s = result.videos > 0?result.videos - 1 : 0;
 				if(s == 0) {
 					// videojs(document.querySelector('.video-js'));
-					$.getScript("./static/js/video.min.js");
+					// $.getScript("./static/js/video.min.js");
 				}
 				for (var i = 0; i < result.videos.length; i++)
 				{

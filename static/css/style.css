@@ -325,8 +325,11 @@ input:-webkit-autofill {
 	width      : 50%;
 	margin-top : 25px;
 }
+.footer .pages{
+	padding-left : 150px; 
+}
 
-
+              
 /* 注册用户调查 */
 .form {
 	font-size : 16px;
@@ -538,7 +541,7 @@ input:-webkit-autofill {
 }
 .video-content .video-style{
 	width  : 100%;
-	height : 16vw;
+	height : 16.4vw;
 }
 .video-content p,.pic-content p,.user-content .item p{
 	line-height : 50px;

@@ -11,9 +11,9 @@
         <link rel="stylesheet" href="static/css/normalize.css" type="text/css" />
         <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/video-js.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
-
 
     <body>
         <div class="header">
@@ -86,85 +86,34 @@
         <!-- 导航结束 -->
 
 
-        <div class="instructor-banner">
-            
-        </div>
+        <div class="pic-content">
+            <div class="text-title">Basic Pictures</div>
+            <hr>
 
-        <div class="instructor-content">
-            <div class="container">
-                <h1 class="title">Become a MYbarre Instructor</h1>
-                <p class="instructor-text">
-                	Learn how to inspire,motivate,and lead others safely and effectively through the MYbarre program with our 3 day comprehensive Instructor Training.This is an open learning environment delivered in person by our MYbarre Master Trainers.It includes a mix of practical master classes,theory workshops,small group exercises and class teaching practice presentations.
-                </p>
-                <div class="button row">
-                    <div class="instructor-btn"><a href="schedule.html">
-                        <p>Click to view the</p>
-                        <p class="click">INSTRUCTOR TRAINING SCHEDULE</p>
-                    </a></div>
-                    <div class="instructor-btn"><a href="form.html">
-                        <p>Click to apply for the</p>
-                        <p class="click">MYbarre INSTRUCTOR TRAINING</p>
-                    </a></div>
+            <div class="pic-list">
+                <!-- 图片循环 -->
+                <div class="row">
+                    <div class="col-md-4 col-xs-6">
+                        <img src="static/img/team-banner.jpg" alt="" class="panel-img lightense"  data-background="rgba(0, 10, 45, .6)">
+                    </div>
                 </div>
-                <div class="instructor-text">
-                	You will receive
-                	<li>A MYbarre Instructor Manual</li>
-                	<li>A MYbarre Choreography Manual with detailed pictures and teaching instruction</li>
-                	<li>Access to video material and sample classes</li>
-                </div>
-                <div class="instructor-text">
-                	The course will cover:
-                	<li>Teaching correct body alignment and postures</li>
-                	<li>The basic elements of ballet,Pilates and fitness training covered in a MYbarre Class</li>
-                	<li>The importance of music,beat,flow and voice in teaching</li>
-                	<li>Basic moves and choreography breakdown for all sections of class</li>
-                	<li>Using MYbarre props and studio equipment</li>
-                	<li>How to format and design a MYbarre Class</li>
-                	<li>Teaching advancements,modifications and giving corrections.</li>
-                </div>
+
             </div>
         </div>
 
-        <!-- footer -->
-        <div class="footer">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="title">CONTACT MYbarre</div>
-                    <p class="sub-title" style="color: #53565B">Send email to MYbarre</p>
-                    <input type="text" name="name" placeholder="NAME" >
-                    <input type="email" name="email" placeholder="EMAIL">
-                    <textarea placeholder="MESSAGE"></textarea>
-                    <div class="send">SEND EMAIL</div>
-                </div>
-                <div class="col-md-4 pages">
-                    <div class="title">PAGES</div>
-                    <ul class="footer-list">
-                        <li><a href="#">Homepage</a></li>
-                        <li><a href="#">MYbarre Workout</a></li>
-                        <li><a href="#">Founders</a></li>
-                        <li><a href="#">Gallery</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">MYbarre Instructor</a></li>
-                        <li><a href="#">Training Schedule</a></li>
-                        <li><a href="#">FAQs</a></li>
-                        <li><a href="#">Community</a></li>
-                        <li><a href="#">Shop MYbarre</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Login</a></li>
-                        <li><a href="#">Fermentum</a></li>
-                    </ul>
-                </div>  
-                <div class="col-md-4">
-                    <div class="title">SOCIAL</div>
-                    <img src="static/img/qrcode.jpg" class="qrcode"/>
-                </div>
-            </div> 
-        </div>
-        
 
+        
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="static/js/lightense.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
+        <script type="text/javascript">
+            window.addEventListener('load', function () {
+                var el = document.querySelectorAll('img.zoom:not(.no-lightense),.lightense');
+                Lightense(el);
+            }, false);
+        </script>
+
     </body>
 </html>
