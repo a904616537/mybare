@@ -269,8 +269,17 @@ input:-webkit-autofill {
 	text-align : center;
 	padding    : 70px 0;
 }
-.evaluate #carousel-example-generic .img{
-	height : 15vw;
+.evaluate #carousel-example-generic{
+	padding  : 2vw 14vw;
+	height   : 16vw;
+	overflow : hidden;
+}
+.evaluate #carousel-example-generic p.text{
+	overflow           : hidden;
+	text-overflow      : ellipsis;
+	display            : -webkit-box;
+	-webkit-box-orient : vertical;
+	-webkit-line-clamp : 5;
 }
 .evaluate .carousel-control.right,.evaluate .carousel-control.left{
 	background-image : none;
@@ -500,7 +509,7 @@ input:-webkit-autofill {
 }
 .user-content .item .box{
 	/*background-size : cover;*/
-	background-size: 100% auto;
+	background-size : 100% auto;
 	height          : 20vw;
 }
 .user-content .inner{
@@ -596,6 +605,12 @@ input:-webkit-autofill {
 	.registe .button{
 		width : 70vw;
 	}
+	.evaluate #carousel-example-generic{
+		height : 100px;
+	}
+	.evaluate #carousel-example-generic p.text{
+		-webkit-line-clamp : 3;
+	}
 	.footer{
 		text-align : center;
 		padding    : 20px 0px;
@@ -682,6 +697,12 @@ input:-webkit-autofill {
 	.content-grid .inner .moreBtn{
 		margin-top : 30px;
 		font-size  : 14px;
+	}
+	.evaluate #carousel-example-generic p.text{
+		-webkit-line-clamp : 4;
+	}
+	.evaluate .glyphicon.glyphicon-chevron-right,.evaluate .glyphicon.glyphicon-chevron-left{
+		padding-top : 8px;
 	}
 	.footer{
 		text-align : center;
