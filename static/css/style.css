@@ -571,6 +571,41 @@ input:-webkit-autofill {
 	display : block;
 	padding : 20%;
 }
+.faq-content {
+    padding   : 40px 0;
+    font-size : 16px;
+}
+.faq-content ul{
+    list-style   : none;
+    padding      : 0;
+    margin-right : 20px;
+    float        : left;
+    line-height  : 30px;
+}
+.faq-content .scrollspy-example{
+	float    : left;
+	position : relative;
+	height   : 1000px;
+	overflow : auto;
+}
+.faq-content .faq-title{
+    font-weight : bold;
+    line-height : 30px;
+    font-size   : 18px;
+}
+.faq-content .faq-hr{
+    border     : none;
+    border-top : 1px solid #ccc;
+    margin     : 5px 0;
+    width      : 100%;
+}
+.active a{
+    color: #00B0CB;
+}
+.fixed{
+    background-color: red;
+}
+.faq-content .scrollspy-example::-webkit-scrollbar {display:none}
 
 
 /*  响应 开始  */
@@ -578,17 +613,17 @@ input:-webkit-autofill {
 	body{
 		font-size : 14px;
 	}
-	.header,.content .row{
+	.header,.content .row,.floatBox,.footer .pages,.faq-content .faq-nav{
 		display : none;
 	}
 	.header-grid,.content-grid,.content-grid .box .inner{
 		display : block;
 	}
+	.content-grid .grid-box{
+		margin-bottom: 20px;
+	}
 	.banner{
 		margin-top : 0px;
-	}
-	.floatBox,.footer .pages{
-		display : none;
 	}
 	.content-grid .row{
 		position : relative;
@@ -599,8 +634,14 @@ input:-webkit-autofill {
 		height : 220px;
 	}
 	.content-grid .inner .moreBtn{
-		margin-top : 30px;
+		margin-top : 20px;
 		font-size  : 14px;
+	}
+	.content-grid .inner .innerText{
+		line-height : 5.5vw;
+	}
+	.registe,.evaluate{
+		padding: 30px 0;
 	}
 	.registe .button{
 		width : 70vw;
@@ -623,9 +664,6 @@ input:-webkit-autofill {
 	}
 	.footer .send{
 		margin : 20px auto 20px;
-	}
-	.footer .pages{
-		display : none;
 	}
 	.footer .qrcode{
 		width : 30%;
@@ -659,6 +697,20 @@ input:-webkit-autofill {
 	}
 	.video-content .video-style{
 		height : 52vw;
+	}
+	.instructor-content .title{
+		font-size: 24px;
+	}
+	.instructor-content .instructor-text{
+		font-size   : 14px;
+		line-height : 25px;
+	}
+	.instructor-content .instru-grid{
+		font-weight : bold;
+		font-size   : 16px;
+	}
+	.faq-content .scrollspy-example{
+		height : 100%;
 	}
 }
 @media screen and (max-width: 840px) and (min-width: 580px){
@@ -731,6 +783,9 @@ input:-webkit-autofill {
 	}
 	.video-content .video-style{
 		height : 22vw;
+	}
+	.faq-content .scrollspy-example{
+		height : 100%;
 	}
 }
 @media screen and (min-width: 840px) and (max-width: 1024px){

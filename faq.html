@@ -14,44 +14,6 @@
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
 
-    <style type="text/css">
-        .faq-content {
-            padding   : 40px 0;
-            font-size : 16px;
-        }
-        .faq-content ul{
-            list-style   : none;
-            padding      : 0;
-            margin-right : 20px;
-            float        : left;
-            line-height  : 30px;
-        }
-        .faq-content .scrollspy-example{
-            float : left;
-            position: relative;
-            height: 1000px;
-            overflow: auto;
-        }
-        .faq-content .faq-title{
-            font-weight : bold;
-            line-height : 30px;
-            font-size   : 18px;
-        }
-        .faq-content .faq-hr{
-            border     : none;
-            border-top : 1px solid #ccc;
-            margin     : 5px 0;
-            width      : 100%;
-        }
-        .active a{
-            color: #00B0CB;
-        }
-        .fixed{
-            background-color: red;
-        }
-        .faq-content .scrollspy-example::-webkit-scrollbar {display:none}
-    </style>
-
     <body>
         <div class="header">
             <div class="related clearfloat">
@@ -128,7 +90,7 @@
         <div class="faq-content">
             <div class="container">
                 <div class="row" id="navbarExample">
-                    <div class="col-md-4">
+                    <div class="col-md-4 faq-nav">
                         <ul class="nav">
                             <li class="active"><a href="#1">What is MYbarre?</a></li>
                             <li class=""><a href="#2">How long is the training?</a></li>
@@ -148,7 +110,7 @@
                             <li class=""><a href="#16">What support is available for my studio to run MYbarre?</a></li>
                         </ul>
                     </div>
-                    <div class="col-md-8 scrollspy-example">
+                    <div class="col-md-8 scrollspy-example col-xs-12">
                         <div data-spy="scroll" data-target="#navbarExample" data-offset="50" class="scrollspy-example">
                             <div class="faq-title" id="1">What is MYbarre?</div>
                         <hr class="faq-hr">
