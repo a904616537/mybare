@@ -88,7 +88,7 @@
 
 
         <div class="pic-content">
-            <div class="text-title">Basic Pictures</div>
+            <div class="text-title" id="title">Basic Pictures</div>
             <hr>
 
             <div class="pic-list">
@@ -132,6 +132,7 @@
                     },
                     success : function(result) {
                         if(result.status) {
+                            $('#title').html(result.data.name);
                             var pictures = result.data.SmallPic;
                             for(var i = 0; i < pictures.length; i++) {
                                 var item =  pictures[i];
