@@ -30,12 +30,19 @@ function getvideos (level){
 	                            <div class="panel-body">\
 	                                <div class="row">';
 	                                    
-	                                
+	                                	
 						for (var i = 0; i < videos.length; i++)
 						{
 							var video = videos[i];
 							console.log('video', video)
 							str += '<div class="col-md-4 col-xs-6 item">\
+										<div class="box" style="background : url(static/img/pdf.jpg) no-repeat top center; background-size : auto 100%;">\
+                                            <div class="inner">\
+                                                <a href="static/img/demo.pdf" download="demo.pdf"><i class="icon fa fa-cloud-download"></i></a>\
+                                            </div>\
+                                        </div>\
+									</div>\
+									<div class="col-md-4 col-xs-6 item">\
                                         <div class="box" style="background : url('+ video.img +') no-repeat top center; background-size : cover;">\
                                             <div class="inner">\
                                                 <a href="'+ video.path +'" download="movie.avi"><i class="icon fa fa-cloud-download"></i></a>\
