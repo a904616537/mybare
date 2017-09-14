@@ -140,12 +140,13 @@
                                 </div>';
 
                                 $('#piclist').append(str);
-                                window.addEventListener('load', function () {
-                                    var el = document.querySelectorAll('img.zoom:not(.no-lightense),.lightense');
-                                    Lightense(el);
-                                }, false);
+                               
                             }
                         }
+                         window.addEventListener('load', function () {
+                            var el = document.querySelectorAll('img.zoom:not(.no-lightense),.lightense');
+                            Lightense(el);
+                        }, false);
                     }
                 });
         }
