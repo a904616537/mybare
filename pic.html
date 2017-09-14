@@ -91,11 +91,11 @@
 
             <div class="pic-list">
                 <!-- 图片循环 -->
-                <div class="row">
-                    <a href="pic-more.html"><div class="col-md-4 col-xs-12">
+                <div class="row" id="piclist">
+                    <!-- <a href="pic-more.html"><div class="col-md-4 col-xs-12">
                         <img src="static/img/team-banner.jpg" alt="" class="panel-img">
                         <p>Basic pic</p>
-                    </div></a>
+                    </div></a> -->
                 </div>
 
             </div>
@@ -143,6 +143,35 @@
         <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="static/js/video.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
+        <script type="text/javascript">
+            // var apiUrl = 'http://106.14.94.210:9080';
+            var apiUrl = 'http://localhost:9080';
+
+
+            function getpicture (){
+                $.ajax({
+                    cache : false,
+                    type  : "GET",
+                    url   : apiUrl + '/picture/all',
+                    async : false,
+                    error : function(request) {
+                        swal('Oops...','For failure！', 'error');
+                    },
+                    success : function(result) {
+                        for(var i = 0; i < result.data.length; i++) {
+                            var item =  result.data[i];
+                            var str = '<a href="pic-more.html?pic='+item._id+'"><div class="col-md-4 col-xs-12">\
+                                            <img src="'+item.img+'" alt="" class="panel-img">\
+                                            <p>'+item.name+'</p>\
+                                        </div></a>';
+
+                            $('#piclist').append(str);
+                            }
+                    }
+                });
+            }
+            getpicture();
+        </script>
 
     </body>
 </html>

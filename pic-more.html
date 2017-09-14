@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/video-js.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/sweetalert2.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
 
@@ -92,10 +93,10 @@
 
             <div class="pic-list">
                 <!-- 图片循环 -->
-                <div class="row">
-                    <div class="col-md-4 col-xs-12">
+                <div class="row" id="piclist">
+                    <!-- <div class="col-md-4 col-xs-12">
                         <img src="static/img/team-banner.jpg" alt="" class="panel-img lightense"  data-background="rgba(0, 10, 45, .6)">
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
@@ -107,12 +108,49 @@
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="static/js/lightense.min.js"></script>
+        <script type="text/javascript" src="static/js/sweetalert2.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
         <script type="text/javascript">
-            window.addEventListener('load', function () {
-                var el = document.querySelectorAll('img.zoom:not(.no-lightense),.lightense');
-                Lightense(el);
-            }, false);
+        var apiUrl = 'http://localhost:9080';
+
+            //获取url中的参数
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+            if (r != null) return unescape(r[2]); return null; //返回参数值
+        }
+
+        function getpicture() {
+            var id = getUrlParam('pic');
+            $.ajax({
+                    cache : false,
+                    type  : "GET",
+                    url   : apiUrl + '/picture/more/' + id,
+                    async : false,
+                    error : function(request) {
+                        swal('Oops...','For failure！', 'error');
+                    },
+                    success : function(result) {
+                        if(result.status) {
+                            var pictures = result.data.SmallPic;
+                            for(var i = 0; i < pictures.length; i++) {
+                                var item =  pictures[i];
+                                var str = '<div class="col-md-4 col-xs-12">\
+                                    <img src="'+item+'" alt="" class="panel-img lightense"  data-background="rgba(0, 10, 45, .6)">\
+                                </div>';
+
+                                $('#piclist').append(str);
+                                window.addEventListener('load', function () {
+                                    var el = document.querySelectorAll('img.zoom:not(.no-lightense),.lightense');
+                                    Lightense(el);
+                                }, false);
+                            }
+                        }
+                    }
+                });
+        }
+
+        getpicture();
         </script>
 
     </body>
