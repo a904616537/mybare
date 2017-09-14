@@ -1,18 +1,19 @@
-var apiUrl = 'http://106.14.94.210:9080';
+// var apiUrl = 'http://106.14.94.210:9080';
+var apiUrl = 'http://localhost:9080';
 
 
 function getvideos (level){
 	$.ajax({
 		cache : false,
 		type  : "GET",
-		url   : apiUrl + '/video/level/' + level,
+		url   : apiUrl + '/courses/list/video/' + level,
 		async : false,
 		error : function(request) {
 			swal('Oops...','For failure！', 'error');
 		},
 		success : function(result) {
 			console.log('result', result)
-			if(result.status) {
+			if(false) {
 				for (var y = 0; y < 5; y++) {
 					var videos = result.videos.filter(function(item) {
 						return item.level == y;
