@@ -17,6 +17,13 @@ $('.floatBox>.item-box').on('mouseleave',function(){
 
 // 注册
 $("#register").on('click',function(){
+	var firstName = $('#firstName').val(),
+  		lastName = $('#lastName').val(),
+  		mobile = $("#mobile").val(),
+  		email = $('#email').val(),
+  		myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/,
+  		reg =  /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+
 	$.ajax({
 		cache : false,
 		type  : "POST",
@@ -27,11 +34,20 @@ $("#register").on('click',function(){
 			swal('Oops..', 'Submission failed!', 'error');
 		},
 		success : function(data) {
+			if(firstName == ''){
+			  	swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
+			}
+			if(!reg.test(email) || email == ''){
+				swal('Oops...', 'Submission failed, incorrect email address！', 'error');
+		 	}
+		 	if(!myreg.test(mobile) || mobile == '') { 
+			    swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
+			}
 			if(data.status){
 				swal('Success!', 'Please check your registered email', 'success');
 				window.location.replace("/index.html");
 			}
-			swal('Oops...', 'Submission failed, mobile phone number or email has been registered！', 'error');
+			// swal('Oops...', 'Submission failed, mobile phone number or email has been registered！', 'error');
 
 		}
 	});
