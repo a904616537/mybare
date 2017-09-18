@@ -40,9 +40,9 @@ $("#register").on('click',function(){
 			if(!reg.test(email) || email == ''){
 				swal('Oops...', 'Submission failed, incorrect email address！', 'error');
 		 	}
-		 	if(!myreg.test(mobile) || mobile == '') { 
-			    swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
-			}
+		 // 	if(!myreg.test(mobile) || mobile == '') { 
+			//     swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
+			// }
 			if(data.status){
 				swal('Success!', 'Please check your registered email', 'success');
 				window.location.replace("/index.html");
