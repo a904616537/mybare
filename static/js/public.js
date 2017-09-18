@@ -22,7 +22,20 @@ $("#register").on('click',function(){
   		mobile = $("#mobile").val(),
   		email = $('#email').val(),
   		myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/,
-  		reg =  /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+  		reg =  /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+
+  		if(firstName == ''){
+		  	swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
+		  	return;
+		}
+		// else if(!reg.test(email) || email == ''){
+		// 	swal('Oops...', 'Submission failed, incorrect email address！', 'error');
+		// 	return;
+	 // 	}
+	 // 	else if(!myreg.test(mobile) || mobile == '') { 
+		//     swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
+		//     return;
+		// }
 
 	$.ajax({
 		cache : false,
@@ -34,21 +47,21 @@ $("#register").on('click',function(){
 			swal('Oops..', 'Submission failed!', 'error');
 		},
 		success : function(data) {
-			if(firstName == ''){
-			  	swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
-			}
-			if(!reg.test(email) || email == ''){
-				swal('Oops...', 'Submission failed, incorrect email address！', 'error');
-		 	}
-		 // 	if(!myreg.test(mobile) || mobile == '') { 
-			//     swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
-			// }
-			if(data.status){
-				swal('Success!', 'Please check your registered email', 'success');
-				window.location.replace("/index.html");
-			}
-			// swal('Oops...', 'Submission failed, mobile phone number or email has been registered！', 'error');
+			if(data.status) {
 
+				swal({
+					title: "Registered Success",
+					text: "Please check your registered email!",
+					type: "success",
+					confirmButtonColor: "#5bc0de",   confirmButtonText: "To Home!"
+				},
+				function(){
+					window.location.replace("/index.html");
+				});
+
+			} else {
+				swal('Oops...', 'Submission failed, mobile phone number or email has been registered！', 'error');
+			}	
 		}
 	});
 });
