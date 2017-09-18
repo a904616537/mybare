@@ -21,21 +21,19 @@ $("#register").on('click',function(){
   		lastName = $('#lastName').val(),
   		mobile = $("#mobile").val(),
   		email = $('#email').val(),
-  		myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/,
-  		reg =  /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/;
+  		phoneReg = /(^[0-9]{3,4}-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^[0−9]3,4[0-9]{3,8}$)|(^0{0,1}1[0-9]{10}$)/,
+  		reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+
 
   		if(firstName == ''){
 		  	swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
-		  	return;
 		}
-		// else if(!reg.test(email) || email == ''){
-		// 	swal('Oops...', 'Submission failed, incorrect email address！', 'error');
-		// 	return;
-	 // 	}
-	 // 	else if(!myreg.test(mobile) || mobile == '') { 
-		//     swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
-		//     return;
-		// }
+		else if(!reg.test(email) || email == ''){
+			swal('Oops...', 'Submission failed, incorrect email address！', 'error');
+	 	}
+	 	else if(!myreg.test(mobile) || mobile == '') { 
+		    swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
+		}
 
 	$.ajax({
 		cache : false,
