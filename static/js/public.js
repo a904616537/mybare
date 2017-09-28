@@ -1,5 +1,5 @@
 var apiUrl = 'http://server.mybarrefitness.com';
-// var apiUrl = 'http://localhost:9080';
+// var apiUrl = 'http://106.14.94.210:8091';
 
 
 
