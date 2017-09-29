@@ -25,41 +25,41 @@ $("#register").on('click',function(){
   		phoneReg = /(^[0-9]{3,4}-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^[0−9]3,4[0-9]{3,8}$)|(^0{0,1}1[0-9]{10}$)/,
   		reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
 
-  		if(firstName == '' || lastName == '' ){
-		  	swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
-		}
-		else if(!reg.test(email) || email == ''){
-			swal('Oops...', 'Submission failed, incorrect email address！', 'error');
-	 	}
-	 	else if(!phoneReg.test(mobile) || mobile == '') { 
-		    swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
-		}
-
-	$.ajax({
-		cache : false,
-		type  : "POST",
-		url   : apiUrl + '/register',
-		data  : $('#myfrom').serialize(),
-		async : false,
-		error : function(request) {
-			swal('Oops..', 'Submission failed!', 'error');
-		},
-		success : function(data) {
-			if(data.status) {
-
-				swal({
-					title: "Registered Success",
-					text: "Please check your registered email!",
-					type: "success",
-					confirmButtonColor: "#5bc0de",   confirmButtonText: "To Home!"
-				},
-				function(){
-					window.location.replace("/index.html");
-				});
-
-			} 	
-		}
-	});
+	if(firstName == '' || lastName == '' ){
+  		swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
+	}
+	else if(!reg.test(email) || email == ''){
+		swal('Oops...', 'Submission failed, incorrect email address！', 'error');
+ 	}
+ 	else if(!phoneReg.test(mobile) || mobile == '') { 
+	    swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
+	}else{
+		$.ajax({
+			cache : false,
+			type  : "POST",
+			url   : apiUrl + '/register',
+			data  : $('#myfrom').serialize(),
+			async : false,
+			error : function(request) {
+				swal('Oops..', 'Submission failed!', 'error');
+			},
+			success : function(data) {
+				if(data.status) {
+					swal({
+						title: "Registered Success",
+						text: "Please check your registered email!",
+						type: "success",
+						confirmButtonColor: "#5bc0de",
+						confirmButtonText: "To Home!"
+					}).then(function(isConfirm){
+						if (isConfirm === true) {
+							window.location.href = 'http://www.mybarrefitness.com';
+						}
+					})				
+				} 	
+			}
+		});
+	}
 });
 
 // 登录
