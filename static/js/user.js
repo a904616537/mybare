@@ -32,7 +32,7 @@ function getvideos (level){
 					{
 						var video = item.videos[v];
 						var photourl = 'static/img/pdf.jpg';
-						if(video.img.length > 0) {
+						if(video.img && video.img.length > 0) {
 							photourl = video.img;
 						}
 						str += '<div class="col-md-4 col-xs-6 item">\
