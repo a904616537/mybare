@@ -31,8 +31,12 @@ function getvideos (level){
 					for (var v=0; v<item.videos.length; v++)
 					{
 						var video = item.videos[v];
+						var photourl = 'static/img/pdf.jpg';
+						if(video.img.length > 0) {
+							photourl = video.img;
+						}
 						str += '<div class="col-md-4 col-xs-6 item">\
-									<div class="box" style="background : url(static/img/pdf.jpg) no-repeat top center; background-size : auto 100%;">\
+									<div class="box" style="background : url('+ photourl +') no-repeat top center; background-size : auto 100%;">\
                                         <div class="inner">\
                                             <a href="'+ video.path +'" download="'+video.name+'.mp4"><i class="icon fa fa-cloud-download"></i></a>\
                                         </div>\
