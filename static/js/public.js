@@ -25,8 +25,7 @@ $("#register").on('click',function(){
   		phoneReg = /(^[0-9]{3,4}-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^[0−9]3,4[0-9]{3,8}$)|(^0{0,1}1[0-9]{10}$)/,
   		reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
 
-
-  		if(firstName == ''){
+  		if(firstName == '' || lastName == '' ){
 		  	swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
 		}
 		else if(!reg.test(email) || email == ''){
