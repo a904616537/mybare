@@ -31,7 +31,7 @@ $("#register").on('click',function(){
 		else if(!reg.test(email) || email == ''){
 			swal('Oops...', 'Submission failed, incorrect email address！', 'error');
 	 	}
-	 	else if(!myreg.test(mobile) || mobile == '') { 
+	 	else if(!phoneReg.test(mobile) || mobile == '') { 
 		    swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
 		}
 
