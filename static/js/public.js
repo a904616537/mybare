@@ -33,23 +33,33 @@ $("#register").on('click',function(){
 	 	}
 	 	else if(!phoneReg.test(mobile) || mobile == '') { 
 		    swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
-		}else{
-			$.post(apiUrl+'/register',function(data){
-				if(data.status) {
-					swal({
-						title: "Registered Success",
-						text: "Please check your registered email!",
-						type: "success",
-						confirmButtonColor: "#5bc0de",   confirmButtonText: "To Home!"
-					},
-					function(){
-						window.location.replace("/index.html");
-					});
-				}else {
-					swal('Oops...', 'Submission failed, mobile phone number or email has been registered！', 'error');
-				}
-			});
 		}
+
+	$.ajax({
+		cache : false,
+		type  : "POST",
+		url   : apiUrl + '/register',
+		data  : $('#myfrom').serialize(),
+		async : false,
+		error : function(request) {
+			swal('Oops..', 'Submission failed!', 'error');
+		},
+		success : function(data) {
+			if(data.status) {
+
+				swal({
+					title: "Registered Success",
+					text: "Please check your registered email!",
+					type: "success",
+					confirmButtonColor: "#5bc0de",   confirmButtonText: "To Home!"
+				},
+				function(){
+					window.location.replace("/index.html");
+				});
+
+			} 	
+		}
+	});
 });
 
 // 登录
