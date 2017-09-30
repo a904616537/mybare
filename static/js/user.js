@@ -32,13 +32,16 @@ function getvideos (level){
 					{
 						var video = item.videos[v];
 						var photourl = 'static/img/pdf.jpg';
+						var filename = video.path.split('/').pop();
+						var suffix = filename.split('.').pop();
+
 						if(video.img && video.img.length > 0) {
 							photourl = video.img;
 						}
 						str += '<div class="col-md-4 col-xs-6 item">\
 									<div class="box" style="background : url('+ photourl +') no-repeat top center; background-size : auto 100%;">\
                                         <div class="inner">\
-                                            <a href="'+ video.path +'" download="'+video.name+'.mp4"><i class="icon fa fa-cloud-download"></i></a>\
+                                            <a href="http://image.mybarrefitness.com/download?path='+ filename +'&name='+ video.name +'.'+suffix+'"><i class="icon fa fa-cloud-download"></i></a>\
                                         </div>\
                                     </div>\
                                     <p>'+ video.name +'</p>\
