@@ -46,8 +46,8 @@ $("#register").on('click',function(){
 			success : function(data) {
 				if(data.status) {
 					swal({
-						title: "Registered Success",
-						text: "Please check your registered email!",
+						title: "Successfully Submitted",
+						text: "Please sit tight! The MYbarre team will review your application and get back to you shortly. Keep a close eye on your email inbox!",
 						type: "success",
 						confirmButtonColor: "#5bc0de",
 						confirmButtonText: "To Home!"
