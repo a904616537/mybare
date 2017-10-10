@@ -32,6 +32,9 @@ function getvideos (level){
 					{
 						var video = item.videos[v];
 						var photourl = 'static/img/pdf.jpg';
+						if(!video.path || video.path == '') {
+							break;
+						}
 						var filename = video.path.split('/').pop();
 						var suffix = filename.split('.').pop();
 
