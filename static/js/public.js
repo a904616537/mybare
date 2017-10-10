@@ -40,7 +40,8 @@ $("#register").on('click',function(){
 			url   : apiUrl + '/register',
 			data  : $('#myfrom').serialize(),
 			async : false,
-			error : function(request) {
+			error : function(xhr) {
+				console.log(JSON.stringify(xhr));
 				swal('Oops..', 'Submission failed!', 'error');
 			},
 			success : function(data) {
@@ -56,7 +57,10 @@ $("#register").on('click',function(){
 							window.location.href = 'http://www.mybarrefitness.com';
 						}
 					})				
-				} 	
+				}else{
+					swal('Oops..', 'Please check your phone number or email have been registration', 'warning');
+				}
+
 			}
 		});
 	}
