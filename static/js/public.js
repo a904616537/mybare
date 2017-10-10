@@ -101,7 +101,7 @@ $(function() {
 		var user = JSON.parse(cookieuser);
 		$('#user').html('<a href="user.html" class="login-icon">'+ user.first_name + user.last_name +'</a>')
 	} else {
-		$('#user').html('<a href="login.html" class="login-icon"><i class="fa fa-user"></i></a>')
+		$('#user').html('<a href="login.html" class="login-icon">Log In</a>')
 	}
 	
 })
