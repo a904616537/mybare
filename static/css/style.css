@@ -652,6 +652,7 @@ input:-webkit-autofill {
 	}
 	.registe .button{
 		width : 70vw;
+		font-size: 14px;
 	}
 	.evaluate #carousel-example-generic{
 		height : 100px;
