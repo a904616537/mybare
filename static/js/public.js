@@ -1,4 +1,5 @@
 var apiUrl = 'http://server.mybarrefitness.com';
+var homeUrl = 'http://www.mybarrefitness.com';
 // var apiUrl = 'http://106.14.94.210:8091';
 
 
@@ -54,7 +55,7 @@ $("#register").on('click',function(){
 						confirmButtonText: "To Home!"
 					}).then(function(isConfirm){
 						if (isConfirm === true) {
-							window.location.href = 'http://www.mybarrefitness.com';
+							window.location.href = homeUrl;
 						}
 					})				
 				}else{
@@ -101,10 +102,16 @@ $(function() {
 		var user = JSON.parse(cookieuser);
 		$('#user').html('<a href="user.html" class="login-icon">'+ user.first_name + user.last_name +'</a>')
 	} else {
-		$('#user').html('<a href="login.html" class="login-icon"><i class="fa fa-user"></i></a>')
+		$('#user').html('<a href="login.html" class="login-icon">Log In</a>')
 	}
 	
 })
+
+// 登出
+$("#logOut").on('click',function(){
+	$.cookie('user', null, { expires: -1 });
+	window.location.href = homeUrl;
+});
 
 
 
