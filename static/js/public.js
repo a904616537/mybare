@@ -100,9 +100,11 @@ $(function() {
 	var cookieuser = $.cookie('user');
 	if(typeof cookieuser != 'undefined') {
 		var user = JSON.parse(cookieuser);
-		$('#user').html('<a href="user.html" class="login-icon">'+ user.first_name + user.last_name +'</a>')
+		$('#user').html('<a href="#" class="login-icon">'+ user.first_name +" "+user.last_name +'</a>');
+		$('#user-grid').html('<a href="user.html" class="login-icon">'+ user.first_name +" "+user.last_name +'</a>');
 	} else {
-		$('#user').html('<a href="login.html" class="login-icon">Log In</a>')
+		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
+		$('#user-grid').html('<a href="login.html" class="login-icon">Log In</a>');
 	}
 	
 })
@@ -112,6 +114,9 @@ $("#logOut").on('click',function(){
 	$.cookie('user', null, { expires: -1 });
 	window.location.href = homeUrl;
 });
-
+$("#logOut-grid").on('click',function(){
+	$.cookie('user', null, { expires: -1 });
+	window.location.href = homeUrl;
+});
 
 

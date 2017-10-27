@@ -53,6 +53,7 @@
                     <li><a href="#" class="login-icon"><i class="fa fa-user"></i></a>
                         <ul class="dropdown" style="position: absolute;right: 10px;">
                             <li id="user"><a href="login.html">Log In</a></li>
+                            <li><a href="user.html">Videos</a></li>
                             <li><a href="javascript:;" id="logOut">Log Out</a></li>
                         </ul>
                     </li>
@@ -65,7 +66,7 @@
                 <a href="index.html"><img src="static/img/logo.png" alt="logo"></a>
             </div>
             <div class="menu">
-                <li><a href="login.html"><i class="fa fa-user"></i></a></li>
+                <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li>
                 <li id="bars"><a href="#"><i class="fa fa-bars"></i></a>
                     <ul class="dropdown" id="dropdown">
                         <li class="li-grid"><a href="#">ABOUT</a></li>
@@ -81,20 +82,84 @@
                         <li><a href="pic.html">MYbarre Pictures</a></li>
                         <li class="li-grid" style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
                         <li class="li-grid"><a href="#footer">CONTACT US</a></li>
-                        <li class="li-grid"><a href="javascript:;" id="logOut">LOG OUT</a></li>
+                        <li class="li-grid"><a href="javascript:;" id="logOut-grid">LOG OUT</a></li>
                     </ul>
                 </li>
-            </div>  
+            </div>
         </div>
 
         <!-- 导航结束 -->
 
 
-        <div class="workout-banner"></div>
+        <div class="schedule-banner"></div>
 
-        <div class="workout-content">
+        <div class="train-content">
             <div class="container">
-                
+                <h1 class="title" style="text-align: center;">Host A MYbarre Training</h1>
+                <p class="train-text">
+                    Looking to develop and educate your current Fitness Professionals? Want to open MYbarre classes at your facility? Opening a new studio?
+                </p>
+                <p class="train-text">
+                    To host a MYbarre Instructor Training course at your studio, there needs to be a minimum of 10 participants. Studio space must be available over 3 consecutive days from 9am-6pm with access to a barre, mats, and a music system.
+                </p>
+                <p class="train-text">
+                    MYbarre will provide the marketing/E-flyer for the course and post on our official website, and social networking channels. All other social media communications is the responsibility of the host studio. For more information or registration interest, contact us using the form below:
+                </p>
+                <p class="instru-grid">Host Studio Enquiry Form (complete and submit to register interest)</p>
+
+                <!-- 注册表 -->
+                <form class="train-from">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" name="name" class="input-type">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6 col-xs-12">
+                            <label>Email</label>
+                            <input type="email" name="email" class="input-type">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <label>WeChat ID</label>
+                            <input type="text" name="wechat" class="input-type">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Telephone</label>
+                        <input type="text" name="phone" class="input-type">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6 col-xs-12">
+                            <label>Studio Name</label>
+                            <input type="text" name="studio_name" class="input-type">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <label>Location</label>
+                            <input type="text" name="location" class="input-type">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Studio Address</label>
+                        <input type="text" name="studio_address" class="input-type">
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6 col-xs-12">
+                            <label>Studio Telephone</label>
+                            <input type="text" name="studio_phone" class="input-type">
+                        </div>
+                        <div class="form-group col-md-6 col-xs-12">
+                            <label>Studio Website</label>
+                            <input type="text" name="studio_website" class="input-type">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Dates Interested</label>
+                        <input type="text" name="dates_in" class="input-type">
+                    </div>
+                    <div class="btn sub-btn">
+                        SUBMIT TO MYbarre
+                    </div>
+                </form>
+
             </div>
         </div>
 

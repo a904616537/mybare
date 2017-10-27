@@ -29,6 +29,13 @@ p.text{
 i{
 	margin-left : 5px;
 }
+ul{
+	margin  : 0;
+	padding : 0;
+}
+li{
+	list-style : none;
+}
 input:-webkit-autofill {
 	-webkit-box-shadow : 0 0 0px 1000px white inset;
 }
@@ -233,7 +240,6 @@ input:-webkit-autofill {
 }
 
 
-
 /*  register 开始  */
 .registe{
 	text-align       : center;
@@ -292,6 +298,7 @@ input:-webkit-autofill {
 	height           : 40px;
 	padding-top      : 4px;
 }
+
 
 /*  footer 开始  */
 .footer{
@@ -396,26 +403,26 @@ input:-webkit-autofill {
 
 /*  team  */
 .team-banner{
-	background      : url(../img/team-banner.jpg) no-repeat top center;
+	background      : url(../img/team-banner.jpg) no-repeat 100% 30%;
 	background-size : 100% auto; 
 }
 .team-banner:after{
 	content : "";
 	display : block;
-	padding : 25%;
+	padding : 20%;
 }
 .team-content .team-inner{
 	font-size   : 1.3vw;
 	margin      : 30px 0;
 	line-height : 30px;
 }
+.team-content .team-inner h1{
+	text-align : center;
+}
 .team-content .item{
 	border-bottom : 1px solid #d6d3d4;
 	padding       : 40px 0;
 	font-size     : 16px;
-}
-.team-content h3{
-	font-size : 2vw;
 }
 .team-content .item p{
 	font-size   : 1.3vw;
@@ -427,9 +434,14 @@ input:-webkit-autofill {
 }
 .team-content .ann-pic{
 	line-height : 429px;
+	margin-top  : 20px;
+}
+.team-content .ann-pic-grid{
+	display : none;
 }
 .team-content .siri-pic{
-	line-height : 325px;
+	/*line-height : 325px;*/
+	margin-top : 20px;
 }
 
 
@@ -464,8 +476,8 @@ input:-webkit-autofill {
 
 /*  instructor  */
 .instructor-banner{
-	background      : url(../img/team-banner.jpg) no-repeat scroll 0px -70px;
-	background-size : 100% auto; 
+	background      : url(../img/instr-banner.jpg) no-repeat top center;
+	background-size : 100% auto;
 }
 .instructor-banner:after{
 	content : "";
@@ -506,14 +518,15 @@ input:-webkit-autofill {
 
 /*  user  */
 .user-content .item{
-	margin-top      : 30px;
-	font-size       : 1.5vw;
-	text-align      : left;
+	margin-top : 30px;
+	font-size  : 1.5vw;
+	text-align : center;
 }
 .user-content .item .box{
 	/*background-size : cover;*/
 	background-size : 100% auto;
 	height          : 20vw;
+	border          : 1px solid #eee;
 }
 .user-content .inner{
 	background-color : rgba(255,255,255,.8);
@@ -529,7 +542,6 @@ input:-webkit-autofill {
 .user-content .item:hover .inner{
 	display : block;
 }
-
 
 
 /*  video  */
@@ -557,6 +569,7 @@ input:-webkit-autofill {
 	margin      : 0px;
 }
 
+
 /*  pic  */
 .pic-content .panel-img{
 	width  : 100%;
@@ -567,7 +580,7 @@ input:-webkit-autofill {
 
 /*  faq  */
 .faq-banner{
-	background      : url(../img/team-banner.jpg) no-repeat scroll 0px -70px;
+	background      : url(../img/instr-banner.jpg) no-repeat scroll 0px -70px;
 	background-size : 100% auto; 
 }
 .faq-banner:after{
@@ -607,9 +620,170 @@ input:-webkit-autofill {
     color: #00B0CB;
 }
 .fixed{
-    background-color: red;
+	background-color : red;
 }
 .faq-content .scrollspy-example::-webkit-scrollbar {display:none}
+
+
+/*  schedule  */
+.schedule-banner{
+	background      : url(../img/schedule-banner.jpg) no-repeat top center;
+	background-size : 100% auto; 
+}
+.schedule-banner:after{
+	content : "";
+	display : block;
+	padding : 20%;
+}
+.schedule-content{
+	text-align : center;
+	padding    : 30px 0;
+}
+.schedule-content .schedule-text{
+	margin-bottom : 30px;
+	font-size     : 20px;
+	line-height   : 30px;
+}
+.schedule-content .train-faq{
+	background-color : #00B0CB;
+	width            : 200px;
+	margin           : 0 auto;	
+	margin-bottom    : 30px;
+}
+.schedule-content .faq-btn{
+	color       : #fff;
+	line-height : 40px;
+}
+.schedule-content .table{
+	border     : 1px solid #eee;
+	box-shadow : 3px 3px 3px #f7f7f7;
+}
+.schedule-content .table td{
+	line-height: 40px;
+}
+.schedule-content .table-title{
+	font-weight      : bold;
+	background-color : #eee;
+}
+
+
+/*  train  */
+.train-content{
+	text-align : left;
+	padding    : 30px 0;
+}
+.train-content .train-text{
+	margin-bottom : 30px;
+	font-size     : 20px;
+	line-height   : 30px;
+}
+.train-content .instru-grid{
+	font-weight     : bold;
+	font-size       : 16px;
+	text-decoration : underline;
+}
+.train-content .train-from{
+	border      : 1px solid #eee;
+	padding     : 20px;
+	line-height : 30px;
+	box-shadow  : 3px 3px 3px #f7f7f7;
+}
+.train-content .train-from label{
+	width : 120px;
+}
+.train-content .train-from .input-type{
+	outline       : none;
+	width         : 100%;
+	border        : none;
+	border-bottom : 1px solid #ddd;
+}
+.train-content .sub-btn{
+	background-color : #00B0CB;
+	color            : #fff;
+	border-radius    : 0px;
+	margin           : 30px auto;
+	padding          : 7px 24px;
+	cursor           : pointer;
+}
+
+
+/*  workout  */
+.workout-content{
+	text-align : left;
+	padding    : 30px 0;
+}
+.workout-content .workout-text{
+	margin-bottom : 30px;
+	font-size     : 20px;
+	line-height   : 30px;
+}
+
+
+/*  store  */
+.store-banner{
+	background      : url(../img/store-banner.jpg) no-repeat top center;
+	background-size : 100% auto; 
+}
+.store-banner:after{
+	content : "";
+	display : block;
+	padding : 20%;
+}	
+.store-content{
+	padding    : 30px 0;
+}
+.store-content .title{
+	text-align    : center;
+	margin-bottom : 30px;
+}
+.store-content .store-text{
+	margin-bottom : 30px;
+	font-size     : 20px;
+	line-height   : 30px;
+	text-align    : center;
+}
+.store-content .item:hover{
+	border  : 1px solid #ddd;
+	padding : 9px;
+}
+.store-content .item{
+	padding       : 10px;
+	margin-bottom : 30px;
+}
+.store-content .store-img{
+	width   : 100%;
+}
+.store-content .item p{
+	border-bottom : 1px solid #ddd;
+	line-height   : 40px;
+	font-size     : 16px;
+}
+.store-content .item-img{
+	padding : 10px;
+}
+.store-content .item .con-img{
+	width : 32.33%;
+}
+.store-content .item-img li{
+	display: inline;
+}
+.store-content .submit{
+	float       : right;
+	color       : #00B0CB;
+	font-size   : 16px;
+	cursor      : pointer;
+}
+.store-content .tobuy{
+	background-color : #00B0CB;
+	color            : #fff;
+	line-height      : 30px;
+	width            : 150px;
+	margin           : 0 auto;
+	text-align       : center;
+	font-weight      : bold;
+}
+
+
 
 
 /*  响应 开始  */
@@ -623,7 +797,7 @@ input:-webkit-autofill {
 	.header,.content .row,.floatBox,.footer .pages,.faq-content .faq-nav{
 		display : none;
 	}
-	.header-grid,.content-grid,.content-grid .box .inner{
+	.header-grid,.content-grid,.content-grid .box .inner,.team-content .ann-pic-grid{
 		display : block;
 	}
 	.content-grid .grid-box{
@@ -681,6 +855,7 @@ input:-webkit-autofill {
 	}
 	.team-content .ann-pic{
 		line-height : 200px;
+		display     : none;
 	}
 	.team-content .siri-pic{
 		line-height : 200px;
@@ -706,10 +881,10 @@ input:-webkit-autofill {
 	.video-content .video-style{
 		height : 52vw;
 	}
-	.instructor-content .title{
+	.instructor-content .title,.schedule-content .title,.train-content .title,.workout-content .title{
 		font-size: 24px;
 	}
-	.instructor-content .instructor-text{
+	.instructor-content .instructor-text,.schedule-content .schedule-text,.train-content .train-text,.workout-content .workout-text{
 		font-size   : 14px;
 		line-height : 25px;
 	}
@@ -720,11 +895,36 @@ input:-webkit-autofill {
 	.faq-content .scrollspy-example{
 		height : 100%;
 	}
+	.team-content .team-inner{
+		line-height   : 20px;
+		margin-bottom : -40px;
+	}
+	.team-content .item p{
+		line-height : 20px;
+	}
+	.team-content h3{
+		font-size : 16px;
+	}
+	.team-content .team-inner h1{
+		font-size : 18px;
+	}
+	.team-content img{
+		width : 50%;
+	}
+	.team-content .item{
+		padding : 30px 0 20px;
+	}
+	.team-content .item:last-child{
+		padding-top : 10px;
+	}
 }
 @media screen and (max-width: 840px) and (min-width: 580px){
 	.header .logo img{
 		width      : 15%;
 		margin-top : 10px;
+	}
+	.info-text{
+		font-size: 16px;
 	}
 	.header .navbar {
 		padding : 0px;
@@ -795,6 +995,15 @@ input:-webkit-autofill {
 	.faq-content .scrollspy-example{
 		height : 100%;
 	}
+	.team-content .item p{
+		font-size : 16px;
+	}
+	.train-content .train-text{
+		font-size     : 16px;
+		line-height   : 30px;
+		margin-bottom : 14px;
+	}
+
 }
 @media screen and (min-width: 320px) and (max-width: 990px){
 	.pic-content .panel-img{

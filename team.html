@@ -53,6 +53,7 @@
                     <li><a href="#" class="login-icon"><i class="fa fa-user"></i></a>
                         <ul class="dropdown" style="position: absolute;right: 10px;">
                             <li id="user"><a href="login.html">Log In</a></li>
+                            <li><a href="user.html">Videos</a></li>
                             <li><a href="javascript:;" id="logOut">Log Out</a></li>
                         </ul>
                     </li>
@@ -65,7 +66,7 @@
                 <a href="index.html"><img src="static/img/logo.png" alt="logo"></a>
             </div>
             <div class="menu">
-                <li><a href="login.html"><i class="fa fa-user"></i></a></li>
+                <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li>
                 <li id="bars"><a href="#"><i class="fa fa-bars"></i></a>
                     <ul class="dropdown" id="dropdown">
                         <li class="li-grid"><a href="#">ABOUT</a></li>
@@ -79,12 +80,12 @@
                         <li class="li-grid"><a href="#">GALLERY</a></li>
                         <li><a href="video.html">MYbarre Videos</a></li>
                         <li><a href="pic.html">MYbarre Pictures</a></li>
-                        <li class="li-grid" style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
+                        <li class="li-grid"  style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
                         <li class="li-grid"><a href="#footer">CONTACT US</a></li>
-                        <li class="li-grid"><a href="javascript:;" id="logOut">LOG OUT</a></li>
+                        <li class="li-grid"><a href="javascript:;" id="logOut-grid">LOG OUT</a></li>
                     </ul>
                 </li>
-            </div>  
+            </div> 
         </div>
 
         <!-- 导航结束 -->
@@ -95,8 +96,9 @@
         <div class="team-content">
         	<div class="container">
         		<div class="team-inner">
-        			<p>The MYbarre program was created in Shanghai through friendship and a passion for dance and fitness.The founders have a combination of knowladge from all fields of exercise,ranging from powerful thrength and fitness training,dance.Pilates and ballet.This profound and diverse background contributes to the signature MYbarre workout which combines the best of the best.</p>
-        			<p>Their mission is to inspire and continually educate MYbarre instructors in delivering an energetic,invigorating,fun and elegant workout to their students every time.</p>
+                    <h1 class="title">Our Team</h1>
+        			<p class="info-text">The MYbarre program was created in Shanghai through friendship and a passion for dance and fitness.The founders have a combination of knowladge from all fields of exercise,ranging from powerful thrength and fitness training,dance.Pilates and ballet.This profound and diverse background contributes to the signature MYbarre workout which combines the best of the best.</p>
+        			<p class="info-text">Their mission is to inspire and continually educate MYbarre instructors in delivering an energetic,invigorating,fun and elegant workout to their students every time.</p>
         		</div>
 
         		<div class="item row">
@@ -112,6 +114,9 @@
         		</div>
 
         		<div class="item row">
+                    <div class="col-md-4 ann-pic-grid">
+                        <img src="static/img/ann.jpg">
+                    </div>
         			<div class="col-md-8">
         				<h3>Ann MacLellan</h3>
         				<p class="text">MYbarre Founder</p>
@@ -124,7 +129,7 @@
         		</div>
 
         		<div class="item row">
-        			<div class="col-md-4" style="line-height: 237px;">
+        			<div class="col-md-4" style="line-height: 237px;margin-top: 20px;">
         				<img src="static/img/alice.jpg">
         			</div>
         			<div class="col-md-8">
