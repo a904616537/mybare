@@ -22,7 +22,7 @@ $(function() {
 	if(typeof cookieuser != 'undefined') {
 		var cookie = JSON.parse(cookieuser);
 		$('#user_id').val(cookie.user._id);
-		$('#user').html('<a href="set.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
+		$('#user').html('<a href="#" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 	} else {
 		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
@@ -142,7 +142,7 @@ $('#change_pwd').on('click',function(){
 			success : function(data) {
 				if(data.status) {
 					swal('success','','success').then(function(){
-					$.cookie('user', null, { expires: -1 });
+						$.cookie('user', null, { expires: -1 });
 						location.href = "login.html";
 					})
 				} else {
