@@ -124,21 +124,12 @@ $("#logOut-grid").on('click',function(){
 
 
 // 修改密码	
-
 $('#change_pwd').on('click',function(){
 	var pwd 	= $('#pwd').val(),
 		pwd1    = $('#pwd1').val(),
 		body    = $('#pwdfrom').serialize();
 
 	if(pwd == pwd1){
-<<<<<<< HEAD
-		$('#prompt').html('');
-		swal('success','','success').then(function(){
-			$.cookie('user', null, { expires: -1 });
-			location.href = "login.html";
-		})
-	}else{
-=======
 		$.ajax({
 			cache : false,
 			type  : "PUT",
@@ -155,15 +146,18 @@ $('#change_pwd').on('click',function(){
 						location.href = "login.html";
 					})
 				} else {
-					// swal('Oops...', data.err, 'error');
 					$('#prompt').html('<font style="color: red">'+data.err+'</font>');
 				}
 			}
 		});
-	} else {
->>>>>>> 7af129b60898f267998e4f3d43fd749e191af296
+		$('#prompt').html('');
+		swal('success','','success').then(function(){
+			$.cookie('user', null, { expires: -1 });
+			location.href = "login.html";
+		});
+	}else{
 		$('#prompt').html('<font style="color: red">Your new password and confirmed new password do not match.</font>');
-	}
+	} 
 })
 	
 
