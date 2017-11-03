@@ -210,7 +210,7 @@
                     url   : apiUrl + '/product',
                     async : false,
                     error : function(request) {
-                        swal('Oops...', '商品列表获取失败！', 'error');
+                        swal('Oops...', 'List of goods failed!', 'error');
                     },
                     success : function(result) {
                         var products = $('#products');

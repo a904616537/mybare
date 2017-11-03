@@ -1,6 +1,6 @@
 // var apiUrl = 'http://server.mybarrefitness.com';
 var homeUrl = 'http://www.mybarrefitness.com';
-var apiUrl = 'http://localhost:9080';
+var apiUrl = 'http://106.14.94.210:9080';
 
 // 手机端nav
 $('#bars').on('click',function(){
@@ -149,11 +149,6 @@ $('#change_pwd').on('click',function(){
 					$('#prompt').html('<font style="color: red">'+data.err+'</font>');
 				}
 			}
-		});
-		$('#prompt').html('');
-		swal('success','','success').then(function(){
-			$.cookie('user', null, { expires: -1 });
-			location.href = "login.html";
 		});
 	}else{
 		$('#prompt').html('<font style="color: red">Your new password and confirmed new password do not match.</font>');
