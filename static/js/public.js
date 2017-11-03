@@ -1,8 +1,6 @@
 var apiUrl = 'http://server.mybarrefitness.com';
 var homeUrl = 'http://www.mybarrefitness.com';
-// var apiUrl = 'http://106.14.94.210:8091';
-
-
+// var apiUrl = 'http://localhost:9080';
 
 // 手机端nav
 $('#bars').on('click',function(){
@@ -22,9 +20,10 @@ $('.floatBox>.item-box').on('mouseleave',function(){
 $(function() {
 	var cookieuser = $.cookie('user');
 	if(typeof cookieuser != 'undefined') {
-		var user = JSON.parse(cookieuser);
-		$('#user').html('<a href="set.html" class="login-icon">'+ user.first_name +" "+user.last_name +'</a>');
-		$('#user-grid').html('<a href="user.html" class="login-icon">'+ user.first_name +" "+user.last_name +'</a>');
+		var cookie = JSON.parse(cookieuser);
+		$('#user_id').val(cookie.user._id);
+		$('#user').html('<a href="set.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
+		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 	} else {
 		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
 		$('#user-grid').html('<a href="login.html" class="login-icon">Log In</a>');
@@ -127,16 +126,42 @@ $("#logOut-grid").on('click',function(){
 // 修改密码	
 
 $('#change_pwd').on('click',function(){
-	var pwd = $('#pwd').val(),
-		pwd1 = $('#pwd1').val();
-	var body = $('#pwdfrom').serialize();
+	var pwd 	= $('#pwd').val(),
+		pwd1    = $('#pwd1').val(),
+		body    = $('#pwdfrom').serialize();
+
 	if(pwd == pwd1){
+<<<<<<< HEAD
 		$('#prompt').html('');
 		swal('success','','success').then(function(){
 			$.cookie('user', null, { expires: -1 });
 			location.href = "login.html";
 		})
 	}else{
+=======
+		$.ajax({
+			cache : false,
+			type  : "PUT",
+			url   : apiUrl + '/user',
+			data  : body,
+			async : false,
+			error : function(request) {
+				swal('Request failed！','', 'error');
+			},
+			success : function(data) {
+				if(data.status) {
+					swal('success','','success').then(function(){
+					$.cookie('user', null, { expires: -1 });
+						location.href = "login.html";
+					})
+				} else {
+					// swal('Oops...', data.err, 'error');
+					$('#prompt').html('<font style="color: red">'+data.err+'</font>');
+				}
+			}
+		});
+	} else {
+>>>>>>> 7af129b60898f267998e4f3d43fd749e191af296
 		$('#prompt').html('<font style="color: red">Your new password and confirmed new password do not match.</font>');
 	}
 })
