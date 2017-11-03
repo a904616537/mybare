@@ -1,8 +1,9 @@
 var apiUrl = 'http://server.mybarrefitness.com';
+// var apiUrl = 'http://localhost:9080';
 // var apiUrl = 'http://106.14.94.210:9080';
 
 
-function getvideos (level){
+function getvideos (level, user_id){
 	$.ajax({
 		cache : false,
 		type  : "GET",
@@ -35,16 +36,14 @@ function getvideos (level){
 						if(!video.path || video.path == '') {
 							continue;
 						}
-						var filename = video.path.split('/').pop();
-						var suffix = filename.split('.').pop();
-
+						
 						if(video.img && video.img.length > 0) {
 							photourl = video.img;
 						}
 						str += '<div class="col-md-4 col-xs-6 item">\
 									<div class="box" style="background : url('+ photourl +') no-repeat top center; background-size : auto 100%;">\
                                         <div class="inner">\
-                                            <a href="http://image.mybarrefitness.com/download?path='+ filename +'&name='+ video.name +'.'+suffix+'"><i class="icon fa fa-cloud-download"></i></a>\
+                                            <a href="'+apiUrl+'/video/download?video='+ video._id +'&user_id='+ user_id +'"><i class="icon fa fa-cloud-download"></i></a>\
                                         </div>\
                                     </div>\
                                     <p>'+ video.name +'</p>\
@@ -74,7 +73,7 @@ $(function() {
 			swal('Oops','For failure！','error');
 		},
 		success : function(result) {
-			getvideos(result.level);
+			getvideos(result.level, cookie.user._id);
 		}
 	});
 
