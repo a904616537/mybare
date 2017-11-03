@@ -404,15 +404,6 @@ input:-webkit-autofill {
 
 
 /*  team  */
-.team-banner{
-	background      : url(../img/instr-banner.jpg) no-repeat 100% 30%;
-	background-size : 100% auto; 
-}
-.team-banner:after{
-	content : "";
-	display : block;
-	padding : 20%;
-}
 .team-content{
 	text-align : left;
 	padding    : 30px 0;
@@ -449,7 +440,6 @@ input:-webkit-autofill {
 	display : none;
 }
 .team-content .siri-pic{
-	/*line-height : 325px;*/
 	margin-top : 20px;
 }
 
@@ -470,15 +460,6 @@ input:-webkit-autofill {
 .banner-title .text{
 	font-size : 1.2vw;
 	color     : #333;
-}
-.workout-banner{
-	background      : url(../img/instr-banner.jpg) no-repeat top center;
-	background-size : 100% auto; 
-}
-.workout-banner:after{
-	content : "";
-	display : block;
-	padding : 25%;
 }
 .workout-content{
 	text-align : left;
