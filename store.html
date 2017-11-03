@@ -14,7 +14,9 @@
         <link rel="stylesheet" href="static/css/sweetalert2.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
-
+    <style type="text/css">
+        
+    </style>
     <body>
         <div class="header">
             <div class="related clearfloat">
@@ -99,7 +101,7 @@
             <div class="container">
                 <h1 class="title">MYbarre Store</h1>
                 <p class="store-text">
-                    Stock up on official MYbarre gear! Just add what you need to your cart, submit your information, and we'll reach out to you shortly.
+                    Stock up on official MYbarre gear!<br> Just add what you need to your cart, submit your information, and we'll reach out to you shortly.
                 </p>
                 <div class="row">
                     <div class="col-md-4 col-xs-12">
@@ -110,7 +112,7 @@
                                 <li ref="static/img/5D4_0939.jpg"><img src="static/img/5D4_0939.jpg" class="con-img"></li>
                             </ul>
                             <div class="item-con">
-                                <p><strong>Head Band</strong></p>
+                                <p><strong>MYbarre Resistance Bands</strong></p>
                                 <span> ¥ 99</span>
                                 <span class="submit">Add</span>
                             </div>
@@ -125,7 +127,7 @@
                                 <li ref="static/img/5D4_0992.jpg"><img src="static/img/5D4_0992.jpg" class="con-img"></li>
                             </ul> 
                             <div class="item-con">
-                                <p><strong>Premium Yoga Socks</strong></p>  
+                                <p><strong>MYbarre Grip Socks</strong></p>  
                                 <span> ¥ 99</span>
                                 <span class="submit">Add</span>
                             </div>                        
@@ -139,7 +141,7 @@
                                 <li ref="static/img/5D4_0962.jpg"><img src="static/img/5D4_0962.jpg" class="con-img"></li>
                             </ul> 
                             <div class="item-con">
-                                <p><strong>Fitness Ball</strong></p>
+                                <p><strong>MYbarre Ball</strong></p>
                                 <span> ¥ 99</span>
                                 <span class="submit">Add</span>
                             </div>
@@ -223,12 +225,13 @@
                     html : 
                         '<input id="name" class="swal2-input" autofocus placeholder="Name"/>'+
                         '<input id="phone" class="swal2-input" placeholder="Mobile"/>'+
-                        '<input id="address" class="swal2-input" placeholder="Address"/>'+
-                        '<input type="radio" value="delivery" name="type" style="margin-right: 10px;"/>Express Delivery'+
-                        '<input type="radio" value="self" name="type" style="margin-left: 30px; margin-right: 10px;"/>Self-mention',
+                        '<textarea id="address" class="swal2-textarea" placeholder="Address" style="height: 64px; resize: none;"></textarea>'+
+                        '<p class="text-l"><strong>Please Select a Delivery Option:</strong></p>'+
+                        '<div class="text-l"><input type="radio" value="delivery" name="type" style="margin-right: 10px;"/>Express Delivery (20 rmb delivery fee)</div>'+
+                        '<div class="text-l"><input type="radio" value="self" name="type" style="margin-right: 10px;"/>Self-Pickup from Z&B Studio</div>',
                 }).then(function(isConfirm) {
                     if(isConfirm === true) {
-                        swal('Success','','success');
+                        swal('','Thanks for submitting your order! The MYbarre team will reach out to you shortly to arrange for payment and delivery. ','success');
                     }
                 })
             });

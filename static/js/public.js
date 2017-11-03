@@ -17,6 +17,22 @@ $('.floatBox>.item-box').on('mouseleave',function(){
 
 });
 
+
+// cookie
+$(function() {
+	var cookieuser = $.cookie('user');
+	if(typeof cookieuser != 'undefined') {
+		var user = JSON.parse(cookieuser);
+		$('#user').html('<a href="set.html" class="login-icon">'+ user.first_name +" "+user.last_name +'</a>');
+		$('#user-grid').html('<a href="user.html" class="login-icon">'+ user.first_name +" "+user.last_name +'</a>');
+	} else {
+		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
+		$('#user-grid').html('<a href="login.html" class="login-icon">Log In</a>');
+	}
+	
+})
+
+
 // 注册
 $("#register").on('click',function(){
 	var firstName = $('#firstName').val(),
@@ -67,6 +83,7 @@ $("#register").on('click',function(){
 	}
 });
 
+
 // 登录
 $("#login").on('click',function(){
 	var body = $('#loginfrom').serialize();
@@ -95,19 +112,6 @@ $("#login").on('click',function(){
 	});
 });
 
-// cookie
-$(function() {
-	var cookieuser = $.cookie('user');
-	if(typeof cookieuser != 'undefined') {
-		var user = JSON.parse(cookieuser);
-		$('#user').html('<a href="#" class="login-icon">'+ user.first_name +" "+user.last_name +'</a>');
-		$('#user-grid').html('<a href="user.html" class="login-icon">'+ user.first_name +" "+user.last_name +'</a>');
-	} else {
-		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
-		$('#user-grid').html('<a href="login.html" class="login-icon">Log In</a>');
-	}
-	
-})
 
 // 登出
 $("#logOut").on('click',function(){
@@ -118,5 +122,21 @@ $("#logOut-grid").on('click',function(){
 	$.cookie('user', null, { expires: -1 });
 	window.location.href = homeUrl;
 });
+
+
+// 修改密码	
+
+$('#change_pwd').on('click',function(){
+	var pwd = $('#pwd').val(),
+		pwd1 = $('#pwd1').val();
+	var body = $('#pwdfrom').serialize();
+	if(pwd == pwd1){
+		console.log(pwd,pwd1)
+		$('#prompt').html('');
+	}else{
+		$('#prompt').html('<font style="color: red">Your new password and confirmed new password do not match.</font>');
+	}
+})
+	
 
 
