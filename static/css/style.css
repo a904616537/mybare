@@ -772,6 +772,22 @@ input:-webkit-autofill {
 }
 
 
+/*  pay  */
+.pay{
+    text-align      : center;
+    background      : url(static/img/team-banner.jpg) top center no-repeat;
+    background-size : cover;
+}
+.pay .inner{
+    background-color : rgba(255,255,255,.3);
+    padding          : 11vw;
+    font-size        : 2vw;
+}
+.pay img{
+    width         : 25vw;
+    margin-bottom : 30px;
+}
+
 
 
 /*  响应 开始  */
