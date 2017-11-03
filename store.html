@@ -103,8 +103,8 @@
                 <p class="store-text">
                     Stock up on official MYbarre gear!<br> Just add what you need to your cart, submit your information, and we'll reach out to you shortly.
                 </p>
-                <div class="row">
-                    <div class="col-md-4 col-xs-12">
+                <div class="row" id="products">
+                    <!-- <div class="col-md-4 col-xs-12">
                        <div class="item">
                             <img src="static/img/5D4_0934.jpg" class="store-img" alt=""/>
                             <ul class="item-img">
@@ -146,7 +146,7 @@
                                 <span class="submit">Add</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <!-- 下单 -->
@@ -202,21 +202,61 @@
         <script type="text/javascript" src="static/js/sweetalert2.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
         <script type="text/javascript">
-            $(function (){
-                var list = $('.store-content').find('li'),
-                    imgs = $('.store-content').find('.store-img');
+            var getProduct = function() {
+                $.ajax({
+                    cache : false,
+                    type  : "GET",
+                    url   : apiUrl + '/product',
+                    async : false,
+                    error : function(request) {
+                        swal('Oops...', '商品列表获取失败！', 'error');
+                    },
+                    success : function(result) {
+                        var products = $('#products');
+                        result.data.forEach(function(val, index) {
+                            var defimg = val.img.filter(function(v) {
+                                return v.def;
+                            })
+                            var str = '<div class="col-md-4 col-xs-12">\
+                                <div class="item">\
+                                    <img src="' + (defimg[0]?defimg[0].path:'') + '" class="store-img"/>\
+                                    <ul class="item-img">';
 
-                for (var i = 0; i < imgs.length; i++) {
-                    var img = $(imgs[i]);
-                    var next = img.next().find('li');
-                    for(var y = 0; y < next.length; y++){
-                        next[y].onclick = function () {
-                            var obj = $(this).parent().prev();
-                            var img_href = this.getAttribute('ref');
-                            obj.attr('src', img_href)
+                            val.img.forEach(function(image, i) {
+                                str += '<li ref="'+image.path+'"><img src="'+image.path+'" class="con-img"></li>';
+                            });
+
+                            str += '</ul>\
+                                    <div class="item-con">\
+                                        <p><strong>'+val.name+'</strong></p>\
+                                        <span> ¥ '+val.price+'</span>\
+                                    </div>\
+                                </div>\
+                            </div>';
+                            products.append(str)
+                        });
+                        
+
+                        var list = $('.store-content').find('li'),
+                            imgs = $('.store-content').find('.store-img');
+
+                        for (var i = 0; i < imgs.length; i++) {
+                            var img = $(imgs[i]);
+                            var next = img.next().find('li');
+                            for(var y = 0; y < next.length; y++){
+                                next[y].onclick = function () {
+                                    var obj = $(this).parent().prev();
+                                    var img_href = this.getAttribute('ref');
+                                    obj.attr('src', img_href)
+                                }
+                            }
                         }
                     }
-                }
+                });
+            }
+
+            $(function (){
+                getProduct();
             })
             $('#tobuy').on('click',function(){
                 swal({

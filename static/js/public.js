@@ -1,6 +1,6 @@
-var apiUrl = 'http://server.mybarrefitness.com';
+// var apiUrl = 'http://server.mybarrefitness.com';
 var homeUrl = 'http://www.mybarrefitness.com';
-// var apiUrl = 'http://localhost:9080';
+var apiUrl = 'http://localhost:9080';
 
 // 手机端nav
 $('#bars').on('click',function(){
