@@ -131,8 +131,11 @@ $('#change_pwd').on('click',function(){
 		pwd1 = $('#pwd1').val();
 	var body = $('#pwdfrom').serialize();
 	if(pwd == pwd1){
-		console.log(pwd,pwd1)
 		$('#prompt').html('');
+		swal('success','','success').then(function(){
+			$.cookie('user', null, { expires: -1 });
+			location.href = "login.html";
+		})
 	}else{
 		$('#prompt').html('<font style="color: red">Your new password and confirmed new password do not match.</font>');
 	}
