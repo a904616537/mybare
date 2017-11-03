@@ -522,7 +522,6 @@ input:-webkit-autofill {
 	text-align : center;
 }
 .user-content .item .box{
-	/*background-size : cover;*/
 	background-size : 100% auto;
 	height          : 20vw;
 	border          : 1px solid #eee;
@@ -885,10 +884,10 @@ input:-webkit-autofill {
 	.video-content .video-style{
 		height : 52vw;
 	}
-	.instructor-content .title,.schedule-content .title,.train-content .title,.workout-content .title{
+	.instructor-content .title,.schedule-content .title,.train-content .title,.workout-content .title,.store-content .title{
 		font-size: 24px;
 	}
-	.instructor-content .instructor-text,.schedule-content .schedule-text,.train-content .train-text,.workout-content .workout-text{
+	.instructor-content .instructor-text,.schedule-content .schedule-text,.train-content .train-text,.workout-content .workout-text,.store-content .store-text{
 		font-size   : 14px;
 		line-height : 25px;
 	}
@@ -920,6 +919,10 @@ input:-webkit-autofill {
 	}
 	.team-content .item:last-child{
 		padding-top : 10px;
+	}
+	.user-content .item p{
+		font-size   : 12px;
+		line-height : 20px;
 	}
 }
 @media screen and (max-width: 840px) and (min-width: 580px){
