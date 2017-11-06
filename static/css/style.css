@@ -404,6 +404,16 @@ input:-webkit-autofill {
 
 
 /*  team  */
+.team-banner{
+	background      : url(../img/team-banner.jpg) no-repeat scroll 0px -200px;
+	background-size : 100% auto;
+	margin-top      : 120px;
+}
+.team-banner:after{
+	content : "";
+	display : block;
+	padding : 16%;
+}
 .team-content{
 	text-align : left;
 	padding    : 30px 0;
@@ -445,6 +455,16 @@ input:-webkit-autofill {
 
 
 /*  workout  */
+.workout-banner{
+	background      : url(../img/workout-banner.jpg) no-repeat top center;
+	background-size : 100% auto;
+	margin-top      : 120px;
+}
+.workout-banner:after{
+	content : "";
+	display : block;
+	padding : 16%;
+}
 .banner-title{
 	width        : 25%;
 	text-align   : center;
@@ -474,19 +494,17 @@ input:-webkit-autofill {
 
 /*  instructor  */
 .instructor-banner{
-	background      : url(../img/instr-banner.jpg) no-repeat top center;
+	background      : url(../img/instr-banner.jpg) no-repeat scroll 0px -100px;
 	background-size : 100% auto;
+	margin-top      : 120px;
 }
 .instructor-banner:after{
 	content : "";
 	display : block;
-	padding : 20%;
+	padding : 16%;
 }
 .instructor-content{
 	padding : 30px 0;
-}
-.instructor-content h1.title{
-	margin-bottom : 30px;
 }
 .instructor-content .instructor-text{
 	margin-bottom : 30px;
@@ -578,13 +596,14 @@ input:-webkit-autofill {
 
 /*  faq  */
 .faq-banner{
-	background      : url(../img/instr-banner.jpg) no-repeat scroll 0px -70px;
+	background      : url(../img/faq-banner.jpg) no-repeat top center;
 	background-size : 100% auto; 
+	margin-top      : 120px;
 }
 .faq-banner:after{
 	content : "";
 	display : block;
-	padding : 20%;
+	padding : 16%;
 }
 .faq-content {
     padding   : 40px 0;
@@ -625,13 +644,14 @@ input:-webkit-autofill {
 
 /*  schedule  */
 .schedule-banner{
-	background      : url(../img/schedule-banner.jpg) no-repeat top center;
+	background      : url(../img/schedule-banner.jpg) no-repeat scroll 0px -70px;
 	background-size : 100% auto; 
+	margin-top      : 120px;
 }
 .schedule-banner:after{
 	content : "";
 	display : block;
-	padding : 20%;
+	padding : 16%;
 }
 .schedule-content{
 	text-align : center;
@@ -666,6 +686,16 @@ input:-webkit-autofill {
 
 
 /*  train  */
+.train-banner{
+	background      : url(../img/train-banner.jpg) no-repeat scroll 0px -70px;
+	background-size : 100% auto; 
+	margin-top      : 120px;
+}
+.train-banner:after{
+	content : "";
+	display : block;
+	padding : 16%;
+}
 .train-content{
 	text-align : left;
 	padding    : 30px 0;
