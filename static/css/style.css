@@ -506,6 +506,11 @@ input:-webkit-autofill {
 .instructor-content{
 	padding : 30px 0;
 }
+<<<<<<< HEAD
+=======
+.instructor-content h1.title{
+}
+>>>>>>> fa8a29f6451cb6375ad65c6749637d1f05411515
 .instructor-content .instructor-text{
 	margin-bottom : 30px;
 	font-size     : 20px;
