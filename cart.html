@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
         <meta charset="utf-8">
         <meta name="keywords" content="">
         <meta name="description" content=""> 
@@ -9,26 +9,23 @@
         <meta http-equiv="Window-target" content="_top">
         <title>MYbarre</title>
         <link rel="stylesheet" href="static/css/normalize.css" type="text/css" />
-        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/sweetalert2.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
-    <style type="text/css">
-        
-    </style>
+
     <body>
         <div class="header">
             <div class="related clearfloat">
                 <div class="item">
                     <i class="fa fa-weixin"></i>
-                    <i class="fa fa-weibo"></i>
                     <i class="fa fa-linkedin"></i>
                     <i class="fa fa-facebook"></i>
                 </div>
             </div>
             <div class="logo">
-                <a href="index.html"><img src="static/img/logo.png" alt="logo"></a>
+                <a href="index.html"><img src="static/img/logo.png" alt="MYbarre"></a>
             </div>
             <div class="nav clearfloat">
                 <ul class="navbar">
@@ -87,47 +84,82 @@
                         <li class="li-grid"><a href="#">GALLERY</a></li>
                         <li><a href="video.html">MYbarre Videos</a></li>
                         <li><a href="pic.html">MYbarre Pictures</a></li>
-                        <li class="li-grid"  style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
+                        <li class="li-grid" style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
                         <li class="li-grid"><a href="javascript:;" id="logOut-grid">LOG OUT</a></li>
                     </ul>
                 </li>
-            </div>    
+            </div>  
         </div>
 
         <!-- 导航结束 -->
 
-        <div class="store-banner grid-banner"></div>
-
-
-        <div class="store-content">
-            <div class="container">
-                <h1 class="title">MYbarre Store</h1>
-                <p class="store-text">
-                    Stock up on official MYbarre gear!<br> Just add what you need to your cart, submit your information, and we'll reach out to you shortly.
-                </p>
-                <div class="row" id="products">
-                </div>
-                
-                <!-- 下单 -->
-                <div class="tobuy"><a href="cart.html" style="color: #fff;">BUY</a></div>
-            </div>
-        </div>
-
-        
-        <!--  -->
+		
+		<div class="cart">
+			<div class="container clearfloat">
+				<h1 class="title">My Bag</h1>
+				<div class="cart-title row">
+					<div class="col-md-4 col-xs-4">Product</div>
+					<div class="col-md-2 col-xs-2">Price</div>
+					<div class="col-md-2 col-xs-2">Qty</div>
+					<div class="col-md-2 col-xs-2">Remove</div>
+					<div class="col-md-2 col-xs-2">Price</div>
+				</div>
+				<div class="cart-box" id="cart-box">
+					<div class="row">
+						<div class="col-md-4 col-xs-4">
+							<img src="/static/img/5D4_0934.jpg" alt="product-img" class="item-img"/>
+							<strong>MYbarre Resistance Bands</strong>
+						</div>
+						<div class="col-md-2 col-xs-2">¥ 99</div>
+						<div class="col-md-2 col-xs-2">
+							<input type="text" placeholder="1" class="qty">
+						</div>
+						<div class="col-md-2 col-xs-2"><a href="javascript:;"><i class="fa fa-trash-o fa-lg"></i></a></div>
+						<div class="col-md-2 col-xs-2">¥ 99</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-xs-4">
+							<img src="/static/img/5D4_0934.jpg" alt="product-img" class="item-img"/>
+							<strong>MYbarre Resistance Bands</strong>
+						</div>
+						<div class="col-md-2 col-xs-2">¥ 99</div>
+						<div class="col-md-2 col-xs-2">
+							<input type="text" placeholder="1" class="qty">
+						</div>
+						<div class="col-md-2 col-xs-2"><a href="javascript:;"><i class="fa fa-trash-o fa-lg"></i></a></div>
+						<div class="col-md-2 col-xs-2">¥ 99</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4 col-xs-4">
+							<img src="/static/img/5D4_0934.jpg" alt="product-img" class="item-img"/>
+							<strong>MYbarre Resistance Bands</strong>
+						</div>
+						<div class="col-md-2 col-xs-2">¥ 99</div>
+						<div class="col-md-2 col-xs-2">
+							<input type="text" placeholder="1" class="qty">
+						</div>
+						<div class="col-md-2 col-xs-2"><a href="javascript:;"><i class="fa fa-trash-o fa-lg"></i></a></div>
+						<div class="col-md-2 col-xs-2">¥ 99</div>
+					</div>
+				</div>
+				<p class="subtotal"><strong>Subtotal ¥ 99</strong></p>
+				<div class="cart-submit" id="tobuy"><strong>Next</strong></div>
+			</div>
+		</div>
+		
 
 
 
         <!-- footer -->
-        <div class="footer">
+		<div class="footer">
             <div class="row">
-                <div class="col-md-4 col-xs-12">
+                <div class="col-md-4">
                     <div class="title">CONTACT MYbarre</div>
-                    <p class="sub-title">Send email to MYbarre</p>
+                    <p class="sub-title" style="color:#53565B;">Send email to MYbarre</p>
                     <input type="text" name="name" placeholder="NAME" >
                     <input type="email" name="email" placeholder="EMAIL">
                     <textarea placeholder="MESSAGE"></textarea>
-                    <div class="send">SEND EMAIL</div>
+                    <div class="send" id="send">SEND EMAIL</div>
                 </div>
                 <div class="col-md-4 pages">
                     <div class="title">PAGES</div>
@@ -146,78 +178,21 @@
                         <li><a href="login.html">Login</a></li>
                         <li><a href="come.html">Fermentum</a></li>
                     </ul>
-                </div>
+                </div>  
                 <div class="col-md-4">
                     <div class="title">SOCIAL</div>
                     <img src="static/img/qrcode.jpg" class="qrcode"/>
                 </div>
             </div> 
         </div>
-        
+
+
 
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="static/js/sweetalert2.min.js"></script>
-        <script type="text/javascript" src="static/js/public.js"></script>
-        <script type="text/javascript">
-            var getProduct = function() {
-                $.ajax({
-                    cache : false,
-                    type  : "GET",
-                    url   : apiUrl + '/product',
-                    async : false,
-                    error : function(request) {
-                        swal('Oops...', 'List of goods failed!', 'error');
-                    },
-                    success : function(result) {
-                        var products = $('#products');
-                        result.data.forEach(function(val, index) {
-                            var defimg = val.img.filter(function(v) {
-                                return v.def;
-                            })
-                            var str = '<div class="col-md-4 col-xs-12">\
-                                <div class="item">\
-                                    <img src="' + (defimg[0]?defimg[0].path:'') + '" class="store-img"/>\
-                                    <ul class="item-img">';
-
-                            val.img.forEach(function(image, i) {
-                                str += '<li ref="'+image.path+'"><img src="'+image.path+'" class="con-img"></li>';
-                            });
-
-                            str += '</ul>\
-                                    <div class="item-con">\
-                                        <p><strong>'+val.name+'</strong></p>\
-                                        <span> ¥ '+val.price+'</span>\
-                                    </div>\
-                                </div>\
-                            </div>';
-                            products.append(str)
-                        });
-                        
-
-                        var list = $('.store-content').find('li'),
-                            imgs = $('.store-content').find('.store-img');
-
-                        for (var i = 0; i < imgs.length; i++) {
-                            var img = $(imgs[i]);
-                            var next = img.next().find('li');
-                            for(var y = 0; y < next.length; y++){
-                                next[y].onclick = function () {
-                                    var obj = $(this).parent().prev();
-                                    var img_href = this.getAttribute('ref');
-                                    obj.attr('src', img_href)
-                                }
-                            }
-                        }
-                    }
-                });
-            }
-
-            $(function (){
-                getProduct();
-            })
-            
-        </script>
+        <script type="text/javascript" src="static/js/public.js"></script>     
+        <script type="text/javascript" src="static/js/cart.js"></script>   
     </body>
 </html>

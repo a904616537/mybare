@@ -506,11 +506,6 @@ input:-webkit-autofill {
 .instructor-content{
 	padding : 30px 0;
 }
-<<<<<<< HEAD
-=======
-.instructor-content h1.title{
-}
->>>>>>> fa8a29f6451cb6375ad65c6749637d1f05411515
 .instructor-content .instructor-text{
 	margin-bottom : 30px;
 	font-size     : 20px;
@@ -742,13 +737,14 @@ input:-webkit-autofill {
 
 /*  store  */
 .store-banner{
-	background      : url(../img/store-banner.jpg) no-repeat top center;
+	background      : url(../img/store-banner.jpg) no-repeat scroll 0px -300px;
 	background-size : 100% auto; 
+	margin-top      : 120px;
 }
 .store-banner:after{
 	content : "";
 	display : block;
-	padding : 20%;
+	padding : 16%;
 }	
 .store-content{
 	padding    : 30px 0;
@@ -823,11 +819,63 @@ input:-webkit-autofill {
 }
 
 
+/*  cart  */
+.cart{
+	margin-top : 120px;
+	text-align : center;
+	padding    : 30px 0;
+}
+.cart .row{
+	line-height   : 120px;
+	border-bottom : 1px solid #eee;
+	padding       : 20px 0;
+}
+.cart .cart-title{
+	border-bottom : 1px solid #eee;
+	line-height   : 50px;
+	padding       : 0;
+}
+.cart .item-img{
+	width        : 160px;
+	margin-right : 20px;
+}
+.cart .row .qty{
+	border      : 1px solid #eee;
+	display     : inline-block;
+	width       : 60px;
+	line-height : 50px;
+	text-align  : center;
+	outline     : none;
+}
+.cart .subtotal{
+	font-size        : 16px;
+	text-align       : right;
+	line-height      : 50px;
+}
+.cart .cart-submit{
+	background-color : #00B0CB;
+	width            : 100px;
+	float            : right;
+	color            : #fff;
+	line-height      : 30px;
+	cursor           : pointer;
+	margin-bottom    : 50px;
+}
+
 
 /*  响应 开始  */
 @media screen and (max-width : 580px) and (min-width: 320px){
 	body{
 		font-size : 14px;
+	}
+	.grid-banner{
+		margin: 0;
+	}
+	.grid-banner:after{
+		padding: 20% 0;
+	}
+	.team-banner,.instructor-banner,.schedule-banner,.train-banner,.store-banner{
+		background-position: center center;
 	}
 	.text-title{
 		font-size : 18px;
@@ -891,16 +939,6 @@ input:-webkit-autofill {
 	.evaluate .glyphicon.glyphicon-chevron-right,.evaluate .glyphicon.glyphicon-chevron-left{
 		padding-top : 10px;
 	}
-	.team-content .ann-pic{
-		line-height : 200px;
-		display     : none;
-	}
-	.team-content .siri-pic{
-		line-height : 200px;
-	}
-	.workout-banner:after{
-		background-color : rgba(255,255,255,.6);
-	}
 	.workout-banner .banner-title{
 		width       : 50%;
 		float       : none;
@@ -919,10 +957,10 @@ input:-webkit-autofill {
 	.video-content .video-style{
 		height : 52vw;
 	}
-	.instructor-content .title,.schedule-content .title,.train-content .title,.workout-content .title,.store-content .title{
+	.instructor-content .title,.schedule-content .title,.train-content .title,.workout-content .title,.store-content .title,.cart h1,.team-content .title{
 		font-size: 24px;
 	}
-	.instructor-content .instructor-text,.schedule-content .schedule-text,.train-content .train-text,.workout-content .workout-text,.store-content .store-text{
+	.instructor-content .instructor-text,.schedule-content .schedule-text,.train-content .train-text,.workout-content .workout-text,.store-content .store-text,.team-content .info-text,.team-content p.grid-text,.team-content p.text{
 		font-size   : 14px;
 		line-height : 25px;
 	}
@@ -933,6 +971,9 @@ input:-webkit-autofill {
 	.faq-content .scrollspy-example{
 		height : 100%;
 	}
+	.team-content {
+		padding-bottom : 0;
+	}
 	.team-content .team-inner{
 		line-height   : 20px;
 		margin-bottom : -40px;
@@ -942,6 +983,13 @@ input:-webkit-autofill {
 	}
 	.team-content h3{
 		font-size : 16px;
+	}
+	.team-content .ann-pic{
+		line-height : 200px;
+		display     : none;
+	}
+	.team-content .siri-pic{
+		line-height : 200px;
 	}
 	.team-content .team-inner h1{
 		font-size : 18px;
@@ -959,7 +1007,31 @@ input:-webkit-autofill {
 		font-size   : 12px;
 		line-height : 20px;
 	}
+	.cart{
+		margin-top: 0;
+		padding: 0;
+	}
+	.cart .cart-box .row>div:first-child{
+		line-height : 30px;
+	}
+	.cart .cart-box .row>div{
+		line-height : 180px;
+	}
+	.cart .cart-box .item-img{
+		width : 100px;
+	}
+	.cart .row .qty{
+		border      : 1px solid #eee;
+		display     : inline-block;
+		width       : 60px;
+		line-height : 50px;
+		text-align  : center;
+		outline     : none;
+	}
 }
+
+
+
 @media screen and (max-width: 840px) and (min-width: 580px){
 	.header .logo img{
 		width      : 15%;
@@ -1045,13 +1117,22 @@ input:-webkit-autofill {
 		line-height   : 30px;
 		margin-bottom : 14px;
 	}
-
+	.cart .cart-box .row>div:first-child{
+		line-height: 30px;
+	}
+	.cart .cart-box .row>div{
+		line-height: 180px;
+	}
 }
+
+
 @media screen and (min-width: 320px) and (max-width: 990px){
 	.pic-content .panel-img{
 		height : 100%;
 	}
 }
+
+
 @media screen and (min-width: 840px) and (max-width: 1024px){
 	.header .logo img{
 		width      : 15%;
