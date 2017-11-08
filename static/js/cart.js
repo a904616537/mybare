@@ -7,6 +7,7 @@ $('#tobuy').on('click',function(){
             html : 
                   '<input id="name" class="swal2-input" autofocus placeholder="Name"/>'+
                   '<input id="phone" class="swal2-input" placeholder="Mobile"/>'+
+                  '<input id="email" class="swal2-input" type="email" placeholder="Email" />'+
                   '<textarea id="address" class="swal2-textarea" placeholder="Address" style="height: 66px; resize: none;"></textarea>'+
                   '<p class="text-l"><strong>Please Select a Delivery Option:</strong></p>'+
                   '<div class="text-l"><input type="radio" value="delivery" name="type" style="margin-right: 10px;"/>Express Delivery (20 rmb delivery fee)</div>'+
