@@ -2,11 +2,17 @@
 <html>
 	<head>
         <meta charset="utf-8">
-        <meta name="keywords" content="">
-        <meta name="description" content=""> 
-        <meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta name ="keywords" content="MYbarre,Mybarre,mybarre">
+        <meta name ="description" content="MYbarre,Mybarre,mybarre"> 
+        <meta name ="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1">
+        <meta name ="format-detection" content="telephone=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
         <meta http-equiv="Window-target" content="_top">
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <meta http-equiv="Expires" content="-1">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-cache">
+        <meta http-equiv="Cache" content="no-cache">
         <title>MYbarre</title>
         <link rel="stylesheet" href="static/css/normalize.css" type="text/css" />
         <link rel="stylesheet" href="static/css/bootstrap.min.css" type="text/css" />
@@ -14,6 +20,7 @@
         <link rel="stylesheet" href="static/css/sweetalert2.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
+
     <style type="text/css">
         .table{  
             width           : 100%;  
@@ -31,8 +38,6 @@
         }
     </style>
     
-        
-
     <body>
         <div class="form" id="commentForm">
         	<div class="container">
@@ -41,22 +46,22 @@
                 
                     <div class="item">
                         <div class="form-title">
-                            Personal Details
+                            Personal Details <span class="red-span">（ * Mandatory Field ) </span>
                         </div>
                         <div class="form-inner">
-                            <p>First Name: <input type="text" class="input-type" name="first_name" id="firstName"></p>
-                            <p>Last Name: <input type="text" class="input-type" name="last_name" id="lastName"></p>
-                            <p>Email: <input type="email" class="input-type" name="email" id="email"></p>
+                            <p>First Name: <span class="red-span">*</span><input type="text" class="input-type" name="first_name" id="firstName"></p>
+                            <p>Last Name: <span class="red-span">*</span><input type="text" class="input-type" name="last_name" id="lastName"></p>
+                            <p>Phone Number: <span class="red-span">*</span><input type="text" class="input-type" name="phone" id="mobile"></p>
+                            <p>Email: <span class="red-span">*</span><input type="email" class="input-type" name="email" id="email"></p>
                             <p>Address: <input type="text" class="input-type" name="address"></p>
                             <p>Date Of Birth: <input type="text" class="input-type" name="birth"></p>
                             <p>Nationality: <input type="text" class="input-type" name="nationality"></p>
                             <p>Occupation: <input type="text" class="input-type" name="occupation"></p>
-                            <p>Phone Number: <input type="text" class="input-type" name="phone" id="mobile"></p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="form-title">
-                            Studio Details (if you currently instruct or have plan to launch MYbarre please complete the studios details, if not leave blank)
+                            Studio Details ( if you currently instruct or have plan to launch MYbarre please complete the studios details, if not leave blank )
                         </div>
                         <div class="form-inner">
                             <p>Studio Name: <input type="text" class="input-type" name="studio_name"></p>

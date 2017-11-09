@@ -184,10 +184,52 @@ input:-webkit-autofill {
 
 
 /*  content 开始  */
-.floatBox,.content-grid .row{
-	padding  : 0px 60px;
-	position : relative;
-	top      : -70px;
+.floatBox{
+    margin : 30px 0;
+}
+.floatBox .item-box{
+    width    : 33.33%;
+    float    : left;
+    padding  : 0 20px;
+    position : relative;
+}
+.floatBox .inner-box{
+    height         : 0;
+    padding-bottom : 100%;
+}
+.floatBox .sub-title{
+    background-color : #fff;
+    height           : 30px;
+    position         : absolute;
+    top              : 50%;
+    bottom           : 50%;
+    left             : 20px;
+    right            : 20px;
+    z-index          : 99;
+    padding          : 5px 10px;
+}
+.floatBox .sub-title img{
+    width : 76px;
+}
+.floatBox .sub-title span{
+    float       : right;
+    font-size   : 16px;
+    line-height : 20px;
+    margin-top  : 2px;
+}
+.floatBox .hide-box{
+    background-color : rgba(255,255,255,.8);
+    position         : absolute;
+    top              : 53%;
+    bottom           : 0;
+    left             : 20px;
+    right            : 20px;
+    padding          : 0 10px;
+    display          : none;
+}
+.floatBox .hide-box .text{
+    position : absolute;
+    bottom   : 0;
 }
 .content-grid{
 	display : none;
@@ -205,12 +247,12 @@ input:-webkit-autofill {
 	background-size : 100% auto;
 }
 .floatBox .item-box .inner-box,.content-grid .box{
-	box-shadow      : 3px 3px 10px #ccc;
+	box-shadow : 3px 3px 10px #ccc;
 }
 .content-grid .box{
 	height : 420px;
 }
-.floatBox .item-box .hide-box,.content-grid .inner{
+.content-grid .inner{
 	background-color : rgba(255,255,255,.7);
 	text-align       : center;
 	height           : 100%;
@@ -221,16 +263,16 @@ input:-webkit-autofill {
 .content-grid .box:hover .inner{
 	display : block;
 }
-.floatBox .hide-box .title,.content-grid .inner .title{
+.content-grid .inner .title{
 	font-weight : bold;
 }
-.floatBox .hide-box .innerText,.content-grid .inner .innerText{
+.content-grid .inner .innerText{
 	margin-top  : 1.5vw;
 	word-wrap   : keep-all;
 	color       : #7f8c8d;
 	line-height : 3vw;
 }
-.floatBox .hide-box .moreBtn,.content-grid .inner .moreBtn{
+.content-grid .inner .moreBtn{
 	width         : 150px;
 	margin        : 0 auto;
 	padding       : 7px;
@@ -358,6 +400,9 @@ input:-webkit-autofill {
 	font-size : 16px;
 	padding   : 50px 0 30px;
 }
+.form .red-span{
+	color: red;
+}
 .form .form-title{
 	font-weight : bold;
 	line-height : 70px;
@@ -416,7 +461,7 @@ input:-webkit-autofill {
 }
 .team-content{
 	text-align : left;
-	padding    : 30px 0;
+	padding    : 30px 0 0;
 }
 .team-content h1.title{
 	text-align : center;
@@ -863,10 +908,64 @@ input:-webkit-autofill {
 }
 
 
+/*  class  */
+.class-banner{
+	background      : url(../img/instr-banner.jpg) no-repeat scroll 0px -100px;
+	background-size : 100% auto;
+	margin-top      : 120px;
+}
+.class-banner:after{
+	content : "";
+	display : block;
+	padding : 16%;
+}
+.class-content{
+	padding    : 30px 0;
+	text-align : center;
+}
+.class-content .class-text{
+	margin-bottom : 30px;
+	font-size     : 20px;
+	line-height   : 30px;
+}
+.class-content .item{
+	/*width   : 25%;*/
+	float   : left;
+	padding : 20px;
+}
+.class-content .item-box{
+	border         : 1px solid #eee;	
+	height         : 0;
+	padding        : 20px 10px;
+	padding-bottom : 100%;
+	box-shadow     : 3px 3px 10px #eee;
+}
+.class-content .item:hover{
+	position : relative;
+	top      : -10px;
+}
+.class-content .item:hover .item-box{
+	border     : 1px solid #00B0CB;
+	box-shadow : none;
+}
+.class-content .class-name{
+	font-size: 16px;
+}
+.class-content hr.class-hr{
+	height        : 4px;
+	border        : none;
+	border-top    : 2px solid #666; 
+	width         : 70px;
+	margin-top    : 5px;
+	margin-bottom : 10px;
+}
+
+
+
 /*  响应 开始  */
 @media screen and (max-width : 580px) and (min-width: 320px){
 	body{
-		font-size : 14px;
+		font-size : 14px; 
 	}
 	.grid-banner{
 		margin: 0;
@@ -874,7 +973,7 @@ input:-webkit-autofill {
 	.grid-banner:after{
 		padding: 20% 0;
 	}
-	.team-banner,.instructor-banner,.schedule-banner,.train-banner,.store-banner{
+	.team-banner,.instructor-banner,.schedule-banner,.train-banner,.store-banner,.class-banner{
 		background-position: center center;
 	}
 	.text-title{
@@ -957,11 +1056,15 @@ input:-webkit-autofill {
 	.video-content .video-style{
 		height : 52vw;
 	}
-	.instructor-content .title,.schedule-content .title,.train-content .title,.workout-content .title,.store-content .title,.cart h1,.team-content .title{
+	.instructor-content .title,.schedule-content .title,.train-content .title,.workout-content .title,.store-content .title,.cart h1,.team-content .title,.class-content .title{
 		font-size: 24px;
 	}
 	.instructor-content .instructor-text,.schedule-content .schedule-text,.train-content .train-text,.workout-content .workout-text,.store-content .store-text,.team-content .info-text,.team-content p.grid-text,.team-content p.text{
 		font-size   : 14px;
+		line-height : 25px;
+	}
+	.class-content .class-text{
+		font-size   : 16px;
 		line-height : 25px;
 	}
 	.instructor-content .instru-grid{
@@ -1129,6 +1232,10 @@ input:-webkit-autofill {
 @media screen and (min-width: 320px) and (max-width: 990px){
 	.pic-content .panel-img{
 		height : 100%;
+	}
+	.class-content .item-box{
+		padding-bottom : 0px;
+		height         : 220px;
 	}
 }
 

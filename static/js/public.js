@@ -13,7 +13,6 @@ $('.floatBox>.item-box').on('mouseenter',function(){
 });
 $('.floatBox>.item-box').on('mouseleave',function(){
     $(this).find('.hide-box').fadeOut();
-
 });
 
 
