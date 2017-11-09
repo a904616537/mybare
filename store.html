@@ -161,7 +161,39 @@
         <script type="text/javascript" src="static/js/sweetalert2.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
         <script type="text/javascript">
+
+            var addCart = function(_id) {
+                var cookieuser = $.cookie('user');
+    
+                // 没登录
+                if(!cookieuser) {
+                    window.location.replace("login.html");
+                    return;
+                } else {
+                    var user = JSON.parse(cookieuser).user;
+                    $.ajax({
+                        cache : false,
+                        type  : "post",
+                        url   : apiUrl + '/cart',
+                        async : false,
+                        data  : 'product_id='+_id+'&number=1&user=' + user._id ,
+                        error : function(request) {
+                            swal('Oops...','For failure！','error');
+                        },
+                        success : function(result) {
+                            console.log('post cart result', result)
+                            if(result.status) {
+                                swal('Oops...','Success！','success');
+                            } else {
+                                swal('Oops...','For failure！','error');   
+                            }
+                        }
+                    });
+                }
+            }
+
             var getProduct = function() {
+
                 $.ajax({
                     cache : false,
                     type  : "GET",
@@ -189,7 +221,7 @@
                                     <div class="item-con">\
                                         <p><strong>'+val.name+'</strong></p>\
                                         <span> ¥ '+val.price+'</span>\
-                                        <a href="javascript:;" style="color: #00B0CB"><span style="float: right">Add To Cart</span></a>\
+                                        <a href="javascript:void(0);" onclick="addCart(\''+val._id+'\')" style="color: #00B0CB"><span style="float: right">Add To Cart</span></a>\
                                     </div>\
                                 </div>\
                             </div>';

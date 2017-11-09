@@ -1,6 +1,6 @@
 // var apiUrl = 'http://server.mybarrefitness.com';
-var apiUrl = 'http://106.14.94.210:9080';
-// var apiUrl = 'http://localhost:9080';
+// var apiUrl = 'http://test.mybarrefitness.com';
+var apiUrl = 'http://localhost:9080';
 
 $(function() {
 	$.ajax({
