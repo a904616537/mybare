@@ -1,7 +1,7 @@
 // var apiUrl = 'http://server.mybarrefitness.com';
 var homeUrl = 'http://www.mybarrefitness.com';
-// var apiUrl = 'http://test.mybarrefitness.com';
-var apiUrl = 'http://localhost:9080';
+var apiUrl = 'http://test.mybarrefitness.com';
+// var apiUrl = 'http://localhost:9080';
 
 // 手机端nav
 $('#bars').on('click',function(){
@@ -152,6 +152,29 @@ $('#change_pwd').on('click',function(){
 	}else{
 		$('#prompt').html('<font style="color: red">Your new password and confirmed new password do not match.</font>');
 	} 
+})
+
+// Host Studio
+$('#studio_submit').on('click',function(){
+	var body    = $('#train-from').serialize();
+
+	$.ajax({
+		cache : false,
+		type  : "post",
+		url   : apiUrl + '/studio',
+		data  : body,
+		async : false,
+		error : function(request) {
+			swal('Request failed！','', 'error');
+		},
+		success : function(data) {
+			if(data.status) {
+				swal('success','','success')
+			} else {
+				swal('failed','','error')
+			}
+		}
+	});
 })
 	
 

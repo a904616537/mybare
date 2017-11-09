@@ -1,7 +1,7 @@
 // var apiUrl = 'http://server.mybarrefitness.com';
 // var apiUrl = 'http://localhost:9080';
-// var apiUrl = 'http://test.mybarrefitness.com';
-var apiUrl = 'http://localhost:9080';
+var apiUrl = 'http://test.mybarrefitness.com';
+// var apiUrl = 'http://localhost:9080';
 
 function getvideos (level, user_id){
 
