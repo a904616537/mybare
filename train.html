@@ -123,7 +123,7 @@
                 <p class="instru-grid">Host Studio Enquiry Form (complete and submit to register interest)</p>
 
                 <!-- 注册表 -->
-                <form class="train-from">
+                <form class="train-from" id="train-from">
                     <div class="form-group">
                         <label>Name</label>
                         <input type="text" name="name" class="input-type">
@@ -131,7 +131,7 @@
                     <div class="row">
                         <div class="form-group col-md-6 col-xs-12">
                             <label>Email</label>
-                            <input type="email" name="email" class="input-type">
+                            <input type="text" name="email" class="input-type">
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
                             <label>WeChat ID</label>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="form-group">
                         <label>Studio Address</label>
-                        <input type="text" name="studio_address" class="input-type">
+                        <input type="text" name="address" class="input-type">
                     </div>
                     <div class="row">
                         <div class="form-group col-md-6 col-xs-12">
@@ -163,16 +163,16 @@
                         </div>
                         <div class="form-group col-md-6 col-xs-12">
                             <label>Studio Website</label>
-                            <input type="text" name="studio_website" class="input-type">
+                            <input type="text" name="website" class="input-type">
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Dates Interested</label>
-                        <input type="text" name="dates_in" class="input-type">
+                        <input type="text" name="interested" class="input-type">
                     </div>
-                    <div class="btn sub-btn">
+                    <button type="button" class="btn sub-btn" id="studio_submit">
                         SUBMIT TO MYbarre
-                    </div>
+                    </button>
                 </form>
 
             </div>
@@ -213,6 +213,7 @@
         </div>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script type="text/javascript" src="static/js/sweetalert2.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
     </body>
 </html>
