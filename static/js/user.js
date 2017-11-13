@@ -76,7 +76,7 @@ function getvideos (level, user_id){
 
 $(function() {
 	var cookieuser = $.cookie('user');
-	var cookie = JSON.parse(cookieuser);
+	var cookie     = JSON.parse(cookieuser);
 	$.ajax({
 		cache : false,
 		type  : "GET",

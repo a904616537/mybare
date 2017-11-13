@@ -22,19 +22,20 @@
     </head>
     
     <style>
+        body{
+            background      : url(static/img/bgp.jpg) top center no-repeat;
+            background-size : cover;
+        }
         .pay{
             text-align      : center;
-            background      : url(static/img/index-banner.jpg) top center no-repeat;
-            background-size : cover;
         }
         .pay .inner{
             background-color : rgba(255,255,255,.3);
-            padding          : 11vw;
+            padding          : 21vw 60px;
             font-size        : 2vw;
         }
-        .pay img{
-            width         : 25vw;
-            margin-bottom : 30px;
+        .pay p{
+            margin-top : 28px; 
         }
     </style>
     <body>
@@ -42,7 +43,7 @@
             <div class="inner">
                 <!-- <img src="static/img/qrcode.jpg" /> -->
                 <div id="qrcode"></div>
-                <p>Please scan the above QR Code with WeChat to initiate payment. Once the transfer has been confirmed you will receive a pop-up notification.</p>
+                <p>Please scan the above QR Code with WeChat to initiate payment. <br>Once the transfer has been confirmed you will receive a pop-up notification.</p>
             </div>
         </div>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
