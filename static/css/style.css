@@ -60,7 +60,7 @@ input:-webkit-autofill {
 	background-color : #fff;
 	border-bottom    : 1px solid #eee;
 	box-shadow       : 1px 1px 3px #eee;
-	z-index          : 1;
+	z-index          : 99;
 	position         : fixed;
 	top              : 0;
 	left             : 0;
@@ -74,6 +74,9 @@ input:-webkit-autofill {
 }
 .header .related .item{
 	float : right;
+}
+.header .related .item a{
+	color : #D6D3D4;
 }
 .header .related i{
 	margin-left : 20px;
@@ -205,7 +208,7 @@ input:-webkit-autofill {
     bottom           : 50%;
     left             : 20px;
     right            : 20px;
-    z-index          : 99;
+    z-index          : 1;
     padding          : 5px 10px;
 }
 .floatBox .sub-title img{

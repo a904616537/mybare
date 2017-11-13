@@ -74,7 +74,7 @@ $("#register").on('click',function(){
 						}
 					})				
 				}else{
-					swal('Oops..', 'Please check your phone number or email have been registration', 'warning');
+					swal('Oops..', "Your email or phone number has already been registered in our system. If this doesn't seem right, please email us: info@mybarrefitness.com", 'warning');
 				}
 
 			}
@@ -103,7 +103,8 @@ $("#login").on('click',function(){
 				} else {
 					$.cookie('user', JSON.stringify(user));
 				}
-  				window.history.back()
+  				// window.history.back()
+  				window.location.href = homeUrl;
 			}
 			else swal('Oops...', 'Login failed, please try again!', 'error');
 		}
@@ -140,7 +141,7 @@ $('#change_pwd').on('click',function(){
 			},
 			success : function(data) {
 				if(data.status) {
-					swal('success','','success').then(function(){
+					swal('success','Password Successfully Updated','success').then(function(){
 						$.cookie('user', null, { expires: -1 });
 						location.href = "login.html";
 					})

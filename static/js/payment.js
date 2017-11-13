@@ -42,8 +42,8 @@ $(function() {
 		if(result.order_id[0] == order) {
 			swal({
                   title             : 'Success',
-                  text              : 'Pay for success',
-                  type              : 'success',
+                  text              : 'Payment Complete!',
+                  type              : 'To access your course content, click on "Videos" under the profile icon in the upper-right corner. Enjoy the videos!',
                   showCancelButton  : false,
                   confirmButtonText : 'OK'
             }).then(() => {

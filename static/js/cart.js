@@ -76,7 +76,6 @@ $(function() {
                               $("input").blur(function(){
                                     var _id = $(this).attr('ref');
                                     var val = $(this).val();
-                                    console.log('_id', _id, val);
                                     updateProduct(_id, user._id, val)
                               });
                         }
@@ -98,20 +97,32 @@ $('#tobuy').on('click',function(){
             swal({
                   title : 'Shipping Info',
                   showCancelButton : true,
+                  confirmButtonText : 'Submit',
                   html : 
                         '<form id="cartfrom">'+
-                        '<input name="recipients" class="swal2-input" autofocus placeholder="Name"/>'+
-                        '<input name="phone" class="swal2-input" placeholder="Mobile"/>'+
-                        '<input name="email" class="swal2-input" type="email" placeholder="Email" />'+
-                        '<textarea name="address" class="swal2-textarea" placeholder="Address" style="height: 66px; resize: none;"></textarea>'+
+                        '<input name="recipients" class="swal2-input" autofocus placeholder="Name" id="name"/>'+
+                        '<input name="phone" class="swal2-input" placeholder="Mobile" id="phone"/>'+
+                        '<input name="email" class="swal2-input" placeholder="Email" id="email"/>'+
+                        '<textarea name="address" class="swal2-textarea" placeholder="Address" style="height: 66px; resize: none;" id="address"></textarea>'+
                         '<p class="text-l"><strong>Please Select a Delivery Option:</strong></p>'+
                         '<div class="text-l"><input type="radio" value="Express Delivery (20 rmb delivery fee)" name="type" checked="checked" style="margin-right: 10px;"/>Express Delivery (20 rmb delivery fee)</div>'+
                         '<div class="text-l"><input type="radio" value="Self-Pickup from Z&B Studio" name="type" style="margin-right: 10px;"/>Self-Pickup from Z&B Studio</div>'+
                         '</form>',
-            }).then(function(isConfirm) {
-                  if(isConfirm === true) {
+                  inputValidator : function(value) {
+                        return new Promise(function(resolve,reject) {
+                              if(value) {
+                                    resolve();
+                              }else{
+                                    reject('Please ensure all fields are filled in before submitting order.');
+                              }
+                        })
+                  }
+            }).then(function(result) {
+                  if(result) {
+            // .then(function(isConfirm) {
+            //       if(isConfirm === true) {
                         var address = $('#cartfrom').serialize();
-                        console.log('address', address);
+
                         $.ajax({
                               cache : false,
                               type  : "post",
@@ -123,7 +134,7 @@ $('#tobuy').on('click',function(){
                               },
                               success : function(result) {
                                     swal({
-                                          title : 'Shipping Info',
+                                          title : 'Done!',
                                           text : 'Thanks for submitting your order! The MYbarre team will reach out to you shortly to arrange for payment and delivery',
                                           type : 'success',
                                           showCancelButton : false,
