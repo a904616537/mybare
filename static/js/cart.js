@@ -57,7 +57,7 @@ $(function() {
                                     var subtotal = item.product.price * item.number;
 
                                     str += '<div class="row">\
-                                          <div class="col-md-4 col-xs-4">\
+                                          <div class="col-md-4 col-xs-4" style="text-align: left;">\
                                                 <img src="'+(item.product.img.length>0?item.product.img[0].path:'')+'" alt="product-img" class="item-img"/>\
                                                 <strong>'+item.product.name+'</strong>\
                                           </div>\

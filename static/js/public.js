@@ -141,7 +141,7 @@ $('#change_pwd').on('click',function(){
 			},
 			success : function(data) {
 				if(data.status) {
-					swal('success','Password Successfully Updated','success').then(function(){
+					swal('Done!','Password Successfully Updated','success').then(function(){
 						$.cookie('user', null, { expires: -1 });
 						location.href = "login.html";
 					})
