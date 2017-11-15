@@ -12,7 +12,6 @@ $(function() {
 			swal('Oops...','For failure！','error');
 		},
 		success : function(result) {
-			console.log('result', result)
 			var video_view = $('#videos');
 			if(result.status) {
 				var s = result.videos > 0?result.videos - 1 : 0;
