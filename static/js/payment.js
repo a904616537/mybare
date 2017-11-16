@@ -25,7 +25,7 @@ $(function() {
 			type  : "post",
 			url   : apiUrl + '/payment/sweep',
 			async : false,
-			data  : 'order='+order+'&total=1&user=' + user._id ,
+			data  : 'order='+order+'&total=400000&user=' + user._id ,
 			error : function(request) {
 				swal('Oops...','For failure！','error');
 			},
