@@ -35,7 +35,7 @@ $(function() {
       var cookieuser = $.cookie('user');
       // 没登录
       if(!cookieuser) {
-            window.location.replace("login.html");
+            window.location.replace("login-cart.html");
             return;
       } else {
             var user = JSON.parse(cookieuser).user;

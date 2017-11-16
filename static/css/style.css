@@ -1,3 +1,5 @@
+@import url("../iconfont/iconfont.css");
+
 body{
 	box-sizing  : content-box;
 	font-family : 'Avenir', Helvetica, Arial, sans-serif;
@@ -54,6 +56,13 @@ input:-webkit-autofill {
 	text-align: left;
 	line-height: 30px;
 }
+.iconfont{
+	font-size    : 24px;
+	margin-right : 10px;
+	position     : relative;
+	top          : 3px;
+}
+
 
 /*  导航 开始  */
 .header{
@@ -188,7 +197,7 @@ input:-webkit-autofill {
 
 /*  content 开始  */
 .floatBox{
-    margin : 30px 0;
+    margin : 40px 20px;
 }
 .floatBox .item-box{
     width    : 33.33%;
@@ -351,7 +360,7 @@ input:-webkit-autofill {
 .footer{
 	background-color : #53565B;
 	text-align       : left;
-	padding          : 40px 60px;
+	padding          : 40px 60px 20px;
 }
 .footer .title{
 	color     : #fff;
@@ -913,7 +922,7 @@ input:-webkit-autofill {
 
 /*  class  */
 .class-banner{
-	background      : url(../img/instr-banner.jpg) no-repeat scroll 0px -100px;
+	background      : url(../img/class-banner.jpg) no-repeat scroll 0px -300px;
 	background-size : 100% auto;
 	margin-top      : 120px;
 }

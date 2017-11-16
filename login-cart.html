@@ -36,10 +36,10 @@
         }
         .login .form{
             background-color : #fff;
-            padding          : 20px 30px 70px;
+            padding          : 50px 30px;
             margin-bottom    : 20px;
             box-shadow       : 3px 3px 3px #ccc;
-            position         : relative;
+            position: relative;
         }
         .login .inner{
             margin-bottom : 20px;
@@ -57,7 +57,7 @@
         .login .icon{
             margin-right : 10px;
         }
-        .login .submit{
+        .login .log{
             position         : absolute;
             right            : 30px;
             bottom           : 30px;
@@ -73,9 +73,6 @@
             line-height : 30px;
             margin-left : 30px;
         }
-        .login strong{
-            line-height : 50px;
-        }
         @media screen and (max-width : 580px) and (min-width: 320px){
             .login{
                 width      : 100%;
@@ -85,7 +82,7 @@
             .login .form{
                 padding : 30px 30px;
             }
-            .login .submit{
+            .login .log{
                 position : absolute;
                 bottom   : 20px;
                 padding  : 3px 10px;
@@ -93,44 +90,40 @@
         }
 
     </style>
-
     <body>
-        <div class="workout-content">
-            <div class="container">
-                <div class="login">
-                    <img src="static/img/logo-black.png" alt="MYbarre" class="logo">
-                    <div class="form">
-                        <strong>Change Password</strong>
-                        <form id="pwdfrom">
-                            <input id="user_id" type="hidden" name="user_id" value="">
-                            <div class="inner">
-                                <p>Old Password</p>
-                                <input type="password" id="old_pwd" name="old_pwd" class="input-type">
-                            </div>
-                            <div class="inner">
-                                <p>New Password</p>
-                                <input type="password" id="pwd" name="newpwd" class="input-type">
-                            </div>
-                            <div class="inner">
-                                <p>Confirm New Password</p>
-                                <p id="prompt"></p>
-                                <input type="password" id="pwd1" name="pwd" class="input-type">
-                            </div>
-                            <button type="button" id="change_pwd" class="submit">Submit</button>
-                        </form>
-                    </div>
-                    <!-- <a href="#">Lost your password?</a> -->
-                    <a href="#" onclick="javascript:history.back(-1);"><i class="fa fa-long-arrow-left icon"></i>Back</a>
+        <div class="login">
+                <img src="static/img/logo-black.png" alt="MYbarre" class="logo">
+                <p style="margin-bottom: 40px; text-align: center; margin-top: -30px;">You must be a MYbarre Instructor or Instructor in-training to purchase items from the MYbarre Store.</p>
+
+                <div class="form">
+                    <form id="loginfrom">
+                        <div class="inner">
+                            <p>Email</p>
+                            <input type="text" id="key" name="key" class="input-type">
+                        </div>
+                        <div class="inner">
+                            <p>Password</p>
+                            <input type="password" id="password" name="password" class="input-type">
+                        </div>
+                        <input type="checkbox" name="rember" class="icon"><span>Remember Me</span>
+                        <button type="button" id="login" class="log">Log In</button>
+                    </form>
                 </div>
-            </div>
+                <!-- <a href="#">Lost your password?</a> -->
+                <a href="#" onclick="javascript:history.back(-1);"><i class="fa fa-long-arrow-left icon"></i>Back</a>
+                <a href="instructor.html" style="text-decoration: underline; padding-left: 5px;">Want to become an instructor? Please click here!</a>
         </div>
-
-        
-
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-        <script type="text/javascript" src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
         <script type="text/javascript" src="static/js/sweetalert2.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                var cookieuser = $.cookie('user');
+                if(typeof cookieuser != 'undefined') {
+                    window.location.replace("/index.html");
+                }
+            })
+        </script>
     </body>
 </html>
