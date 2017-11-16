@@ -475,6 +475,9 @@ input:-webkit-autofill {
 	text-align : left;
 	padding    : 30px 0 0;
 }
+.team-content .info-text{
+	font-size : 16px;
+}
 .team-content h1.title{
 	text-align : center;
 }
@@ -492,7 +495,7 @@ input:-webkit-autofill {
 	font-size     : 16px;
 }
 .team-content .item p{
-	font-size   : 20px;
+	font-size   : 16px;
 	line-height : 30px;
 }
 .team-content img{
@@ -544,7 +547,7 @@ input:-webkit-autofill {
 }
 .workout-content .workout-text{
 	margin-bottom : 30px;
-	font-size     : 20px;
+	font-size     : 16px;
 	line-height   : 30px;
 }
 
@@ -565,7 +568,7 @@ input:-webkit-autofill {
 }
 .instructor-content .instructor-text{
 	margin-bottom : 30px;
-	font-size     : 20px;
+	font-size     : 16px;
 	line-height   : 30px;
 }
 .instructor-content li,.instructor-content .click{
@@ -716,7 +719,7 @@ input:-webkit-autofill {
 }
 .schedule-content .schedule-text{
 	margin-bottom : 30px;
-	font-size     : 20px;
+	font-size     : 16px;
 	line-height   : 30px;
 }
 .schedule-content .train-faq{
@@ -759,7 +762,7 @@ input:-webkit-autofill {
 }
 .train-content .train-text{
 	margin-bottom : 30px;
-	font-size     : 20px;
+	font-size     : 16px;
 	line-height   : 30px;
 }
 .train-content .instru-grid{
@@ -812,7 +815,7 @@ input:-webkit-autofill {
 }
 .store-content .store-text{
 	margin-bottom : 30px;
-	font-size     : 20px;
+	font-size     : 16px;
 	line-height   : 30px;
 	text-align    : center;
 }
@@ -937,7 +940,7 @@ input:-webkit-autofill {
 }
 .class-content .class-text{
 	margin-bottom : 30px;
-	font-size     : 20px;
+	font-size     : 16px;
 	line-height   : 30px;
 }
 .class-content .item{
