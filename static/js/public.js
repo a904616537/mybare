@@ -159,25 +159,41 @@ $('#change_pwd').on('click',function(){
 
 // Host Studio
 $('#studio_submit').on('click',function(){
-	var body    = $('#train-from').serialize();
+	var body     = $('#train-from').serialize();
+	var name     = $('#name').val(),
+		email    = $('#email').val(),
+		wechat   = $('#wechat').val(),
+		phoneReg = /(^[0-9]{3,4}-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^[0−9]3,4[0-9]{3,8}$)|(^0{0,1}1[0-9]{10}$)/,
+		reg      = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/,
+		phone    = $('#phone').val();
 
-	$.ajax({
-		cache : false,
-		type  : "post",
-		url   : apiUrl + '/studio',
-		data  : body,
-		async : false,
-		error : function(request) {
-			swal('Request failed！','', 'error');
-		},
-		success : function(data) {
-			if(data.status) {
-				swal('success','','success')
-			} else {
-				swal('failed','','error')
+	if(name == ''){
+		swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
+	}else if(wechat == ''){
+		swal('Oops...', 'Submission failed, wechat ID cannot be empty！', 'error');
+	}else if(!reg.test(email) || email == ''){
+		swal('Oops...', 'Submission failed, incorrect email address！', 'error');
+ 	}else if(!phoneReg.test(phone) || phone == '') { 
+	    swal('Oops...', 'Submission failed, incorrect telephone number！', 'error');
+	}else{
+		$.ajax({
+			cache : false,
+			type  : "post",
+			url   : apiUrl + '/studio',
+			data  : body,
+			async : false,
+			error : function(request) {
+				swal('Request failed！','', 'error');
+			},
+			success : function(data) {
+				if(data.status) {
+					swal('success','','success')
+				} else {
+					swal('failed','','error')
+				}
 			}
-		}
-	});
+		});
+	}	
 })
 	
 
