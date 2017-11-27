@@ -1,7 +1,7 @@
-// var apiUrl = 'http://server.mybarrefitness.com';
+var apiUrl = 'http://server.mybarrefitness.com';
 // var apiUrl = 'http://localhost:9080';
 var homeUrl = 'http://www.mybarrefitness.com';
-var apiUrl = 'http://test.mybarrefitness.com';
+// var apiUrl = 'http://test.mybarrefitness.com';
 
 var getOrderId = function() {
 	var str = "" + moment().unix(),
@@ -25,7 +25,7 @@ $(function() {
 			type  : "post",
 			url   : apiUrl + '/payment/sweep',
 			async : false,
-			data  : 'order='+order+'&total=1&user=' + user._id ,
+			data  : 'order='+order+'&total=400000&user=' + user._id ,
 			error : function(request) {
 				swal('Oops...','For failure！','error');
 			},
@@ -41,9 +41,9 @@ $(function() {
 		console.log('socket io result:', result)
 		if(result.order_id[0] == order) {
 			swal({
-                  title             : 'Success',
-                  text              : 'Payment Complete!',
-                  type              : 'To access your course content, click on "Videos" under the profile icon in the upper-right corner. Enjoy the videos!',
+                  title             : 'Payment Complete!',
+                  text              : 'To access your course content, click on "Videos" under the profile icon in the upper-right corner. Enjoy the videos!',
+                  type              : 'success',
                   showCancelButton  : false,
                   confirmButtonText : 'OK'
             }).then(() => {
