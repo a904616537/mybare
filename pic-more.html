@@ -77,7 +77,15 @@
                 <a href="index.html"><img src="static/img/logo.png" alt="logo"></a>
             </div>
             <div class="menu">
-                <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li>
+                <!-- <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li> -->
+                <li id="bar"><a href="#"><i class="fa fa-user"></i></a>
+                    <ul class="user-dropdown" id="user-dropdown">
+                        <li><a href="login.html" id="user-grid">Instructor Login</a></li>
+                        <li><a href="user.html">Videos</a></li>
+                        <li><a href="set.html">Change Password</a></li>
+                        <li><a href="javascript:;" id="logOut-grid">Log Out</a></li>
+                    </ul>
+                </li>
                 <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
                 <li id="bars"><a href="#"><i class="fa fa-bars"></i></a>
                     <ul class="dropdown" id="dropdown">
@@ -94,7 +102,6 @@
                         <li><a href="video.html">MYbarre Videos</a></li>
                         <li><a href="pic.html">MYbarre Pictures</a></li>
                         <li class="li-grid"  style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
-                        <li class="li-grid"><a href="javascript:;" id="logOut-grid">LOG OUT</a></li>
                     </ul>
                 </li>
             </div>  

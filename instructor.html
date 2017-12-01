@@ -78,14 +78,22 @@
                 <a href="index.html"><img src="static/img/logo.png" alt="logo"></a>
             </div>
             <div class="menu">
-                <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li>
+                <!-- <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li> -->
+                <li id="bar"><a href="#"><i class="fa fa-user"></i></a>
+                    <ul class="user-dropdown" id="user-dropdown">
+                        <li><a href="login.html" id="user-grid">Instructor Login</a></li>
+                        <li><a href="user.html">Videos</a></li>
+                        <li><a href="set.html">Change Password</a></li>
+                        <li><a href="javascript:;" id="logOut-grid">Log Out</a></li>
+                    </ul>
+                </li>
                 <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
                 <li id="bars"><a href="#"><i class="fa fa-bars"></i></a>
                     <ul class="dropdown" id="dropdown">
                         <li class="li-grid"><a href="#">ABOUT</a></li>
                         <li><a href="workout.html">MYbarre WORKOUT</a></li>
                         <li><a href="team.html">MYbarre TEAM</a></li>
-                        <li><a href="class.html">Find A MYbarre Class</a></li>
+                        <li><a href="class.html">Find a MYbarre Class</a></li>
                         <li class="li-grid"><a href="#">INSTRUCTOR TRAINING</a></li>
                         <li><a href="instructor.html">BECOME a MYbarre INSTRUCTOR</a></li>
                         <li><a href="schedule.html">INSTRUCTOR TRAINING SCHEDULE</a></li>
@@ -95,7 +103,6 @@
                         <li><a href="video.html">MYbarre Videos</a></li>
                         <li><a href="pic.html">MYbarre Pictures</a></li>
                         <li class="li-grid"  style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
-                        <li class="li-grid"><a href="javascript:;" id="logOut-grid">LOG OUT</a></li>
                     </ul>
                 </li>
             </div>  
@@ -168,13 +175,13 @@
                         <li><a href="login.html">Instructor Log in</a></li>
                         <li><a href="class.html">Find a MYbarre Class</a></li>
                     </ul>
+                    <p style="color: #999; margin-top: 40px;">©2017 沪ICP备17040400号-1</p>
                 </div> 
                 <div class="col-md-4">
                     <div class="title">SOCIAL</div>
                     <img src="static/img/qrcode.jpg" class="qrcode"/>
                 </div>
             </div> 
-            <p style="color: #999;text-align: center; margin-top: 40px;">©2017 沪ICP备17040400号-1</p>
         </div>
         
 

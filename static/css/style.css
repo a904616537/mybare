@@ -179,6 +179,20 @@ input:-webkit-autofill {
 	border-bottom : 1px solid #eee;
 	border-top    : 1px solid #eee;
 }
+.user-dropdown{
+    background-color : #fff;
+    position         : absolute;
+    left             : 0;
+    z-index          : 99;
+    border-top       : 1px solid #eee;
+    border-bottom    : 1px solid #eee;
+    display          : none;
+}
+.user-dropdown li{
+    width      : 100%;
+    text-align : center;
+}
+
 
 
 
@@ -643,6 +657,11 @@ input:-webkit-autofill {
 	line-height : 50px;
 	font-size   : 16px;
 	margin      : 0px;
+}
+.video-content #video-tip{
+	color       : #00B0CB;
+	line-height : 20px;
+	margin-top  : 20px;
 }
 
 
@@ -1145,6 +1164,15 @@ input:-webkit-autofill {
 		line-height : 50px;
 		text-align  : center;
 		outline     : none;
+	}
+	.video-content p{
+		padding : 0 20px;
+	}
+	.video-content #video-tip{
+		margin        : 0;
+		margin-top    : 10px;
+		margin-bottom : -10px;
+		color         : #00B0CB;
 	}
 }
 

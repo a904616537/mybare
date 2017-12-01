@@ -9,13 +9,16 @@ var homeUrl = 'http://www.mybarrefitness.com';
 $('#bars').on('click',function(){
 	$('#dropdown').toggle();
 });
-
+$('#bar').on('click',function(){
+	$('#user-dropdown').toggle();
+})
 $('.floatBox>.item-box').on('mouseenter',function(){
     $(this).find('.hide-box').fadeIn();
 });
 $('.floatBox>.item-box').on('mouseleave',function(){
     $(this).find('.hide-box').fadeOut();
 });
+
 
 
 // cookie
@@ -26,9 +29,11 @@ $(function() {
 		$('#user_id').val(cookie.user._id);
 		$('#user').html('<a href="#" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
+		$('#video-tip').show();
 	} else {
 		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
-		$('#user-grid').html('<a href="login.html" class="login-icon">Log In</a>');
+		$('#user-grid').html('<a href="login.html" class="login-icon">Instructor Login</a>');
+		$('#video-tip').hide();
 	}
 	
 })
