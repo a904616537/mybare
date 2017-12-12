@@ -1,8 +1,7 @@
-var apiUrl = 'http://server.mybarrefitness.com';
-var homeUrl = 'http://www.mybarrefitness.com';
-// var homeUrl = 'http://106.14.94.210:8090';
-
-// var apiUrl = 'http://test.mybarrefitness.com';
+// var apiUrl = 'http://server.mybarrefitness.com';
+// var homeUrl = 'http://www.mybarrefitness.com';
+var homeUrl = 'http://106.14.94.210:8090';
+var apiUrl = 'http://test.mybarrefitness.com';
 // var apiUrl = 'http://localhost:9080';
 
 // 手机端nav
@@ -168,7 +167,11 @@ $("#login").on('click',function(){
 					$.cookie('user', JSON.stringify(user));
 				}
   				// window.history.back()
-  				window.location.href = homeUrl;
+  				
+  				setTimeout(function() {
+  					window.location.href = homeUrl;
+  				}, 500);
+  				
 			}
 			else swal('Oops...', 'Login failed, please try again!', 'error');
 		}

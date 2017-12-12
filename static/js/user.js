@@ -1,12 +1,12 @@
-var apiUrl = 'http://server.mybarrefitness.com';
-// var apiUrl = 'http://test.mybarrefitness.com';
+// var apiUrl = 'http://server.mybarrefitness.com';
+var apiUrl = 'http://test.mybarrefitness.com';
 // var apiUrl = 'http://localhost:9080';
 
 function getvideos (level, user_id){
 
 	var cookieuser = $.cookie('user');
 	// 没登录
-	if(!cookieuser) {
+	if(typeof cookieuser != 'undefined') {
 		window.location.replace("login.html");
 		return;
 	} else {
@@ -75,19 +75,21 @@ function getvideos (level, user_id){
 
 $(function() {
 	var cookieuser = $.cookie('user');
-	var cookie     = JSON.parse(cookieuser);
-	$.ajax({
-		cache : false,
-		type  : "GET",
-		url   : apiUrl + '/user/level/' + cookie.user._id,
-		async : false,
-		error : function(request) {
-			swal('Oops','For failure！','error');
-		},
-		success : function(result) {
-			getvideos(result.level, cookie.user._id);
-		}
-	});
-
-	
+	if(typeof cookieuser != 'undefined') {
+		var cookie     = JSON.parse(cookieuser);
+		$.ajax({
+			cache : false,
+			type  : "GET",
+			url   : apiUrl + '/user/level/' + cookie.user._id,
+			async : false,
+			error : function(request) {
+				swal('Oops','For failure！','error');
+			},
+			success : function(result) {
+				getvideos(result.level, cookie.user._id);
+			}
+		});
+	} else {
+		window.location.href = homeUrl + '/login.html';
+	}
 })
