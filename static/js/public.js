@@ -49,48 +49,70 @@ $("#register").on('click',function(){
   		reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
 
 
+
   	if(firstName == ''){
   		$('.firstName').prev().html('First name cannot be empty');
+		$('html,body').animate({scrollTop:$('.q1').offset().top},500)
   	}else if(lastName == ''){
   		$('.lastName').prev().html('Last name cannot be empty');
+  		$('html,body').animate({scrollTop:$('.q2').offset().top},500)
   	}else if(!phoneReg.test(mobile) || mobile == '') { 
   		$('.mobile').prev().html('Phone number cannot be empty');
+  		$('html,body').animate({scrollTop:$('.q3').offset().top},500)
   	}else if(!reg.test(email) || email == ''){
   		$('.email').prev().html('Email cannot be empty');
+  		$('html,body').animate({scrollTop:$('.q4').offset().top},500)
   	}else if($('.address').val() == ''){
   		$('.address').prev().html('Address cannot be empty');
+  		$('html,body').animate({scrollTop:$('.q5').offset().top},500)
   	}else if($('.birth').val() == ''){
   		$('.birth').prev().html('Date of birth cannot be empty');
+  		$('html,body').animate({scrollTop:$('.q6').offset().top},500)
   	}else if($('.nationality').val() == ''){
   		$('.nationality').prev().html('Nationality cannot be empty');
+  		$('html,body').animate({scrollTop:$('.q7').offset().top},500)
   	}else if($('.occupation').val() == ''){
   		$('.occupation').prev().html('Occupation cannot be empty');
+  		$('html,body').animate({scrollTop:$('.q8').offset().top},500)
   	}else if($('.howfind').val() == ''){
   		$('.howfind').prev().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q9').offset().top},500)
   	}else if($('.elaborate').val() == ''){
   		$('.elaborate').prev().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q10').offset().top},500)
   	}else if($('.discipline').val() == ''){
   		$('.table').prev().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q11').offset().top},500)
   	}else if($('.level').val() == ''){
   		$('.table').prev().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q11').offset().top},500)
   	}else if($('.experience').val() == ''){
   		$('.table').prev().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q11').offset().top},500)
   	}else if($('.prior').val() == ''){
   		$('.prior').prev().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q12').offset().top},500)
   	}else if($('.share').val() == ''){
   		$('.share').prev().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q13').offset().top},500)
   	}else if($('input:radio[name="isvpn"]:checked').val() == null){
   		$('.vpn').next().html('A selection must be made');
+  		$('html,body').animate({scrollTop:$('.q14').offset().top},500)
   	}else if($('.device').val() == ''){
   		$('.device').prev().html('This field cannot be left empty');
+		$('html,body').animate({scrollTop:$('.q15').offset().top},500)
   	}else if($('input:radio[name="QQ"]:checked').val() == null){
   		$('.qq').next().html('A selection must be made');
+  		$('html,body').animate({scrollTop:$('.q16').offset().top},500)
   	}else if($('input:radio[name="heart_condition"]:checked').val() == null){
   		$('.heart_condition').next().html('A selection must be made');
+  		$('html,body').animate({scrollTop:$('.q17').offset().top},500)
   	}else if($('input:radio[name="workout"]:checked').val() == null){
   		$('.workout').next().html('A selection must be made');
+  		$('html,body').animate({scrollTop:$('.q18').offset().top},500)
   	}else if($('input:radio[name="high_blood"]:checked').val() == null){
   		$('.high_blood').next().html('A selection must be made');
+  		$('html,body').animate({scrollTop:$('.q19').offset().top},500)
   	}else{
   		$.ajax({
 			cache : false,
