@@ -40,24 +40,24 @@
     </style>
     
     <body>
-        <div class="form" id="commentForm">
+        <div class="form" id="commentForm" name="form">
         	<div class="container">
                 <h2>MYbarre Instructor Application Form</h2>
                 <form id="myfrom" action="" method="post">
                 
                     <div class="item">
                         <div class="form-title">
-                            Personal Details <span class="red-span">（ * Mandatory Field ) </span>
+                            Personal Details <span class="red-span">（ Full Page Mandatory Field ) </span>
                         </div>
                         <div class="form-inner">
-                            <p>First Name: <span class="red-span">*</span><input type="text" class="input-type" name="first_name" id="firstName"></p>
-                            <p>Last Name: <span class="red-span">*</span><input type="text" class="input-type" name="last_name" id="lastName"></p>
-                            <p>Phone Number: <span class="red-span">*</span><input type="text" class="input-type" name="phone" id="mobile"></p>
-                            <p>Email: <span class="red-span">*</span><input type="email" class="input-type" name="email" id="email"></p>
-                            <p>Address: <input type="text" class="input-type" name="address"></p>
-                            <p>Date Of Birth: <input type="text" class="input-type" name="birth"></p>
-                            <p>Nationality: <input type="text" class="input-type" name="nationality"></p>
-                            <p>Occupation: <input type="text" class="input-type" name="occupation"></p>
+                            <p>First Name: <span class="red-span"></span><input type="text" class="input-type firstName" name="first_name" id="firstName"></p>
+                            <p>Last Name: <span class="red-span"></span><input type="text" class="input-type lastName" name="last_name" id="lastName"></p>
+                            <p>Phone Number: <span class="red-span"></span><input type="text" class="input-type mobile" name="phone" id="mobile"></p>
+                            <p>Email: <span class="red-span"></span><input type="email" class="input-type email" name="email" id="email"></p>
+                            <p>Address: <span class="red-span"></span><input type="text" class="input-type address" name="address"></p>
+                            <p>Date Of Birth: <span class="red-span"></span><input type="text" class="input-type birth" name="birth"></p>
+                            <p>Nationality: <span class="red-span"></span><input type="text" class="input-type nationality" name="nationality"></p>
+                            <p>Occupation: <span class="red-span"></span><input type="text" class="input-type occupation" name="occupation"></p>
                         </div>
                     </div>
                     <div class="item">
@@ -76,23 +76,24 @@
                             Background and Motivation
                         </div>
                         <div class="form-inner">
-                            <p>How did you find out about the MYbarre Instructor Training Course?</p>
-                            <textarea class="textarea-type" name="motivation1"></textarea>
-                            <p>Please elaborate on your motivation for joining the training?</p>
+                            <p>How did you find out about the MYbarre Instructor Training Course?<span class="red-span"></span>
+                            <textarea class="textarea-type howfind" name="motivation1"></textarea></p>
+                            <p>Please elaborate on your motivation for joining the training?<span class="red-span"></span>
 
-                            <textarea class="textarea-type" name="motivation2"></textarea>
+                            <textarea class="textarea-type elaborate" name="motivation2"></textarea></p>
                             <p>Please list your exercised fitness disciplines, certification level and years of experience.</p>
-
+                            <span class="red-span"></span>
                             <table cellspacing="0" cellpadding="0" class="table">  
                                 <tr>  
                                     <td>Discipline</td>  
                                     <td>Certification / Level</td>  
                                     <td>Years of experience</td>  
                                 </tr>  
-                                <tr>  
-                                    <td><input type="text" class="table-input" name="discipline"></td>
-                                    <td><input type="text" class="table-input" name="level"></td>
-                                    <td><input type="text" class="table-input" name="years"></td>
+
+                                <tr> 
+                                    <td><input type="text" class="table-input discipline" name="discipline"></td>
+                                    <td><input type="text" class="table-input level" name="level"></td>
+                                    <td><input type="text" class="table-input experience" name="years"></td>
                                 </tr>  
                                 <tr>  
                                     <td><input type="text" class="table-input" name="discipline"></td>
@@ -106,10 +107,11 @@
                                 </tr>  
                             </table>  
 
-                            <p>Do you have any prior MYbarre, ballet or pilates experience?</p>
-                            <textarea class="textarea-type" name="bellet"></textarea>
-                            <p>Is there anything else you would like to share with us about yourself or fitness / dance experience?</p>
-                            <textarea class="textarea-type" name="share_experience"></textarea>
+
+                            <p>Do you have any prior MYbarre, ballet or pilates experience?<span class="red-span"></span>
+                            <textarea class="textarea-type prior" name="bellet"></textarea></p>
+                            <p>Is there anything else you would like to share with us about yourself or fitness / dance experience?<span class="red-span"></span>
+                            <textarea class="textarea-type share" name="share_experience"></textarea></p>
 
                         </div>  
                     </div>  
@@ -118,9 +120,9 @@
                             Practical Information
                         </div>
                         <div class="form-inner">
-                            <p>Do you have a VPN？<input type="radio" value="Yes" name="isvpn">Yes <input type="radio" value="No" name="isvpn">No</p>
-                            <p>What device do you use for downloading your music？<input type="text" class="input-type" name="music"></p>
-                            <p>Do you use QQ？<input type="radio" value="Yes" name="QQ">Yes <input type="radio" value="No" name="QQ">No</p>
+                            <p >Do you have a VPN？<input type="radio" value="Yes" name="isvpn">Yes <input type="radio" value="No" name="isvpn" class="vpn">No<span class="red-span"></span></p>
+                            <p>What device do you use for downloading your music？<span class="red-span"></span><input type="text" class="input-type device" name="music"></p>
+                            <p>Do you use QQ？<input type="radio" value="Yes" name="QQ">Yes <input type="radio" value="No" name="QQ" class="qq">No<span class="red-span"></span></p>
                         </div>
                     </div>
                     <div class="item">
@@ -128,9 +130,9 @@
                             Medical Information
                         </div>
                         <div class="form-inner">
-                            <p>Have you ever been told you have a heart condition？<input type="radio" value="Yes" name="heart_condition">Yes <input type="radio" value="No" name="heart_condition">No</p>
-                            <p>Have you ever experienced chest pain, dizziness or loss of consciousness during or after a physical exercise workout?<input type="radio" value="Yes" name="workout">Yes <input type="radio" value="No" name="workout">No</p>
-                            <p>Have you or do you currently take any medicines for high blood pressure？<input type="radio" value="Yes" name="high_blood">Yes <input type="radio" value="No" name="high_blood">No</p>
+                            <p>Have you ever been told you have a heart condition？<input type="radio" value="Yes" name="heart_condition">Yes <input type="radio" value="No" name="heart_condition" class="heart_condition">No<span class="red-span"></span></p>
+                            <p>Have you ever experienced chest pain, dizziness or loss of consciousness during or after a physical exercise workout?<input type="radio" value="Yes" name="workout">Yes <input type="radio" value="No" name="workout" class="workout">No<span class="red-span"></span></p>
+                            <p>Have you or do you currently take any medicines for high blood pressure？<input type="radio" value="Yes" name="high_blood">Yes <input type="radio" value="No" name="high_blood" class="high_blood">No<span class="red-span"></span></p>
                             <p>In case you have answered any of the above questions positively (with “yes”), please make sure to get cleared by a doctor before attending the MYbarre Instructor Training Course.</p>
                         </div>
                     </div>
