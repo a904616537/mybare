@@ -48,16 +48,51 @@ $("#register").on('click',function(){
   		phoneReg = /(^[0-9]{3,4}-[0-9]{3,8}$)|(^[0-9]{3,8}$)|(^[0−9]3,4[0-9]{3,8}$)|(^0{0,1}1[0-9]{10}$)/,
   		reg = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
 
-	if(firstName == '' || lastName == '' ){
-  		swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
-	}
-	else if(!reg.test(email) || email == ''){
-		swal('Oops...', 'Submission failed, incorrect email address！', 'error');
- 	}
- 	else if(!phoneReg.test(mobile) || mobile == '') { 
-	    swal('Oops...', 'Submission failed, incorrect phone number！', 'error');
-	}else{
-		$.ajax({
+
+  	if(firstName == ''){
+  		$('.firstName').prev().html('First name cannot be empty');
+  	}else if(lastName == ''){
+  		$('.lastName').prev().html('Last name cannot be empty');
+  	}else if(!phoneReg.test(mobile) || mobile == '') { 
+  		$('.mobile').prev().html('Phone number cannot be empty');
+  	}else if(!reg.test(email) || email == ''){
+  		$('.email').prev().html('Email cannot be empty');
+  	}else if($('.address').val() == ''){
+  		$('.address').prev().html('Address cannot be empty');
+  	}else if($('.birth').val() == ''){
+  		$('.birth').prev().html('Date of birth cannot be empty');
+  	}else if($('.nationality').val() == ''){
+  		$('.nationality').prev().html('Nationality cannot be empty');
+  	}else if($('.occupation').val() == ''){
+  		$('.occupation').prev().html('Occupation cannot be empty');
+  	}else if($('.howfind').val() == ''){
+  		$('.howfind').prev().html('This field cannot be left empty');
+  	}else if($('.elaborate').val() == ''){
+  		$('.elaborate').prev().html('This field cannot be left empty');
+  	}else if($('.discipline').val() == ''){
+  		$('.table').prev().html('This field cannot be left empty');
+  	}else if($('.level').val() == ''){
+  		$('.table').prev().html('This field cannot be left empty');
+  	}else if($('.experience').val() == ''){
+  		$('.table').prev().html('This field cannot be left empty');
+  	}else if($('.prior').val() == ''){
+  		$('.prior').prev().html('This field cannot be left empty');
+  	}else if($('.share').val() == ''){
+  		$('.share').prev().html('This field cannot be left empty');
+  	}else if($('input:radio[name="isvpn"]:checked').val() == null){
+  		$('.vpn').next().html('A selection must be made');
+  	}else if($('.device').val() == ''){
+  		$('.device').prev().html('This field cannot be left empty');
+  	}else if($('input:radio[name="QQ"]:checked').val() == null){
+  		$('.qq').next().html('A selection must be made');
+  	}else if($('input:radio[name="heart_condition"]:checked').val() == null){
+  		$('.heart_condition').next().html('A selection must be made');
+  	}else if($('input:radio[name="workout"]:checked').val() == null){
+  		$('.workout').next().html('A selection must be made');
+  	}else if($('input:radio[name="high_blood"]:checked').val() == null){
+  		$('.high_blood').next().html('A selection must be made');
+  	}else{
+  		$.ajax({
 			cache : false,
 			type  : "POST",
 			url   : apiUrl + '/register',
@@ -86,7 +121,7 @@ $("#register").on('click',function(){
 
 			}
 		});
-	}
+  	}
 });
 
 

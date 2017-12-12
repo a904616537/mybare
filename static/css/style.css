@@ -427,7 +427,8 @@ input:-webkit-autofill {
 	padding   : 50px 0 30px;
 }
 .form .red-span{
-	color: red;
+	color       : red;
+	margin-left : 10px;
 }
 .form .form-title{
 	font-weight : bold;
