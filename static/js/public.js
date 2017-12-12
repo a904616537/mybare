@@ -111,7 +111,11 @@ $("#login").on('click',function(){
 					$.cookie('user', JSON.stringify(user));
 				}
   				// window.history.back()
-  				window.location.href = homeUrl;
+  				
+  				setTimeout(function() {
+  					window.location.href = homeUrl;
+  				}, 500);
+  				
 			}
 			else swal('Oops...', 'Login failed, please try again!', 'error');
 		}
