@@ -6,7 +6,7 @@ function getvideos (level, user_id){
 
 	var cookieuser = $.cookie('user');
 	// 没登录
-	if(typeof cookieuser != 'undefined') {
+	if(typeof cookieuser == 'undefined') {
 		window.location.replace("login.html");
 		return;
 	} else {
@@ -90,6 +90,6 @@ $(function() {
 			}
 		});
 	} else {
-		window.location.href = homeUrl + '/login.html';
+		window.location.replace("login.html");
 	}
 })
