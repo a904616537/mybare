@@ -1126,6 +1126,9 @@ input:-webkit-autofill {
 		line-height : 200px;
 		display     : none;
 	}
+	.team-content .ginny-pic{
+		margin-top : 10px;
+	}
 	.team-content .siri-pic{
 		line-height : 200px;
 	}
