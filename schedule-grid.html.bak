@@ -22,34 +22,6 @@
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
     
-    <style>
-        .card{
-            border        : 1px solid #eee;
-            border-radius : 3px;
-            line-height   : 30px;
-            box-shadow    : 3px 3px 5px #f4f4f4;
-            text-align    : left;
-            margin-bottom : 20px;
-        }
-        .card .head{
-            font-weight      : bold;
-            padding          : 0 20px;
-            background-color : #f4f4f4;
-        }
-        .card .content{
-            padding : 0 20px;
-        }
-        .card .content label{
-            width : 70px;
-        }
-        .card .regist-btn{
-            color : #00B0CB;
-        }
-        .card .full-btn{
-            color: #ccc;
-        }
-    </style>
-
     <body>
         <div class="header">
             <div class="related clearfloat">
@@ -151,108 +123,58 @@
                 </div>
             </div>
 
-
-            <!-- 课表开始 -->
-                <div class="container">
-                     <div class="card">
-                        <div class="head">
-                            <span>COMPLETED</span>
-                        </div>
-                        <div class="content">
-                            <div>
-                                <label>Course</label>
-                                <span>MYbarre 3 day Instructor Training</span>
-                            </div>
-                            <div>
-                                <label>Date</label>
-                                <span>7th - May - 2017</span>
-                            </div>
-                            <div>
-                                <label>Location</label>
-                                <span>Z&B Shanghai Shaanxi Studio</span>
-                            </div>
-                            <div>
-                                <label>Places</label>
-                                <span>-</span>   
-                            </div>
-                            <a href="javascript:;" class="full-btn">Class Fulled</a>
-                        </div>
-                    </div>
-                     <div class="card">
-                        <div class="head">
-                            <span>COMPLETED</span>
-                        </div>
-                        <div class="content">
-                            <div>
-                                <label>Course</label>
-                                <span>MYbarre 3 day Instructor Training</span>
-                            </div>
-                            <div>
-                                <label>Date</label>
-                                <span>16/17/18 - July - 2017</span>
-                            </div>
-                            <div>
-                                <label>Location</label>
-                                <span>Z&B Shanghai Shaanxi Studio</span>
-                            </div>
-                            <div>
-                                <label>Places</label>
-                                <span>Only Five People</span>   
-                            </div>
-                            <a href="javascript:;" class="full-btn">Class Fulled</a>
-                        </div>
-                    </div>
-                     <div class="card">
-                        <div class="head">
-                            <span>COMPLETED</span>
-                        </div>
-                        <div class="content">
-                            <div>
-                                <label>Course</label>
-                                <span>MYbarre 3 day Instructor Training</span>
-                            </div>
-                            <div>
-                                <label>Date</label>
-                                <span>1/2/3 - September - 2017</span>
-                            </div>
-                            <div>
-                                <label>Location</label>
-                                <span>Z&B Shanghai Shaanxi Studio</span>
-                            </div>
-                            <div>
-                                <label>Places</label>
-                                <span>Only Five People</span>   
-                            </div>
-                            <a href="javascript:;" class="full-btn">Registration Ended</a>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="head">
-                            <span>UPCOMING TRAININGS</span>
-                        </div>
-                        <div class="content">
-                            <div>
-                                <label>Course</label>
-                                <span>MYbarre 3 day Instructor Training</span>
-                            </div>
-                            <div>
-                                <label>Date</label>
-                                <span>9/10/11 - March - 2018</span>
-                            </div>
-                            <div>
-                                <label>Location</label>
-                                <span>Z&B Shanghai Shaanxi Studio</span>
-                            </div>
-                            <div>
-                                <label>Places</label>
-                                <span>Only Five People</span>   
-                            </div>
-                            <a href="javascript:;" class="regist-btn">Register</a>
-                        </div>
-                    </div>
-                </div>
-            <!-- 课表结束 -->
-
+                <table class="table" style="font-size: 11px;">
+                    <tr class="table-title">
+                        <td>State</td>
+                        <td>Date</td>
+                        <td>Course</td>
+                        <td>Location</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>COMPLETED</td>
+                        <td>7th - May - 2017</td>
+                        <td>MYbarre CE Instructor Training</td>
+                        <td>Z&B Shanghai Changle Studio</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>COMPLETED</td>
+                        <td>16/17/18 - July - 2017</td>
+                        <td>MYbarre 3 Day Instructor Training</td>
+                        <td>Z&B Shanghai Shaanxi Studio</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>COMPLETED</td>
+                        <td>1/2/3 - September - 2017</td>
+                        <td>MYbarre 3 day Instructor Training</td>
+                        <td>Z&B Shanghai Shaanxi Studio</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>COMPLETED</td>
+                        <td>27/28/29 - October - 2017</td>
+                        <td>MYbarre 3 day Instructor Training</td>
+                        <td>Z&B Shanghai Shaanxi Studio</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>COMPLETED</td>
+                        <td>1/2/3 - December - 2017</td>
+                        <td>MYbarre 3 day Instructor Training</td>
+                        <td>Z&B Shanghai Shaanxi Studio</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>UPCOMING TRAININGS <span style="color: #00B0CB">(50/50)</span></td>
+                        <td>9/10/11 - March - 2018</td>
+                        <td>MYbarre 3 day Instructor Training</td>
+                        <td>Z&B Shanghai Shaanxi Studio</td>
+                        <td><a href="form.html" class="regist-btn">Register</a></td>
+                    </tr>
+                </table>
+            <!-- </div> -->
         </div>
 
         <!-- footer -->
