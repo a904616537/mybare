@@ -26,7 +26,7 @@ $(function() {
 	if(typeof cookieuser != 'undefined') {
 		var cookie = JSON.parse(cookieuser);
 		$('#user_id').val(cookie.user._id);
-		$('#user').html('<a href="#" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
+		$('#user').html('<a href="profile.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#video-tip').show();
 	} else {

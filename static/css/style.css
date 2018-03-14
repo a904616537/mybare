@@ -997,6 +997,38 @@ input:-webkit-autofill {
 
 
 
+/*  profile  */
+.profile-content{
+    margin-top : 12vh;
+    width      : 100%;
+    font-size  : 30px;
+}
+.profile-content .inner{
+    width      : 40%;           
+    padding    : 0 90px;
+    text-align : left;
+    float      : left;
+}
+.profile-content .inner .user{
+    font-weight : bold;
+    font-size   : 50px;
+    margin-top  : 20vh;
+}
+.profile-content .inner .level{
+    line-height : 90px;
+}               
+.profile-content .inner .email{
+    word-wrap : break-word;
+}
+.profile-content .profile-img{
+	background      : url(../img/profile.jpg) no-repeat;
+	background-size : cover;
+	width           : 60%; 
+	padding         : 24%;
+	float           : left;
+}  
+
+
 /*  响应 开始  */
 @media screen and (max-width : 580px) and (min-width: 320px){
 	body{
@@ -1149,8 +1181,8 @@ input:-webkit-autofill {
 		line-height : 20px;
 	}
 	.cart{
-		margin-top: 0;
-		padding: 0;
+		margin-top : 0;
+		padding    : 0;
 	}
 	.cart .cart-box .row>div:first-child{
 		line-height : 30px;
@@ -1178,6 +1210,25 @@ input:-webkit-autofill {
 		margin-bottom : -10px;
 		color         : #00B0CB;
 	}
+	.profile-content{
+	    margin-top : 0;
+	    font-size  : 16px;
+	}
+	.profile-content .inner{
+		width   : 40%;    
+		padding : 0 14px;       
+	}
+	.profile-content .inner .user{
+	    font-size   : 20px;
+	    margin-top  : 100px;
+	}
+	.profile-content .inner .level{
+	    line-height : 60px;
+	}    
+	.profile-content .profile-img{
+		background-position : center center;
+		height              : 500px;
+	}  
 }
 
 
@@ -1268,11 +1319,24 @@ input:-webkit-autofill {
 		margin-bottom : 14px;
 	}
 	.cart .cart-box .row>div:first-child{
-		line-height: 30px;
+		line-height : 30px;
 	}
 	.cart .cart-box .row>div{
-		line-height: 180px;
+		line-height : 180px;
 	}
+	.profile-content{
+		font-size : 18px;
+	}
+	.profile-content .inner{
+		padding : 0 30px;
+	}
+	.profile-content .inner .user{
+		font-size  : 28px;
+		margin-top : 10vh;
+	}
+	.profile-content .inner .level{
+		line-height : 60px;
+	} 
 }
 
 
@@ -1309,6 +1373,18 @@ input:-webkit-autofill {
 	.registe .enter{
 		margin-top : 30px;
 	}
+	.profile-content{
+		font-size : 24px;
+	}
+	.profile-content .inner{
+		padding : 0 40px;
+	}
+	.profile-content .inner .user{
+	    font-size   : 32px;
+	}
+	.profile-content .inner .level{
+	    line-height : 60px;
+	} 
 }
 
 
