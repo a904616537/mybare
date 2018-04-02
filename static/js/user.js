@@ -11,10 +11,11 @@ function getvideos (level, user_id){
 		return;
 	} else {
 		var user = JSON.parse(cookieuser).user;
-		if(!user.is_payment) {
-			window.location.replace("topay.html");
-			return;
-		} 
+		// 移除用户前往付款
+		// if(!user.is_payment) {
+		// 	window.location.replace("topay.html");
+		// 	return;
+		// }
 		$.ajax({
 			cache : false,
 			type  : "GET",
@@ -24,6 +25,7 @@ function getvideos (level, user_id){
 				swal('Oops...','For failure！', 'error');
 			},
 			success : function(result) {
+
 				if(result.status) {
 					for(var i = 0; i < result.data.length; i++) {
 						var item =  result.data[i];

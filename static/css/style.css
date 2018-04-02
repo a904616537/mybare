@@ -370,6 +370,20 @@ input:-webkit-autofill {
 }
 
 
+.payment{
+	display  : none;
+	top      : 30%;
+	width    : 100%;
+	position : fixed;
+}
+.payment .payment_block{
+	padding          : 20px;
+	width            : 300px;
+	margin           : 0 auto;
+	text-align       : center;
+	background-color : #fff;
+}
+
 /*  footer 开始  */
 .footer{
 	background-color : #53565B;

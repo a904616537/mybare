@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/sweetalert2.min.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.21.0/moment.min.js"></script> -->
     </head>
     <style type="text/css">
         .full-btn{
@@ -130,7 +131,7 @@
                     <a href="faq.html" class="faq-btn"><div>TRAINING FAQ</div></a>
                 </div>
                 <table class="table">
-                    <tr class="table-title">
+                    <!-- <tr class="table-title">
                         <td>State</td>
                         <td>Places</td>
                         <td>Date</td>
@@ -185,11 +186,17 @@
                         <td>MYbarre 3 day Instructor Training</td>
                         <td>Z&B Shanghai Shaanxi Studio</td>
                         <td><a href="javascript:;" class="regist-btn">Register</a></td>
-                    </tr>
+                    </tr> -->
                 </table>
             </div>
         </div>
-
+        <!-- payment code -->
+        <div class="payment">
+            <div class="payment_block">
+                <div id="qrcode"></div>
+                <p>PAY VIA WECHAT</p>
+            </div>
+        </div>
         <!-- footer -->
         <div class="footer">
             <div class="row">
@@ -226,13 +233,13 @@
             </div> 
         </div>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.bootcss.com/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+        <script src="https://cdn.bootcss.com/moment.js/2.19.0/moment.min.js"></script>
+        <script src="https://cdn.bootcss.com/socket.io/2.0.3/socket.io.js"></script>
         <script type="text/javascript" src="static/js/sweetalert2.min.js"></script>
         <script type="text/javascript" src="static/js/public.js"></script>
-        <script type="text/javascript">
-            $('regist-btn').on('click',function(){
-                
-            })
-        </script>
+        <script type="text/javascript" src="static/js/schedule.js"></script>
+        <script type="text/javascript" src="static/js/schedule.payment.js"></script>
     </body>
 </html>
