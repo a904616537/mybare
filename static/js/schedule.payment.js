@@ -27,8 +27,8 @@ function onPayment(price, next) {
 		$.ajax({
 			cache : false,
 			type  : "post",
-			// url   : apiUrl + '/payment/sweep',
-			url : 'http://server.mybarrefitness.com/payment/sweep',
+			url   : apiUrl + '/payment/sweep',
+			// url : 'http://server.mybarrefitness.com/payment/sweep',
 			async : false,
 			data  : 'order='+order+'&total=' +total+ '&user=' + user._id ,
 			error : function(request) {
@@ -42,8 +42,8 @@ function onPayment(price, next) {
 		});
 
 
-		// var socket = io(apiUrl);
-		var socket = io('http://server.mybarrefitness.com');
+		var socket = io(apiUrl);
+		// var socket = io('http://server.mybarrefitness.com');
 		socket.on('wechatPay', function(result) {
 			console.log('socket io result:', result)
 			if(result.order_id[0] == order) {
