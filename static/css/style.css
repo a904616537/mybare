@@ -1027,6 +1027,19 @@ input:-webkit-autofill {
 	padding         : 24%;
 	float           : left;
 }  
+.profile-content .profile-btn{
+	font-size        : 22px;
+	background-color : #00B0CB;
+	color            : #fff;
+	line-height      : 50px;
+	display          : inline-block;
+	padding          : 0 20px;
+	margin-top       : 50px;
+}
+.profile-content .to-schedule-grid{
+	display : none;
+}
+
 
 
 /*  响应 开始  */
@@ -1228,7 +1241,18 @@ input:-webkit-autofill {
 	.profile-content .profile-img{
 		background-position : center center;
 		height              : 500px;
-	}  
+	} 
+	.profile-content .to-schedule{
+		display : none;
+	} 
+	.profile-content .to-schedule-grid{
+		display : block;
+	} 
+	.profile-content .profile-btn{
+		font-size   : 14px;
+		line-height : 40px;
+		padding     : 0 5px;
+	}
 }
 
 
