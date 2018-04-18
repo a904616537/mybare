@@ -40,7 +40,7 @@ $(function() {
                         <div class="content">\
                             <div>\
                                 <label>Course</label>\
-                                <span>'+ data.name +'</span>\
+                                <span>MYbarre 3 Day Instructor Training</span>\
                             </div>\
                             <div>\
                                 <label>Date</label>\

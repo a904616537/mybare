@@ -44,7 +44,7 @@ $(function() {
 					<td>'+status+'</td>\
 					<td>'+ (data.limit - data.sign_user.length) +'</td>\
 					<td>'+ data.time  +'</td>\
-					<td>'+ data.name +'</td>\
+					<td>MYbarre 3 Day Instructor Training</td>\
 					<td>'+ data.location +'</td>\
 					<td>'+ isRegister +'</td>\
 				</tr>';
