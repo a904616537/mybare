@@ -1,7 +1,7 @@
-// var apiUrl = 'http://server.mybarrefitness.com';
-// var homeUrl = 'http://www.mybarrefitness.com';
-var homeUrl = 'http://106.14.94.210:8090';
-var apiUrl = 'http://test.mybarrefitness.com';
+var apiUrl = 'http://server.mybarrefitness.com';
+var homeUrl = 'http://www.mybarrefitness.com';
+// var homeUrl = 'http://106.14.94.210:8090';
+// var apiUrl = 'http://test.mybarrefitness.com';
 // var apiUrl = 'http://localhost:9080';
 // var homeUrl = 'http://localhost:9080';
 
@@ -41,6 +41,7 @@ $(function() {
 
 // 注册
 $("#register").on('click',function(){
+		
 	var firstName = $('#firstName').val(),
   		lastName = $('#lastName').val(),
   		mobile = $("#mobile").val(),
@@ -125,22 +126,17 @@ $("#register").on('click',function(){
 				swal('Oops..', 'Submission failed!', 'error');
 			},
 			success : function(data) {
-				if(data.status) {
-					swal({
-						title: "Successfully Submitted",
-						text: "Please sit tight! The MYbarre team will review your application and get back to you shortly. Keep a close eye on your email inbox!",
-						type: "success",
-						confirmButtonColor: "#5bc0de",
-						confirmButtonText: "To Home!"
-					}).then(function(isConfirm){
-						if (isConfirm === true) {
-							window.location.href = homeUrl;
-						}
-					})				
-				}else{
-					swal('Oops..', "Your email or phone number has already been registered in our system. If this doesn't seem right, please email us: info@mybarrefitness.com", 'warning');
-				}
-
+				swal({
+					title: "Thank You!",
+					text: "Your application has been submitted to the MYbarre team for approval. If your application is successful you will receive an email in the next 24 hours with your account password.",
+					type: "success",
+					confirmButtonColor: "#5bc0de",
+					confirmButtonText: "To Home!"
+				}).then(function(isConfirm){
+					if (isConfirm === true) {
+						window.location.href = homeUrl;
+					}
+				})
 			}
 		});
   	}
