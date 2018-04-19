@@ -29,6 +29,9 @@ $(function() {
 		$('#user_id').val(cookie.user._id);
 		$('#user').html('<a href="profile.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
+		$('#profile').html(cookie.user.first_name +" "+cookie.user.last_name)
+		$('#level').html(cookie.user.level)
+		$('#email').html(cookie.user.email)
 		$('#video-tip').show();
 	} else {
 		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
