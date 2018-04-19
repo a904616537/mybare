@@ -1,9 +1,9 @@
 $(function() {
 	var cookieuser = $.cookie('user');
-	var geturl = apiUrl + '/courses'
+	var geturl = apiUrl + '/class'
 	if(typeof cookieuser != 'undefined') {
 		var cookie = JSON.parse(cookieuser);
-		geturl = apiUrl + '/courses?user=' + cookie.user._id;
+		geturl = apiUrl + '/class?user=' + cookie.user._id;
 	}
 	console.log(geturl)
 	$.ajax({
@@ -40,7 +40,7 @@ $(function() {
                         <div class="content">\
                             <div>\
                                 <label>Course</label>\
-                                <span>MYbarre 3 Day Instructor Training</span>\
+                                <span>'+ data.name +'</span>\
                             </div>\
                             <div>\
                                 <label>Date</label>\
@@ -71,7 +71,7 @@ $(function() {
 						$.ajax({
 							cache : false,
 							type  : "post",
-							url   : apiUrl + '/courses/apply',
+							url   : apiUrl + '/class/apply',
 							async : false,
 							data : 'courses=' + _id + '&user=' + cookie.user._id,
 							error : function(request) {

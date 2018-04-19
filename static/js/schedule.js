@@ -1,9 +1,9 @@
 $(function() {
 	var cookieuser = $.cookie('user');
-	var geturl = apiUrl + '/courses'
+	var geturl = apiUrl + '/class'
 	if(typeof cookieuser != 'undefined') {
 		var cookie = JSON.parse(cookieuser);
-		geturl = apiUrl + '/courses?user=' + cookie.user._id;
+		geturl = apiUrl + '/class?user=' + cookie.user._id;
 	}
 	console.log(geturl)
 	$.ajax({
@@ -44,7 +44,7 @@ $(function() {
 					<td>'+status+'</td>\
 					<td>'+ (data.limit - data.sign_user.length) +'</td>\
 					<td>'+ data.time  +'</td>\
-					<td>MYbarre 3 Day Instructor Training</td>\
+					<td>'+ data.name +'</td>\
 					<td>'+ data.location +'</td>\
 					<td>'+ isRegister +'</td>\
 				</tr>';
@@ -62,7 +62,7 @@ $(function() {
 						$.ajax({
 							cache : false,
 							type  : "post",
-							url   : apiUrl + '/courses/apply',
+							url   : apiUrl + '/class/apply',
 							async : false,
 							data : 'courses=' + _id + '&user=' + cookie.user._id,
 							error : function(request) {

@@ -1,6 +1,6 @@
-var apiUrl = 'http://server.mybarrefitness.com';
+// var apiUrl = 'http://server.mybarrefitness.com';
 // var apiUrl = 'http://test.mybarrefitness.com';
-// var apiUrl = 'http://localhost:9080';
+var apiUrl = 'http://localhost:9080';
 
 function getvideos (level, user_id){
 
@@ -19,7 +19,7 @@ function getvideos (level, user_id){
 		$.ajax({
 			cache : false,
 			type  : "GET",
-			url   : apiUrl + '/courses/list/video/' + level,
+			url   : apiUrl + '/courses/list/video/' + level + '/' + user._id,
 			async : false,
 			error : function(request) {
 				swal('Oops...','For failure！', 'error');
