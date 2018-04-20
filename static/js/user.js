@@ -94,7 +94,7 @@ $(function() {
 			url   : apiUrl + '/user/level/' + cookie.user._id,
 			async : false,
 			error : function(request) {
-				swal('Oops','For failure！','error');
+				// swal('Oops','For failure！','error');
 			},
 			success : function(result) {
 				getvideos(result.level, cookie.user._id);

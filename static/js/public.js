@@ -23,6 +23,20 @@ $('.floatBox>.item-box').on('mouseleave',function(){
 
 // cookie
 $(function() {
+	var levelToString = function(level) {
+		switch(level) {
+			case 0:
+			return 'Public Availability';
+			case 1:
+			return 'Pre Course Instructor';
+			case 2:
+			return 'Instructor in Training';
+			case 3:
+			return 'MBI (MYbarre Instructor)';
+			case 4:
+			return 'MBI Elite/MBI Master';
+		}
+	}
 	var cookieuser = $.cookie('user');
 	if(typeof cookieuser != 'undefined') {
 		var cookie = JSON.parse(cookieuser);
@@ -30,7 +44,7 @@ $(function() {
 		$('#user').html('<a href="profile.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#profile').html(cookie.user.first_name +" "+cookie.user.last_name)
-		$('#level').html(cookie.user.level)
+		$('#level').html(levelToString(cookie.user.level))
 		$('#email').html(cookie.user.email)
 		$('#video-tip').show();
 	} else {
