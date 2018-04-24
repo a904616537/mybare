@@ -70,16 +70,7 @@ $(function() {
 							},
 							success : function(result) {
 								console.log(result)
-								if(result.status) {
-									swal({
-										title : "Successfully Submitted",
-										type  : "success",
-									}).then(function(isConfirm){
-										if (isConfirm === true) {
-											window.location.reload();
-										}
-									})
-								}
+								window.location.replace("video.html");
 							}
 						});
 					});
