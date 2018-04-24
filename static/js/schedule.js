@@ -53,7 +53,6 @@ $(function() {
 
 			$('.table').append(html);
 			$('.regist-btn').on('click', function(){
-
 				if(typeof cookieuser != 'undefined') {
 					var cookie = JSON.parse(cookieuser);
 					var price = $(this).attr('price');

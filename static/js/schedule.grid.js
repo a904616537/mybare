@@ -62,7 +62,6 @@ $(function() {
 
 			$('#schedule').append(html);
 			$('.regist-btn').on('click', function(){
-
 				if(typeof cookieuser != 'undefined') {
 					var cookie = JSON.parse(cookieuser);
 					var price = $(this).attr('price');
@@ -79,16 +78,7 @@ $(function() {
 							},
 							success : function(result) {
 								console.log(result)
-								if(result.status) {
-									swal({
-										title : "Successfully Submitted",
-										type  : "success",
-									}).then(function(isConfirm){
-										if (isConfirm === true) {
-											window.location.reload();
-										}
-									})
-								}
+								window.location.replace("video.html");
 							}
 						});
 					});
