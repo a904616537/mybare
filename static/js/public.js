@@ -58,6 +58,9 @@ $(function() {
 
 // 注册
 $("#register").on('click',function(){
+
+	
+
 		
 	var firstName = $('#firstName').val(),
   		lastName = $('#lastName').val(),
@@ -113,9 +116,6 @@ $("#register").on('click',function(){
   	}else if($('.share').val() == ''){
   		$('.share').prev().html('This field cannot be left empty');
   		$('html,body').animate({scrollTop:$('.q13').offset().top},500)
-  	}else if($('input:radio[name="isvpn"]:checked').val() == null){
-  		$('.vpn').next().html('A selection must be made');
-  		$('html,body').animate({scrollTop:$('.q14').offset().top},500)
   	}else if($('.device').val() == ''){
   		$('.device').prev().html('This field cannot be left empty');
 		$('html,body').animate({scrollTop:$('.q15').offset().top},500)
@@ -131,7 +131,23 @@ $("#register").on('click',function(){
   	}else if($('input:radio[name="high_blood"]:checked').val() == null){
   		$('.high_blood').next().html('A selection must be made');
   		$('html,body').animate({scrollTop:$('.q19').offset().top},500)
+  	}
+
+  	else if($('.wechatid').val() == ''){
+  		$('.wechatid').next().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q20').offset().top},500)
+  	}else if($('.city').val() == ''){
+  		$('.city').next().html('This field cannot be left empty');
+  		$('html,body').animate({scrollTop:$('.q21').offset().top},500)
+  	}else if($('input:radio[name="lang"]:checked').val() == ''){
+  		$('.lang').next().html('A selection must be made');
+  		$('html,body').animate({scrollTop:$('.q22').offset().top},500)
   	}else{
+  		var is_checked = $('#agree').is(':checked')
+		console.log('is_checked', is_checked)
+		swal('You must agree with our terms!', '', 'warning')
+		if(!is_checked) return;
+
   		$.ajax({
 			cache : false,
 			type  : "POST",

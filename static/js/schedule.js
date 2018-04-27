@@ -16,7 +16,7 @@ $(function() {
 		},
 		success : function(result) {
 			var html = '<tr class="table-title">\
-                        <td>State</td>\
+                        <td>Status</td>\
                         <td>Places</td>\
                         <td>Date</td>\
                         <td>Course</td>\
@@ -69,12 +69,12 @@ $(function() {
 							},
 							success : function(result) {
 								console.log(result)
-								window.location.replace("video.html");
+								window.location.replace("user.html");
 							}
 						});
 					});
 				} else {
-					window.location.replace("login.html");
+					window.location.replace("form.html");
 				}
 			})
 			
