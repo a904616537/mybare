@@ -49,10 +49,6 @@ $(function() {
                             <div>\
                                 <label>Location</label>\
                                 <span>'+ data.location +'</span>\
-                            </div>\
-                            <div>\
-                                <label>Places</label>\
-                                <span>'+ (data.limit - data.sign_user.length) +'</span>\
                             </div>'
                             + isRegister +
                         '</div>\

@@ -17,7 +17,6 @@ $(function() {
 		success : function(result) {
 			var html = '<tr class="table-title">\
                         <td>Status</td>\
-                        <td>Places</td>\
                         <td>Date</td>\
                         <td>Course</td>\
                         <td>Location</td>\
@@ -42,7 +41,6 @@ $(function() {
 				}
 				var str = '<tr>\
 					<td>'+status+'</td>\
-					<td>'+ (data.limit - data.sign_user.length) +'</td>\
 					<td>'+ data.time  +'</td>\
 					<td>'+ data.name +'</td>\
 					<td>'+ data.location +'</td>\
@@ -69,6 +67,8 @@ $(function() {
 							},
 							success : function(result) {
 								console.log(result)
+								cookie.user.level = 1;
+								$.cookie('user', JSON.stringify(cookie.user));
 								window.location.replace("user.html");
 							}
 						});
