@@ -19,6 +19,9 @@ $('.floatBox>.item-box').on('mouseleave',function(){
     $(this).find('.hide-box').fadeOut();
 });
 
+console.log('socket')
+// var socket = io(apiUrl);
+var socket = io('http://server.mybarrefitness.com');
 
 
 // cookie
@@ -49,9 +52,7 @@ $(function() {
 		$('#email').html(cookie.user.email)
 		$('#video-tip').show();
 
-		console.log('socket')
-		// var socket = io(apiUrl);
-		var socket = io('http://server.mybarrefitness.com');
+		
 		socket.on('user-level', function(result) {
 			console.log('socket io result:', result)
 			user.level = Number(result.level);
