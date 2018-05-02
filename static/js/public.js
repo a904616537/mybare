@@ -20,8 +20,7 @@ $('.floatBox>.item-box').on('mouseleave',function(){
 });
 
 console.log('socket')
-// var socket = io(apiUrl);
-var socket = io('http://server.mybarrefitness.com');
+var socket = io(apiUrl);
 
 
 // cookie

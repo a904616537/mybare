@@ -41,6 +41,7 @@ function onPayment(price, next) {
 			}
 		});
 
+		socket = io('http://server.mybarrefitness.com');
 		socket.on('wechatPay', function(result) {
 			console.log('socket io result:', result)
 			if(result.order_id[0] == order) {
@@ -56,13 +57,6 @@ function onPayment(price, next) {
 	                next();
 	            });
 	        }
-		});
-
-		socket.on('user-level', function(result) {
-			console.log('socket io result:', result)
-			user.level = result.level;
-			$.cookie('user', JSON.stringify({user : user}), { expires: 7 });
-			window.location.replace("user.html");
 		});
 
 	}
