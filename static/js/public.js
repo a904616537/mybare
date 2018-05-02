@@ -50,7 +50,8 @@ $(function() {
 		$('#video-tip').show();
 
 		console.log('socket')
-		var socket = io(apiUrl);
+		// var socket = io(apiUrl);
+		var socket = io('http://server.mybarrefitness.com');
 		socket.on('user-level', function(result) {
 			console.log('socket io result:', result)
 			user.level = Number(result.level);

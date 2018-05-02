@@ -1,8 +1,8 @@
-// var apiUrl = 'http://server.mybarrefitness.com';
-// var homeUrl = 'http://www.mybarrefitness.com';
+var apiUrl = 'http://server.mybarrefitness.com';
 // var apiUrl = 'http://localhost:9080';
-var apiUrl = 'http://test.mybarrefitness.com';
-var homeUrl = 'http://106.14.94.210:8090';
+var homeUrl = 'http://www.mybarrefitness.com';
+// var apiUrl = 'http://test.mybarrefitness.com';
+// var homeUrl = 'http://106.14.94.210:8090';
 
 var getOrderId = function() {
 	var str = "" + moment().unix(),
