@@ -26,20 +26,21 @@ $(function() {
 	var levelToString = function(level) {
 		switch(level) {
 			case 0:
-			return 'Public Availability';
-			case 1:
 			return 'Pre Course Instructor';
-			case 2:
+			case 1:
 			return 'Instructor in Training';
-			case 3:
+			case 2:
 			return 'MBI (MYbarre Instructor)';
-			case 4:
+			case 3:
 			return 'MBI Elite/MBI Master';
 		}
 	}
 	var cookieuser = $.cookie('user');
+
 	if(typeof cookieuser != 'undefined') {
 		var cookie = JSON.parse(cookieuser);
+		var user = JSON.parse(cookieuser).user;
+		console.log('user', user)
 		$('#user_id').val(cookie.user._id);
 		$('#user').html('<a href="profile.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
@@ -47,6 +48,15 @@ $(function() {
 		$('#level').html(levelToString(cookie.user.level))
 		$('#email').html(cookie.user.email)
 		$('#video-tip').show();
+
+		console.log('socket')
+		var socket = io(apiUrl);
+		socket.on('user-level', function(result) {
+			console.log('socket io result:', result)
+			user.level = Number(result.level);
+			$.cookie('user', JSON.stringify({user : user}), { expires: 7 });
+		});
+
 	} else {
 		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
 		$('#user-grid').html('<a href="login.html" class="login-icon">Instructor Login</a>');

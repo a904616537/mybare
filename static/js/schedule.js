@@ -67,9 +67,9 @@ $(function() {
 							},
 							success : function(result) {
 								console.log(result)
-								cookie.user.level = 1;
-								$.cookie('user', JSON.stringify(cookie.user));
-								window.location.replace("user.html");
+								setTimeout(function() {
+									window.location.replace("user.html");
+								}, 1000);
 							}
 						});
 					});
@@ -80,4 +80,5 @@ $(function() {
 			
 		}
 	});
+
 })

@@ -74,7 +74,9 @@ $(function() {
 							},
 							success : function(result) {
 								console.log(result)
-								window.location.replace("video.html");
+								setTimeout(function() {
+									window.location.replace("user.html");
+								}, 1000);
 							}
 						});
 					});
