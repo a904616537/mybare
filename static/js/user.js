@@ -1,5 +1,5 @@
-// var apiUrl = 'http://server.mybarrefitness.com';
-var apiUrl = 'http://test.mybarrefitness.com';
+var apiUrl = 'http://server.mybarrefitness.com';
+// var apiUrl = 'http://test.mybarrefitness.com';
 // var apiUrl = 'http://localhost:9080';
 
 function getvideos (level, user_id){
@@ -31,13 +31,13 @@ function getvideos (level, user_id){
 						var item =  result.data[i];
 						var str = '<div class="panel panel-default">\
 		                        <div class="panel-heading" role="tab" id="heading'+i+'">\
-		                        	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'">\
+		                        	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="true" aria-controls="collapse'+i+'">\
 		                            <h4 class="panel-title">\
 					                ' + item.courses.name;
 					        str += '</h4>\
 		                            </a>\
 		                        </div>\
-		                        <div id="collapse'+i+'" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="heading'+i+'">\
+		                        <div id="collapse'+i+'" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading'+i+'">\
 		                            <div class="panel-body">\
 		                                <div class="row">';
 					                    
