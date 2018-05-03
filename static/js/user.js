@@ -31,7 +31,7 @@ function getvideos (level, user_id){
 						var item =  result.data[i];
 						var str = '<div class="panel panel-default">\
 		                        <div class="panel-heading" role="tab" id="heading'+i+'">\
-		                        	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="true" aria-controls="collapse'+i+'">\
+		                        	<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse'+i+'" aria-expanded="false" aria-controls="collapse'+i+'">\
 		                            <h4 class="panel-title">\
 					                ' + item.courses.name;
 					        str += '</h4>\
