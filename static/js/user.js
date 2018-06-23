@@ -45,6 +45,7 @@ function getvideos (level, user_id){
 						for (var v=0; v<item.videos.length; v++)
 						{
 							var video = item.videos[v];
+
 							var photourl = 'static/img/pdf.jpg';
 							if(!video.path || video.path == '') {
 								continue;
@@ -53,16 +54,20 @@ function getvideos (level, user_id){
 							if(video.img && video.img.length > 0) {
 								photourl = video.img;
 							}
-							// 下载视频
-							// str += '<div class="col-md-4 col-xs-6 item">\
-							// 			<div class="box" style="background : url('+ photourl +') no-repeat top center; background-size : auto 100%;">\
-	      //                                   <div class="inner">\
-	      //                                       <a href="'+apiUrl+'/video/download?video='+ video._id +'&user_id='+ user_id +'"><i class="icon fa fa-cloud-download"></i></a>\
-	      //                                   </div>\
-	      //                               </div>\
-	      //                               <p>'+ video.name +'</p>\
-							// 		</div>'
-							str += '<div class="col-md-4 col-sm-6 col-xs-12 item">\
+							var ext = video.path.split('.').pop();
+							console.log('ext', ext)
+							if(ext === 'pdf') {
+								// 下载视频
+								str += '<div class="col-md-4 col-xs-6 item">\
+										<div class="box" style="background : url('+ photourl +') no-repeat top center; background-size : auto 100%;">\
+											<div class="inner">\
+	                                            <a href="'+apiUrl+'/video/download?video='+ video._id +'&user_id='+ user_id +'"><i class="icon fa fa-cloud-download"></i></a>\
+	                                        </div>\
+	                                    </div>\
+	                                    <p>'+ video.name +'</p>\
+									</div>'
+							} else {
+								str += '<div class="col-md-4 col-sm-6 col-xs-12 item">\
                                     	<video id="example_video_1" class="video-js vjs-default-skin vjs-big-play-centered video-style" controls preload="none"\
                                         poster="'+photourl+'"\
                                         data-setup="{}">\
@@ -70,6 +75,9 @@ function getvideos (level, user_id){
                                     </video>\
                                     <p>'+ video.name +'</p>\
                                 </div>'
+							}
+							
+							
 						}
 						str += '</div>\
 					            </div>\
