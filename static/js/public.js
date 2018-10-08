@@ -5,6 +5,43 @@ var homeUrl = 'http://www.mybarrefitness.com';
 // var apiUrl = 'http://localhost:9080';
 // var homeUrl = 'http://localhost:3000';
 
+// 中英文切换
+var type=navigator.appName
+if (type=="Netscape"){
+var lang = navigator.language
+}
+else{
+var lang = navigator.userLanguage
+}
+//取得浏览器语言的前两个字母
+var lang = lang.substr(0,2)
+
+var cookie_lang = $.cookie('lang');
+if(cookie_lang) {
+	setLang(cookie_lang);
+} else {
+	setLang(lang);
+}
+
+$('.langToggle').on('click',function(){
+	var lang = $('.langToggle .lang').attr('data');
+	$.cookie('lang', lang, { expires: 7 });
+	setLang(lang);
+});
+
+function setLang(lang){
+	if(lang == 'en'){
+		$('.langToggle').html('<span class="lang" data="zh">中文</span>');
+		$('.changeLang .zh').hide();
+		$('.changeLang .en').show();
+	}else{
+		$('.langToggle').html('<span class="lang" data="en">English</span>');
+		$('.changeLang .en').hide();
+		$('.changeLang .zh').show();
+	}
+}
+
+
 // 手机端nav
 $('#bars').on('click',function(){
 	$('#dropdown').toggle();

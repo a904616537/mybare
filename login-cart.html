@@ -100,27 +100,33 @@
 
     </style>
     <body>
-        <div class="login">
+        <div class="login changeLang">
                 <img src="static/img/logo-black.png" alt="MYbarre" class="logo">
-                <p class="cart-p">You must be a MYbarre Instructor or Instructor in-training to purchase items from the MYbarre Store.</p>
+                <p class="cart-p">
+                    <font class="en">You must be a MYbarre Instructor or Instructor in-training to purchase items from the MYbarre Store.</font>
+                    <font class="zh">你必须是MYbarre教练员或者在训教练才能选购MYbarre商店的商品。</font>
+                </p>
 
                 <div class="form">
                     <form id="loginfrom">
                         <div class="inner">
-                            <p>Email</p>
+                            <p><font class="en">Email</font><font class="zh">邮箱</font></p>
                             <input type="text" id="key" name="key" class="input-type">
                         </div>
                         <div class="inner">
-                            <p>Password</p>
+                            <p><font class="en">Password</font><font class="zh">密码</font></p>
                             <input type="password" id="password" name="password" class="input-type">
                         </div>
-                        <input type="checkbox" name="rember" class="icon"><span>Remember Me</span>
-                        <button type="button" id="login" class="log">Log In</button>
+                        <input type="checkbox" name="rember" class="icon"><span><font class="en">Remember Me</font><font class="zh">记住我</font></span>
+                        <button type="button" id="login" class="log"><font class="en">Log In</font><font class="zh">登录</font></button>
                     </form>
                 </div>
                 <!-- <a href="#">Lost your password?</a> -->
-                <a href="#" onclick="javascript:history.back(-1);"><i class="fa fa-long-arrow-left icon"></i>Back</a>
-                <a href="instructor.html" style="text-decoration: underline; padding-left: 5px;">Want to become an instructor? Please click here!</a>
+                <a href="#" onclick="javascript:history.back(-1);"><i class="fa fa-long-arrow-left icon"></i><font class="en">Back</font><font class="zh">返回</font></a>
+                <a href="instructor.html" style="text-decoration: underline; padding-left: 5px;">
+                    <font class="en">Want to become an instructor? Please click here!</font>
+                    <font class="zh">想要成为MYbarre教练？请点击这里！</font>
+                </a>
         </div>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>

@@ -23,7 +23,7 @@
     </head>
 
     <body>
-        <div class="header">
+        <div class="header changeLang">
             <div class="related clearfloat">
                 <div class="item">
                     <a href="wechat.html"><i class="fa fa-weixin"></i></a>
@@ -36,43 +36,78 @@
             </div>
             <div class="nav clearfloat">
                 <ul class="navbar">
-                    <li><a href="#">ABOUT<i class="fa fa-caret-down"></i></a>
+                    <li><a href="#">
+                        <font class="en">ABOUT</font>
+                        <font class="zh">关于我们</font>
+                        <i class="fa fa-caret-down"></i>
+                        </a>
                         <ul class="dropdown">
-                            <li><a href="workout.html">MYbarre Workout</a></li>
-                            <li><a href="team.html">MYbarre Team</a></li>
-                            <li><a href="class.html">Find a MYbarre Class</a></li>
+                            <li><a href="workout.html">
+                                <font class="en">MYbarre Workout</font>
+                                <font class="zh">MYbarre训练</font>
+                            </a></li>
+                            <li><a href="team.html">
+                                <font class="en">MYbarre Team</font>
+                                <font class="zh">MYbarre团队</font>
+                            </a></li>
+                            <li><a href="class.html">
+                                <font class="en">Find a MYbarre Class</font>
+                                <font class="zh">查找MYbarre课程</font>
+                            </a></li>
                         </ul>
                     </li>
-                    <li><a href="#">INSTRUCTOR TRAINING<i class="fa fa-caret-down"></i></a>
+                    <li><a href="#">
+                        <font class="en">INSTRUCTOR TRAINING</font>
+                        <font class="zh">教练培训</font>
+                        <i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="instructor.html">Become a MYbarre Instructor</a></li>
-                            <li><a href="schedule.html">Instructor Training Schedule</a></li>
-                            <li><a href="train.html">Host a MYbarre Training</a></li>
-                            <li><a href="faq.html">Instructor Training FAQ</a></li>
+                            <li><a href="instructor.html">
+                                <font class="en">Become a MYbarre Instructor</font>
+                                <font class="zh">成为一名MYbarre教练</font>
+                            </a></li>
+                            <li><a href="schedule.html">
+                                <font class="en">Instructor Training Schedule</font>    
+                                <font class="zh">教练培训时间表</font>
+                            </a></li>
+                            <li><a href="train.html">
+                                <font class="en">Host a MYbarre Training</font>
+                                <font class="zh">举办一场MYbarre培训</font>
+                            </a></li>
+                            <li><a href="faq.html">
+                                <font class="en">Instructor Training FAQ</font>
+                                <font class="zh">教练培训常见问题</font>
+                            </a></li>
                         </ul>
                     </li>
-                    <li><a href="#">GALLERY<i class="fa fa-caret-down"></i></a>
+                    <li><a href="#"><font class="en">GALLERY</font><font class="zh">资源库</font><i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="video.html">MYbarre Videos</a></li>
-                            <li><a href="pic.html">MYbarre Pictures</a></li>
+                            <li><a href="video.html">
+                                <font class="en">MYbarre Videos</font>
+                                <font class="zh">MYbarre视频集</font>
+                            </a></li>
+                            <li><a href="pic.html">
+                                <font class="en">MYbarre Pictures</font>
+                                <font class="zh">MYbarre图片集</font>
+                            </a></li>
                         </ul>
                     </li>
-                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="store.html"><font class="en">STORE</font><font class="zh">商店</font></a></li>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
                     <li><a href="mailto:info@mybarrefitness.com"><i class="fa fa-envelope-o"></i></a></li>
-                    <li><a href="#" class="login-icon">INSTRUCTOR LOGIN</a>
+                    <li><a href="#" class="login-icon"><font class="en">INSTRUCTOR LOGIN</font><font class="zh">教练登录</font></a>
                         <ul class="dropdown" style="position: absolute;right: 10px;">
-                            <li id="user"><a href="login.html">Log In</a></li>
-                            <li><a href="user.html">Videos</a></li>
-                            <li><a href="set.html">Change Password</a></li>
-                            <li><a href="javascript:;" id="logOut">Log Out</a></li>
+                            <li id="user"><a href="login.html"><font class="en">Log In</font><font class="zh">登录</font></a></li>
+                            <li><a href="user.html"><font class="en">Videos</font><font class="zh">课程视频</font></a></li>
+                            <li><a href="set.html"><font class="en">Change Password</font><font class="zh">修改密码</font></a></li>
+                            <li><a href="javascript:;" id="logOut"><font class="en">Log Out</font><font class="zh">教练登出</font></a></li>
+                            <li><a href="javascript:;" class="langToggle"></a></li>
                         </ul>
                     </li>
                 </ul>
             </div>   
         </div>
         <!-- 响应式导航显示 -->
-        <div class="header-grid clearfloat">
+        <div class="header-grid clearfloat changeLang">
             <div class="logo">
                 <a href="index.html"><img src="static/img/logo.png" alt="logo"></a>
             </div>
@@ -80,28 +115,70 @@
                 <!-- <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li> -->
                 <li id="bar"><a href="#"><i class="fa fa-user"></i></a>
                     <ul class="user-dropdown" id="user-dropdown">
-                        <li><a href="login.html" id="user-grid">Instructor Login</a></li>
-                        <li><a href="user.html">Videos</a></li>
-                        <li><a href="set.html">Change Password</a></li>
-                        <li><a href="javascript:;" id="logOut-grid">Log Out</a></li>
+                        <li><a href="login.html" id="user-grid">
+                            <font class="en">Instructor Login</font>    
+                            <font class="zh">教练登录</font>
+                        </a></li>
+                        <li><a href="user.html">
+                            <font class="en">Videos</font><font class="zh">课程视频</font>
+                        </a></li>
+                        <li><a href="set.html">
+                            <font class="en">Change Password</font><font class="zh">修改密码</font>
+                        </a></li>
+                        <li><a href="javascript:;" id="logOut-grid">
+                            <font class="en">Log Out</font><font class="zh">教练登出</font>
+                        </a></li>
                     </ul>
                 </li>
                 <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
                 <li id="bars"><a href="#"><i class="fa fa-bars"></i></a>
                     <ul class="dropdown" id="dropdown">
-                        <li class="li-grid"><a href="#">ABOUT</a></li>
-                        <li><a href="workout.html">MYbarre WORKOUT</a></li>
-                        <li><a href="team.html">MYbarre TEAM</a></li>
-                        <li><a href="class.html">Find a MYbarre Class</a></li>
-                        <li class="li-grid"><a href="#">INSTRUCTOR TRAINING</a></li>
-                        <li><a href="instructor.html">BECOME a MYbarre INSTRUCTOR</a></li>
-                        <li><a href="schedule-grid.html">INSTRUCTOR TRAINING SCHEDULE</a></li>
-                        <li><a href="train.html">HOST a MYbarre TRAINING</a></li>
-                        <li><a href="faq.html">INSTRUCTOR TRAINING FAQ</a></li>
-                        <li class="li-grid"><a href="#">GALLERY</a></li>
-                        <li><a href="video.html">MYbarre Videos</a></li>
-                        <li><a href="pic.html">MYbarre Pictures</a></li>
-                        <li class="li-grid"  style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
+                        <li class="li-grid"><a href="#">
+                            <font class="en">ABOUT</font>
+                            <font class="zh">关于我们</font>
+                        </a></li>
+                        <li><a href="workout.html">
+                            <font class="en">MYbarre WORKOUT</font>
+                            <font class="zh">MYbarre训练</font>
+                        </a></li>
+                        <li><a href="team.html">
+                            <font class="en">MYbarre TEAM</font>
+                            <font class="zh">MYbarre团队</font>
+                        </a></li>
+                        <li><a href="class.html">
+                            <font class="en">Find a MYbarre Class</font>
+                            <font class="zh">查找MYbarre课程</font>
+                        </a></li>
+                        <li class="li-grid"><a href="#">
+                            <font class="en">INSTRUCTOR TRAINING</font>
+                            <font class="zh">教练培训</font>
+                        </a></li>
+                        <li><a href="instructor.html">
+                            <font class="en">BECOME a MYbarre INSTRUCTOR</font>
+                            <font class="zh">成为一名MYbarre教练</font>
+                        </a></li>
+                        <li><a href="schedule-grid.html">
+                            <font class="en">INSTRUCTOR TRAINING SCHEDULE</font>    
+                            <font class="zh">教练培训时间表</font>
+                        </a></li>
+                        <li><a href="train.html">
+                            <font class="en">HOST a MYbarre TRAINING</font>
+                            <font class="zh">举办一场MYbarre培训</font>
+                        </a></li>
+                        <li><a href="faq.html">
+                            <font class="en">INSTRUCTOR TRAINING FAQ</font>
+                            <font class="zh">教练培训常见问题</font>
+                        </a></li>
+                        <li class="li-grid"><a href="#"><font class="en">GALLERY</font><font class="zh">资源库</font></a></li>
+                        <li><a href="video.html">
+                            <font class="en">MYbarre Videos</font>
+                            <font class="zh">MYbarre视频集</font>
+                        </a></li>
+                        <li><a href="pic.html">
+                            <font class="en">MYbarre Pictures</font>
+                            <font class="zh">MYbarre图片集</font>
+                        </a></li>
+                        <li class="li-grid"  style="border-bottom: 0px;"><a href="store.html"><font class="en">STORE</font><font class="zh">商店</font></a></li>
                     </ul>
                 </li>
             </div>  
@@ -112,79 +189,208 @@
 
         <div class="faq-banner grid-banner"></div>
 
-        <div class="faq-content">
+        <div class="faq-content changeLang">
             <div class="container">
                 <div class="row" id="navbarExample">
                     <div class="col-md-4 faq-nav">
                         <ul class="nav">
-                            <li class="active"><a href="#1">What is MYbarre?</a></li>
-                            <li class=""><a href="#2">How long is the training?</a></li>
-                            <li class=""><a href="#3">What does the training include?</a></li>
-                            <li class=""><a href="#4">How is the course structured?</a></li>
-                            <li class=""><a href="#5">How much is the training?</a></li>
-                            <li class=""><a href="#6">Are there any prerequisites prior to attending an instructor training?</a></li>
-                            <li class=""><a href="#7">Will I be certified after after 3 day Instructor Training?</a></li>
-                            <li class=""><a href="#8">How do I become a Certified Instructor?</a></li>
-                            <li class=""><a href="#9">How long after the training do I have to submit my test out video?</a></li>
-                            <li class=""><a href="#10">What is the Instructor License?</a></li>
-                            <li class=""><a href="#11">How long is a MYbarre License valid?</a></li>
-                            <li class=""><a href="#12">Where can i teach MYbarre?</a></li>
-                            <li class=""><a href="#13">Do I need any other certifications before I can teach?</a></li>
-                            <li class=""><a href="#14">I signed up for the training but I can no longer make it. Do I get a refund?</a></li>
-                            <li class=""><a href="#15">What are the requirements to bring MYbarre to my studio?</a></li>
-                            <li class=""><a href="#16">What support is available for my studio to run MYbarre?</a></li>
+                            <li class="active">
+                                <a href="#1">
+                                    <font class="en">What is MYbarre?</font>
+                                    <font class="zh">MYbarre运动是什么？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#2">
+                                    <font class="en">How long is the training?</font>
+                                    <font class="zh">培训时间多久？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#3">
+                                    <font class="en">What does the training include?</font>
+                                    <font class="zh">培训课程包含了什么？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#4">
+                                    <font class="en">How is the course structured?</font>
+                                    <font class="zh">课程构架如何？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#5">
+                                    <font class="en">How much is the training?</font>
+                                    <font class="zh">培训费用是多少？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#6">
+                                    <font class="en">Are there any prerequisites prior to attending an instructor training?</font>
+                                    <font class="zh">参加教练培训课程前需要预备知识吗？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#7">
+                                    <font class="en">Will I be certified after after 3 day Instructor Training?</font>
+                                    <font class="zh">3天培训之后我能获得资格证书吗？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#8">
+                                    <font class="en">How do I become a Certified Instructor?</font>
+                                    <font class="zh">如何成为一名认证教练？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#9">
+                                    <font class="en">How long after the training do I have to submit my test out video?</font>
+                                    <font class="zh">培训结束之后最晚什么时候提交我的视频？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#10">
+                                    <font class="en">What is the Instructor License?</font>
+                                    <font class="zh">教练执照是什么？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#11">
+                                    <font class="en">How long is a MYbarre License valid?</font>
+                                    <font class="zh">MYbarre执照有效期？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#12">
+                                    <font class="en">Where can i teach MYbarre?</font>
+                                    <font class="zh">我可以在哪里教授MYbarre？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#13">
+                                    <font class="en">Do I need any other certifications before I can teach?</font>
+                                    <font class="zh">教授MYbarre之前还需其他证书吗？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#14">
+                                    <font class="en">I signed up for the training but I can no longer make it. Do I get a refund?</font>
+                                    <font class="zh">我报名参加培训后但是不能参加。能否得到退款？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#15">
+                                    <font class="en">What are the requirements to bring MYbarre to my studio?</font>
+                                    <font class="zh">在我的工作室中教授MYbarre课程有什么要求？</font>
+                                </a>
+                            </li>
+                            <li class="">
+                                <a href="#16">
+                                    <font class="en">What support is available for my studio to run MYbarre?</font>
+                                    <font class="zh">在我的工作室开设MYbarre，能够获得哪些支持？</font>
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div class="col-md-8 scrollspy-example col-xs-12">
                         <div data-spy="scroll" data-target="#navbarExample" data-offset="50" class="scrollspy-example">
-                            <div class="faq-title" id="1">What is MYbarre?</div>
+                            <div class="faq-title" id="1"><font class="en">What is MYbarre?</font><font class="zh">MYbarre运动是什么？</font></div>
                         <hr class="faq-hr">
-                        <p>MYbarre is a high-energy and creative exercise program which incorporates elements of Pilates, ballet dance, and fitness training to provide students with an invigorating, fun and graceful workout. While there are many barre programs out there, we believe the MYbarre format is a challenging yet fun fitness model, that delivers consistency and results every time. It’s also the 1st barre training designed and delivered in China.</p>
-                        <div class="faq-title" id="2">How long is the training?</div>
+                        <p>
+                            <font class="en">MYbarre is a high-energy and creative exercise program which incorporates elements of Pilates, ballet dance, and fitness training to provide students with an invigorating, fun and graceful workout. While there are many barre programs out there, we believe the MYbarre format is a challenging yet fun fitness model, that delivers consistency and results every time. It’s also the 1st barre training designed and delivered in China.</font>
+                            <font class="zh">MYbarre是一种高能量并且富有创造性的健身运动，借鉴了普拉提，芭蕾和塑形健身训练，带给学生一种令人振奋，有趣和优雅的运动方式。尽管市面上也存在其他的barre训练课程，但是我们相信MYbarre的课程模式是一种既有战性又不失乐趣的课程设计，能够带来持续有效的健身效果。MYbarre也是第一个barre课程，经过精心设计并且在中国推广。</font>
+                        </p>
+                        <div class="faq-title" id="2"><font class="en">How long is the training?</font><font class="zh">培训时间多久？</font></div>
                         <hr class="faq-hr">
-                        <p>It is a comprehensive 3-day training program, each day runs approx 9 hours.</p>
-                        <div class="faq-title" id="3">What does the training include?</div>
+                        <p>
+                            <font class="en">It is a comprehensive 3-day training program, each day runs approx 9 hours.</font>
+                            <font class="zh">这是一个为期3天的综合性密集培训课程，每天大约需要9小时。</font>
+                        </p>
+                        <div class="faq-title" id="3"><font class="en">What does the training include?</font><font class="zh">培训课程包含了什么？</font></div>
                         <hr class="faq-hr">
-                        <p>You will receive pre-training education videos to help you prepare and 2 MYbarre Instructor manuals for instruction on coaching and choreography. The course will be a mix of practical master classes, theory workshops and small group exercises.</p>
-                        <div class="faq-title" id="4">How is the course structured?</div>
+                        <p>
+                            <font class="en">You will receive pre-training education videos to help you prepare and 2 MYbarre Instructor manuals for instruction on coaching and choreography. The course will be a mix of practical master classes, theory workshops and small group exercises.</font>
+                            <font class="zh">你会收到教学预备视频以及2本关于教学和编排的MYbarre教练手册。课程包含实践性高级课程，工作坊形式的理论课，小组练习等。</font>
+                        </p>
+                        <div class="faq-title" id="4"><font class="en">How is the course structured?</font><font class="zh">课程构架如何？</font></div>
                         <hr class="faq-hr">
-                        <p>Each day you will spend time learning and practicing. You will also have homework to prepare and present the next day, so plan to work on your MYbarre class preparations in the evenings after the course and/or in the mornings before we begin daily. Right at the start of the training, you will receive some basic terminology information, along with music recommendations. It is essential that the materials are reviewed beforehand, and you have your music downloaded on a device, so you can use to practice upon the duration of the training. </p>
-                        <div class="faq-title" id="5">How much is the training?</div>
+                        <p>
+                            <font class="en">Each day you will spend time learning and practicing. You will also have homework to prepare and present the next day, so plan to work on your MYbarre class preparations in the evenings after the course and/or in the mornings before we begin daily. Right at the start of the training, you will receive some basic terminology information, along with music recommendations. It is essential that the materials are reviewed beforehand, and you have your music downloaded on a device, so you can use to practice upon the duration of the training.</font>
+                            <font class="zh">每天你都会花时间学习和练习。会有课后作业需要你准备并且在第二天进行演示。所以，请确保每次课程结束后，你都可以花时间在当天晚上或者第二天早上提前完成作业，确保在下次上课前做好准备。在培训的最初阶段，你会收到一些基础的术语，以及推荐的音乐。提前预习资料十分重要，确保音乐保存到你的播放设备中，以便你能够在培训练习中使用。</font>
+                        </p>
+                        <div class="faq-title" id="5"><font class="en">How much is the training?</font><font class="zh">培训费用是多少？</font></div>
                         <hr class="faq-hr">
-                        <p>4000RMB for the 3 day training.</p>
-                        <div class="faq-title" id="6">Are there any prerequisites prior to attending an instructor training?</div>
+                        <p>
+                            <font class="en">4000RMB for the 3 day training.</font>
+                            <font class="zh">3天课程培训费用为4000RMB。</font>
+                        </p>
+                        <div class="faq-title" id="6"><font class="en">Are there any prerequisites prior to attending an instructor training?</font><font class="zh">参加教练培训课程前需要预备知识吗？</font></div>
                         <hr class="faq-hr">
-                        <p>While instructors of all abilities and backgrounds will benefit from the MYbarre Instructor Training, experience instructing Pilates, yoga, dance, and/or barre is beneficial but not essential. If you do not hold this you are required to have attended a minimum of 20 MYbarre classes.</p>
-                        <div class="faq-title" id="7">Will I be certified after after 3 day Instructor Training?</div>
+                        <p>
+                            <font class="en">While instructors of all abilities and backgrounds will benefit from the MYbarre Instructor Training, experience instructing Pilates, yoga, dance, and/or barre is beneficial but not essential. If you do not hold this you are required to have attended a minimum of 20 MYbarre classes.</font>
+                            <font class="zh">任何能力和背景的学员都会从MYbarre教练培训课程中受益，你将会体会到普拉提，瑜伽，舞蹈以及芭蕾方面的训练内容。如果你没有以上的经验，你需要先参加一个最少20节的MYbarre课程。</font>
+                        </p>
+                        <div class="faq-title" id="7"><font class="en">Will I be certified after after 3 day Instructor Training?</font><font class="zh">3天培训之后我能获得资格证书吗？</font></div>
                         <hr class="faq-hr">
-                        <p>No, students who complete the MYbarre Instructor Training will receive a certificate of completion to show they are an ‘Instructor in Training’.</p>
-                        <div class="faq-title" id="8">How do I become a Certified Instructor?</div>
+                        <p>
+                            <font class="en">No, students who complete the MYbarre Instructor Training will receive a certificate of completion to show they are an ‘Instructor in Training’.</font>
+                            <font class="zh">不能。完成MYbarre教练培训课程之后，学员会收到一个目前仍在“培训中教练员”的结业证明。</font>
+                        </p>
+                        <div class="faq-title" id="8"><font class="en">How do I become a Certified Instructor?</font><font class="zh">如何成为一名认证教练？</font></div>
                         <hr class="faq-hr">
-                        <p>Following the intensive course training, you will be expected to practice what you’ve learned by filming / submitting a 60-minute class for examination. On passing the examination, you will be issued with your Instructor Certificate, and should you wish to proceed and teach classes, you will be required to purchase your annual Instructor License. </p>
-                        <div class="faq-title" id="9">How long after the training do I have to submit my test out video?</div>
+                        <p>
+                            <font class="en">Following the intensive course training, you will be expected to practice what you’ve learned by filming / submitting a 60-minute class for examination. On passing the examination, you will be issued with your Instructor Certificate, and should you wish to proceed and teach classes, you will be required to purchase your annual Instructor License.</font>
+                            <font class="zh">你需要完成整个密集培训课程，你将会将所学用于实践，制作并且提交一个60分钟的课堂演示视频作为考试内容。一旦你通过考试，你将会获得你的教练认证证书，如果你希望开始你的教学，你需要购买年度教练执照。</font> 
+                        </p>
+                        <div class="faq-title" id="9"><font class="en">How long after the training do I have to submit my test out video?</font>
+                            <font class="zh">培训结束之后最晚什么时候提交我的视频？</font></div>
                         <hr class="faq-hr">
-                        <p>Anytime within 60 days of completing the course. As a suggestion, we recommend you allocate at least 30 hours of practice, before submitting your examination video.</p>
-                        <div class="faq-title" id="10">What is the Instructor License?</div>
+                        <p>
+                            <font class="en">Anytime within 60 days of completing the course. As a suggestion, we recommend you allocate at least 30 hours of practice, before submitting your examination video.</font>
+                            <font class="zh">培训结束之后的60天之内你都可以提交视频。我们建议你最少需要30小时的自我练习之后提交你的最终视频演示。</font>
+                        </p>
+                        <div class="faq-title" id="10"><font class="en">What is the Instructor License?</font><font class="zh">教练执照是什么？</font></div>
                         <hr class="faq-hr">
-                        <p>In addition to your one-off instructor training, there is an annual MYbarre license fee at 1,800RMB per instructor. As a MYbarre instructor, you will be provided with new choreography plans and video materials quarterly, along with a basic digital marketing template to use on promoting your classes, as well as recommendations for online playlists. </p>
-                        <div class="faq-title" id="11">How long is a MYbarre License valid?</div>
+                        <p>
+                            <font class="en">In addition to your one-off instructor training, there is an annual MYbarre license fee at 1,800RMB per instructor. As a MYbarre instructor, you will be provided with new choreography plans and video materials quarterly, along with a basic digital marketing template to use on promoting your classes, as well as recommendations for online playlists.</font>
+                            <font class="zh">除了一次性的教练培训课程费用，每年需要缴纳年度MYbarre执照费，每个人1800RMB。作为一名MYbarre教练员，每个季度你将会得到新的编排计划和视频资料，同时还能得到电子营销模板来推广你的课程，以及推荐的网上音乐播放列表供你选择。</font>
+                        </p>
+                        <div class="faq-title" id="11"><font class="en">How long is a MYbarre License valid?</font><font class="zh">MYbarre执照有效期？</font></div>
                         <hr class="faq-hr">
-                        <p>Your MYbarre License is valid for one year. It must be renewed and kept up to date to remain certified and licensed. As with any occupation, a professional fitness instructor is expected to keep up-to-date on knowledge and skills in their field.  Within our MYbarre community, we strive to keep you at the front of barre choreography, always motivated with new ideas for classes, and provide you with the knowledge of ‘why’ your clients will get results if they stick with us.</p>
-                        <div class="faq-title" id="12">Where can i teach MYbarre?</div>
+                        <p>
+                            <font class="en">Your MYbarre License is valid for one year. It must be renewed and kept up to date to remain certified and licensed. As with any occupation, a professional fitness instructor is expected to keep up-to-date on knowledge and skills in their field.  Within our MYbarre community, we strive to keep you at the front of barre choreography, always motivated with new ideas for classes, and provide you with the knowledge of ‘why’ your clients will get results if they stick with us.</font>
+                            <font class="zh">你的MYbarre执照有效期为一年，并且必须保持最新，保证已经通过认证和持有执照。与任何职业一样，专业的健身教练应该掌握其领域最新的知识和技能。 在我们的MYbarre社区，我们努力让你能够处在barre编舞的前列，启发你总是有新的灵感带到你的课堂，并且提供给你必要的知识，让你的客户了解到“为什么”参与MYbarre训练会得到有效的训练结果。</font>
+                        </p>
+                        <div class="faq-title" id="12"><font class="en">Where can i teach MYbarre?</font><font class="zh">我可以在哪里教授MYbarre？</font></div>
                         <hr class="faq-hr">
-                        <p>If you are a certified and currently hold a MYbarre Instructor license, you are entitled to use the MYbarre choreography, class format, and teaching techniques in your classes. There is a non-compete agreement in place, which confirms your agreement that MYbarre will be the only barre training program in your studio. </p>
-                        <div class="faq-title" id="13">Do I need any other certifications before I can teach?</div>
+                        <p>
+                            <font class="en">If you are a certified and currently hold a MYbarre Instructor license, you are entitled to use the MYbarre choreography, class format, and teaching techniques in your classes. There is a non-compete agreement in place, which confirms your agreement that MYbarre will be the only barre training program in your studio. </font>
+                            <font class="zh">如果你已经通过认证并且持有有效期内的MYbarre教练资格证，你可以在你的课堂中使用MYbarre的名称和编排，课程模式，以及教学技巧。这里有一个非竞争协议，证实MYbarre将是你工作室唯一的barre培训项目。</font>
+                        </p>
+                        <div class="faq-title" id="13"><font class="en">Do I need any other certifications before I can teach?</font><font class="zh">教授MYbarre之前还需其他证书吗？</font></div>
                         <hr class="faq-hr">
-                        <p>The MYbarre program teaches and emphasizes safety, specific to a barre fitness workouts so it’s considered a specialty certificate, rather than a fitness qualification. Depending on your chosen studio, you may need a general group exercise or personal training certificate to teach there. You should check with your studio/employer.</p>
-                        <div class="faq-title" id="14">I signed up for the training but I can no longer make it. Do I get a refund?</div>
+                        <p>
+                            <font class="en">The MYbarre program teaches and emphasizes safety, specific to a barre fitness workouts so it’s considered a specialty certificate, rather than a fitness qualification. Depending on your chosen studio, you may need a general group exercise or personal training certificate to teach there. You should check with your studio/employer.</font>
+                            <font class="zh">MYbarre培训强调安全的，具体的barre健身训练。它被认为是专业认证，而不是健身资格证书，所以根据你选择的工作室，你可能需要一个普通的团体训练或私人教练证书，才可以在那里任教。你应该和你的工作室/雇主进行核实。</font>
+                        </p>
+                        <div class="faq-title" id="14"><font class="en">I signed up for the training but I can no longer make it. Do I get a refund?</font><font class="zh">我报名参加培训后但是不能参加。能否得到退款？</font></div>
                         <hr class="faq-hr">
-                        <p>Once payment is made and the spot confirmed there is no refund, but if you cannot attend the course you originally signed up for, you can attend another one within 12 months for no extra charge. </p>
-                        <div class="faq-title" id="15">What are the requirements to bring MYbarre to my studio?</div>
+                        <p>
+                           <font class="en">Once payment is made and the spot confirmed there is no refund, but if you cannot attend the course you originally signed up for, you can attend another one within 12 months for no extra charge. </font>
+                           <font class="zh">一旦付款，并且培训名额确认之后，不能够退款。如果你不能参加原本预定的课程，你可以在12个月之内参加其他期的培训课程，没有额外费用。</font>
+                        </p>
+                        <div class="faq-title" id="15"><font class="en">What are the requirements to bring MYbarre to my studio?</font><font class="zh">在我的工作室中教授MYbarre课程有什么要求？</font></div>
                         <hr class="faq-hr">
-                        <p>Providing there is no other Barre programme running at your studio and you are a Licensed Instructor, you can open MYbarre classes at your studio.  </p>
-                        <div class="faq-title" id="16">What support is available for my studio to run MYbarre?</div>
+                        <p>
+                            <font class="en">Providing there is no other Barre programme running at your studio and you are a Licensed Instructor, you can open MYbarre classes at your studio.  </font>
+                            <font class="zh">确认在你所在的工作室中没有其他Barre课程，并且你是持有执照的合格教练，就可以在你的工作室中开始MYbarre课程。</font>
+                        </p>
+                        <div class="faq-title" id="16"><font class="en">What support is available for my studio to run MYbarre?</font><font class="zh">在我的工作室开设MYbarre，能够获得哪些支持？</font></div>
                         <hr class="faq-hr">
-                        <p>There is a marketing package available to purchase to support your studio in promoting the MYbarre Program. By purchasing this, your studio will become a ‘Partner Studio’ and feature on the MYbarre website. There are also other benefits such as discounts on purchasing MYbarre equipment, and the opportunity to be a host to further your education and training courses.</p>
+                        <p>
+                            <font class="en">There is a marketing package available to purchase to support your studio in promoting the MYbarre Program. By purchasing this, your studio will become a ‘Partner Studio’ and feature on the MYbarre website. There are also other benefits such as discounts on purchasing MYbarre equipment, and the opportunity to be a host to further your education and training courses.</font>
+                            <font class="zh">我们会为你提供市场营销礼包，你可以购买并且推广MYbarre训练。一旦购买之后，你将成为我们的“合作工作室”，并且会出现在MYbarre网站上。同时也有其他的优惠活动，例如购买MYbarre相关器材享有折扣优惠。并且有机会成为将来开设培训课程的主办方。需要了解更多在你的工作室如何举办培训的信息，请发邮件到info@znbfitness.com进咨询。</font>
+                        </p>
                         </div>
                     </div>
                 </div>
@@ -193,39 +399,44 @@
         </div>
 
         <!-- footer -->
-        <div class="footer">
+        <div class="footer changeLang">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="title">CONTACT MYbarre</div>
+                    <div class="title">
+                        <font class="en">CONTACT MYbarre</font>
+                        <font class="zh">联系MYbarre</font>
+                    </div>
                     <p class="sub-title" style="color:#53565B;">Send email to MYbarre</p>
-                    <input type="text" name="name" placeholder="NAME" >
-                    <input type="email" name="email" placeholder="EMAIL">
-                    <textarea placeholder="MESSAGE"></textarea>
-                    <div class="send">SEND EMAIL</div>
+                    <input type="text" name="name" placeholder="NAME/姓名" >
+                    <input type="email" name="email" placeholder="EMAIL/邮箱">
+                    <textarea placeholder="MESSAGE/留言"></textarea>
+                    <div class="send" id="send"><font class="en">SEND EMAIL</font><font class="zh">发送邮件</font></div>
                 </div>
                 <div class="col-md-4 pages">
-                    <div class="title">PAGES</div>
+                    <div class="title"><font class="en">PAGES</font><font class="zh">网页导航</font></div>
                     <ul class="footer-list">
-                        <li><a href="index.html">Homepage</a></li>
-                        <li><a href="workout.html">MYbarre Workout</a></li>
-                        <li><a href="team.html">Founders</a></li>
-                        <li><a href="pic.html">MYbarre Pictures</a></li>
-                        <li><a href="video.html">MYbarre Videos</a></li>
-                        <li><a href="instructor.html">Become a MYbarre Instructor</a></li>
-                        <li><a href="schedule.html">Instructor Training Schedule </a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                        <li><a href="store.html">MYbarre Store</a></li>
-                        <li><a href="mailto:info@mybarrefitness.com">Contact</a></li>
-                        <li><a href="login.html">Instructor Log in</a></li>
-                        <li><a href="class.html">Find a MYbarre Class</a></li>
+                        <li><a href="index.html"><font class="en">Homepage</font><font class="zh">首页</font></a></li>
+                        <li><a href="workout.html"><font class="en">MYbarre Workout</font><font class="zh">MYbarre训练</font></a></li>
+                        <li><a href="team.html"><font class="en">Founders</font><font class="zh">创始人</font></a></li>
+                        <li><a href="pic.html"><font class="en">MYbarre Pictures</font><font class="zh">MYbarre图片集</font></a></li>
+                        <li><a href="video.html"><font class="en">MYbarre Videos</font><font class="zh">MYbarre视频集</font></a></li>
+                        <li><a href="instructor.html"><font class="en">Become a MYbarre Instructor</font><font class="zh">成为MYbarre教练</font></a></li>
+                        <li><a href="schedule.html"><font class="en">Instructor Training Schedule</font><font class="zh">教练培训计划</font></a></li>
+                        <li><a href="faq.html"><font class="en">FAQs</font><font class="zh">常见问题</font></a></li>
+                        <li><a href="store.html"><font class="en">MYbarre Store</font><font class="zh">MYbarre商店</font></a></li>
+                        <li><a href="mailto:info@mybarrefitness.com"><font class="en">Contact</font><font class="zh">联系我们</font></a></li>
+                        <li><a href="login.html"><font class="en">Instructor Log in</font><font class="zh">教练登录</font></a></li>
+                        <li><a href="class.html"><font class="en">Find a MYbarre Class</font><font class="zh">查找MYbarre课程</font></a></li>
                     </ul>
-                    <p style="color: #999; margin-top: 40px;">©2017 沪ICP备17040400号-1</p>
-                </div> 
+                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011302001194">
+                        <p style="color: #999; margin-top: 40px;"><a href="http://www.miitbeian.gov.cn">©2017 沪ICP备17040400号-1</a></p>
+                    </a>
+                </div>  
                 <div class="col-md-4">
-                    <div class="title">SOCIAL</div>
+                    <div class="title"><font class="en">SOCIAL</font><font class="zh">公众号</font></div>
                     <img src="static/img/qrcode.jpg" class="qrcode"/>
                 </div>
-            </div> 
+            </div>  
         </div>
 
         <script type="text/javascript" src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>

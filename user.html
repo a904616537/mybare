@@ -23,7 +23,7 @@
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
     <body>
-        <div class="header">
+        <div class="header changeLang">
             <div class="related clearfloat">
                 <div class="item">
                     <a href="wechat.html"><i class="fa fa-weixin"></i></a>
@@ -36,43 +36,78 @@
             </div>
             <div class="nav clearfloat">
                 <ul class="navbar">
-                    <li><a href="#">ABOUT<i class="fa fa-caret-down"></i></a>
+                    <li><a href="#">
+                        <font class="en">ABOUT</font>
+                        <font class="zh">关于我们</font>
+                        <i class="fa fa-caret-down"></i>
+                        </a>
                         <ul class="dropdown">
-                            <li><a href="workout.html">MYbarre Workout</a></li>
-                            <li><a href="team.html">MYbarre Team</a></li>
-                            <li><a href="class.html">Find a MYbarre Class</a></li>
+                            <li><a href="workout.html">
+                                <font class="en">MYbarre Workout</font>
+                                <font class="zh">MYbarre训练</font>
+                            </a></li>
+                            <li><a href="team.html">
+                                <font class="en">MYbarre Team</font>
+                                <font class="zh">MYbarre团队</font>
+                            </a></li>
+                            <li><a href="class.html">
+                                <font class="en">Find a MYbarre Class</font>
+                                <font class="zh">查找MYbarre课程</font>
+                            </a></li>
                         </ul>
                     </li>
-                    <li><a href="#">INSTRUCTOR TRAINING<i class="fa fa-caret-down"></i></a>
+                    <li><a href="#">
+                        <font class="en">INSTRUCTOR TRAINING</font>
+                        <font class="zh">教练培训</font>
+                        <i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="instructor.html">Become a MYbarre Instructor</a></li>
-                            <li><a href="schedule.html">Instructor Training Schedule</a></li>
-                            <li><a href="train.html">Host a MYbarre Training</a></li>
-                            <li><a href="faq.html">Instructor Training FAQ</a></li>
+                            <li><a href="instructor.html">
+                                <font class="en">Become a MYbarre Instructor</font>
+                                <font class="zh">成为一名MYbarre教练</font>
+                            </a></li>
+                            <li><a href="schedule.html">
+                                <font class="en">Instructor Training Schedule</font>    
+                                <font class="zh">教练培训时间表</font>
+                            </a></li>
+                            <li><a href="train.html">
+                                <font class="en">Host a MYbarre Training</font>
+                                <font class="zh">举办一场MYbarre培训</font>
+                            </a></li>
+                            <li><a href="faq.html">
+                                <font class="en">Instructor Training FAQ</font>
+                                <font class="zh">教练培训常见问题</font>
+                            </a></li>
                         </ul>
                     </li>
-                    <li><a href="#">GALLERY<i class="fa fa-caret-down"></i></a>
+                    <li><a href="#"><font class="en">GALLERY</font><font class="zh">资源库</font><i class="fa fa-caret-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="video.html">MYbarre Videos</a></li>
-                            <li><a href="pic.html">MYbarre Pictures</a></li>
+                            <li><a href="video.html">
+                                <font class="en">MYbarre Videos</font>
+                                <font class="zh">MYbarre视频集</font>
+                            </a></li>
+                            <li><a href="pic.html">
+                                <font class="en">MYbarre Pictures</font>
+                                <font class="zh">MYbarre图片集</font>
+                            </a></li>
                         </ul>
                     </li>
-                    <li><a href="store.html">STORE</a></li>
+                    <li><a href="store.html"><font class="en">STORE</font><font class="zh">商店</font></a></li>
                     <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
                     <li><a href="mailto:info@mybarrefitness.com"><i class="fa fa-envelope-o"></i></a></li>
-                    <li><a href="#" class="login-icon">INSTRUCTOR LOGIN</a>
+                    <li><a href="#" class="login-icon"><font class="en">INSTRUCTOR LOGIN</font><font class="zh">教练登录</font></a>
                         <ul class="dropdown" style="position: absolute;right: 10px;">
-                            <li id="user"><a href="login.html">Log In</a></li>
-                            <li><a href="user.html">Videos</a></li>
-                            <li><a href="set.html">Change Password</a></li>
-                            <li><a href="javascript:;" id="logOut">Log Out</a></li>
+                            <li id="user"><a href="login.html"><font class="en">Log In</font><font class="zh">登录</font></a></li>
+                            <li><a href="user.html"><font class="en">Videos</font><font class="zh">课程视频</font></a></li>
+                            <li><a href="set.html"><font class="en">Change Password</font><font class="zh">修改密码</font></a></li>
+                            <li><a href="javascript:;" id="logOut"><font class="en">Log Out</font><font class="zh">教练登出</font></a></li>
+                            <li><a href="javascript:;" class="langToggle"></a></li>
                         </ul>
                     </li>
                 </ul>
             </div>   
         </div>
         <!-- 响应式导航显示 -->
-        <div class="header-grid clearfloat">
+        <div class="header-grid clearfloat changeLang">
             <div class="logo">
                 <a href="index.html"><img src="static/img/logo.png" alt="logo"></a>
             </div>
@@ -80,28 +115,70 @@
                 <!-- <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li> -->
                 <li id="bar"><a href="#"><i class="fa fa-user"></i></a>
                     <ul class="user-dropdown" id="user-dropdown">
-                        <li><a href="login.html" id="user-grid">Instructor Login</a></li>
-                        <li><a href="user.html">Videos</a></li>
-                        <li><a href="set.html">Change Password</a></li>
-                        <li><a href="javascript:;" id="logOut-grid">Log Out</a></li>
+                        <li><a href="login.html" id="user-grid">
+                            <font class="en">Instructor Login</font>    
+                            <font class="zh">教练登录</font>
+                        </a></li>
+                        <li><a href="user.html">
+                            <font class="en">Videos</font><font class="zh">课程视频</font>
+                        </a></li>
+                        <li><a href="set.html">
+                            <font class="en">Change Password</font><font class="zh">修改密码</font>
+                        </a></li>
+                        <li><a href="javascript:;" id="logOut-grid">
+                            <font class="en">Log Out</font><font class="zh">教练登出</font>
+                        </a></li>
                     </ul>
                 </li>
                 <li><a href="cart.html"><i class="fa fa-shopping-cart"></i></a></li>
                 <li id="bars"><a href="#"><i class="fa fa-bars"></i></a>
                     <ul class="dropdown" id="dropdown">
-                        <li class="li-grid"><a href="#">ABOUT</a></li>
-                        <li><a href="workout.html">MYbarre WORKOUT</a></li>
-                        <li><a href="team.html">MYbarre TEAM</a></li>
-                        <li><a href="class.html">Find a MYbarre Class</a></li>
-                        <li class="li-grid"><a href="#">INSTRUCTOR TRAINING</a></li>
-                        <li><a href="instructor.html">BECOME a MYbarre INSTRUCTOR</a></li>
-                        <li><a href="schedule-grid.html">INSTRUCTOR TRAINING SCHEDULE</a></li>
-                        <li><a href="train.html">HOST a MYbarre TRAINING</a></li>
-                        <li><a href="faq.html">INSTRUCTOR TRAINING FAQ</a></li>
-                        <li class="li-grid"><a href="#">GALLERY</a></li>
-                        <li><a href="video.html">MYbarre Videos</a></li>
-                        <li><a href="pic.html">MYbarre Pictures</a></li>
-                        <li class="li-grid"  style="border-bottom: 0px;"><a href="store.html">STORE</a></li>
+                        <li class="li-grid"><a href="#">
+                            <font class="en">ABOUT</font>
+                            <font class="zh">关于我们</font>
+                        </a></li>
+                        <li><a href="workout.html">
+                            <font class="en">MYbarre WORKOUT</font>
+                            <font class="zh">MYbarre训练</font>
+                        </a></li>
+                        <li><a href="team.html">
+                            <font class="en">MYbarre TEAM</font>
+                            <font class="zh">MYbarre团队</font>
+                        </a></li>
+                        <li><a href="class.html">
+                            <font class="en">Find a MYbarre Class</font>
+                            <font class="zh">查找MYbarre课程</font>
+                        </a></li>
+                        <li class="li-grid"><a href="#">
+                            <font class="en">INSTRUCTOR TRAINING</font>
+                            <font class="zh">教练培训</font>
+                        </a></li>
+                        <li><a href="instructor.html">
+                            <font class="en">BECOME a MYbarre INSTRUCTOR</font>
+                            <font class="zh">成为一名MYbarre教练</font>
+                        </a></li>
+                        <li><a href="schedule-grid.html">
+                            <font class="en">INSTRUCTOR TRAINING SCHEDULE</font>    
+                            <font class="zh">教练培训时间表</font>
+                        </a></li>
+                        <li><a href="train.html">
+                            <font class="en">HOST a MYbarre TRAINING</font>
+                            <font class="zh">举办一场MYbarre培训</font>
+                        </a></li>
+                        <li><a href="faq.html">
+                            <font class="en">INSTRUCTOR TRAINING FAQ</font>
+                            <font class="zh">教练培训常见问题</font>
+                        </a></li>
+                        <li class="li-grid"><a href="#"><font class="en">GALLERY</font><font class="zh">资源库</font></a></li>
+                        <li><a href="video.html">
+                            <font class="en">MYbarre Videos</font>
+                            <font class="zh">MYbarre视频集</font>
+                        </a></li>
+                        <li><a href="pic.html">
+                            <font class="en">MYbarre Pictures</font>
+                            <font class="zh">MYbarre图片集</font>
+                        </a></li>
+                        <li class="li-grid"  style="border-bottom: 0px;"><a href="store.html"><font class="en">STORE</font><font class="zh">商店</font></a></li>
                     </ul>
                 </li>
             </div>  
@@ -111,10 +188,13 @@
         <!-- 导航结束 -->
 
 
-        <div class="user-content video-content">
+        <div class="user-content video-content changeLang">
             <div class="user-title">
                 <img src="static/img/logo.png" alt="logo" style="width: 20%;">
-                <div class="text-title">Instructor Training Videos</div>
+                <div class="text-title">
+                    <font class="en">Instructor Training Videos</font>
+                    <font class="zh">教练培训视频</font>
+                </div>
                 <hr>
             </div>  
     
@@ -127,36 +207,41 @@
         </div>
 
         <!-- footer -->
-        <div class="footer">
+        <div class="footer changeLang">
             <div class="row">
                 <div class="col-md-4">
-                    <div class="title">CONTACT MYbarre</div>
+                    <div class="title">
+                        <font class="en">CONTACT MYbarre</font>
+                        <font class="zh">联系MYbarre</font>
+                    </div>
                     <p class="sub-title" style="color:#53565B;">Send email to MYbarre</p>
-                    <input type="text" name="name" placeholder="NAME" >
-                    <input type="email" name="email" placeholder="EMAIL">
-                    <textarea placeholder="MESSAGE"></textarea>
-                    <div class="send" id="send">SEND EMAIL</div>
+                    <input type="text" name="name" placeholder="NAME/姓名" >
+                    <input type="email" name="email" placeholder="EMAIL/邮箱">
+                    <textarea placeholder="MESSAGE/留言"></textarea>
+                    <div class="send" id="send"><font class="en">SEND EMAIL</font><font class="zh">发送邮件</font></div>
                 </div>
                 <div class="col-md-4 pages">
-                    <div class="title">PAGES</div>
+                    <div class="title"><font class="en">PAGES</font><font class="zh">网页导航</font></div>
                     <ul class="footer-list">
-                        <li><a href="index.html">Homepage</a></li>
-                        <li><a href="workout.html">MYbarre Workout</a></li>
-                        <li><a href="team.html">Founders</a></li>
-                        <li><a href="pic.html">MYbarre Pictures</a></li>
-                        <li><a href="video.html">MYbarre Videos</a></li>
-                        <li><a href="instructor.html">Become a MYbarre Instructor</a></li>
-                        <li><a href="schedule.html">Instructor Training Schedule </a></li>
-                        <li><a href="faq.html">FAQs</a></li>
-                        <li><a href="store.html">MYbarre Store</a></li>
-                        <li><a href="mailto:info@mybarrefitness.com">Contact</a></li>
-                        <li><a href="login.html">Instructor Log in</a></li>
-                        <li><a href="class.html">Find a MYbarre Class</a></li>
+                        <li><a href="index.html"><font class="en">Homepage</font><font class="zh">首页</font></a></li>
+                        <li><a href="workout.html"><font class="en">MYbarre Workout</font><font class="zh">MYbarre训练</font></a></li>
+                        <li><a href="team.html"><font class="en">Founders</font><font class="zh">创始人</font></a></li>
+                        <li><a href="pic.html"><font class="en">MYbarre Pictures</font><font class="zh">MYbarre图片集</font></a></li>
+                        <li><a href="video.html"><font class="en">MYbarre Videos</font><font class="zh">MYbarre视频集</font></a></li>
+                        <li><a href="instructor.html"><font class="en">Become a MYbarre Instructor</font><font class="zh">成为MYbarre教练</font></a></li>
+                        <li><a href="schedule.html"><font class="en">Instructor Training Schedule</font><font class="zh">教练培训计划</font></a></li>
+                        <li><a href="faq.html"><font class="en">FAQs</font><font class="zh">常见问题</font></a></li>
+                        <li><a href="store.html"><font class="en">MYbarre Store</font><font class="zh">MYbarre商店</font></a></li>
+                        <li><a href="mailto:info@mybarrefitness.com"><font class="en">Contact</font><font class="zh">联系我们</font></a></li>
+                        <li><a href="login.html"><font class="en">Instructor Log in</font><font class="zh">教练登录</font></a></li>
+                        <li><a href="class.html"><font class="en">Find a MYbarre Class</font><font class="zh">查找MYbarre课程</font></a></li>
                     </ul>
-                    <p style="color: #999; margin-top: 40px;">©2017 沪ICP备17040400号-1</p>
+                    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011302001194">
+                        <p style="color: #999; margin-top: 40px;"><a href="http://www.miitbeian.gov.cn">©2017 沪ICP备17040400号-1</a></p>
+                    </a>
                 </div>  
                 <div class="col-md-4">
-                    <div class="title">SOCIAL</div>
+                    <div class="title"><font class="en">SOCIAL</font><font class="zh">公众号</font></div>
                     <img src="static/img/qrcode.jpg" class="qrcode"/>
                 </div>
             </div> 
