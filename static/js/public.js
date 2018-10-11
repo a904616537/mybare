@@ -16,6 +16,82 @@ var lang = navigator.userLanguage
 //取得浏览器语言的前两个字母
 var lang = lang.substr(0,2)
 
+var message = {
+	zh : {
+		error : {
+			title          : '哎呀...',
+			msg1           : '出错了!',
+			login          : '登陆失败！',
+			login_401      : '你的账户已被锁定！',
+			login_password : '登录失败，请再试一次!',
+			password_msg   : '你的新密码和确认密码不匹配。',
+			agree          : '你必须同意我们的条款!',
+			submission 	   : '注册失败!',
+			request        : '提交失败!'
+		},
+		success : {
+			title          : '谢谢！',
+			msg            : '你的申请已经提交给MYbarre团队审批。如果你的申请成功，将在24小时内收到一封电子邮件，里面有你的账户密码。',
+			password_title : '完成!',
+			password       : '密码更新成功'
+		},
+		msg : {
+			msg1 : '姓氏不能为空',
+			msg2 : '名字不能为空',
+			msg3 : '请填写你的手机号码',
+			msg4 : '请填写你的电子游戏',
+			msg5 : '请填写你的地址',
+			msg6 : '请填写你的出生日期',
+			msg7 : '请填写你的国籍',
+			msg8 : '请填写你的职业',
+			msg9 : '这里的信息不能为空',
+			msg10 : '必须做出选择',
+			msg11 : '提交失败，名字不能为空！',
+			msg12 : '提交失败，微信号不能为空！',
+			msg13 : '提交失败，你的邮箱地址不能为空！',
+			msg14 : '提交失败，你的手机号码信息不正确！',
+		}
+	},
+	en : {
+		error : {
+			title          : 'Oops...',
+			msg1           : 'For failure!',
+			login          : 'Login failed！',
+			login_401      : 'Your account is locked!',
+			login_password : 'Login failed, please try again!',
+			password_msg   : 'Your new password and confirmed new password do not match.',
+			agree          : 'You must agree with our terms!',
+			submission     : 'Submission failed!',
+			request        : 'Request failed!'
+			
+		},
+		success : {
+			title          : 'Thank You!',
+			msg            : 'Your application has been submitted to the MYbarre team for approval. If your application is successful you will receive an email in the next 24 hours with your account password.',
+			password_title : 'Done!',
+			password       : 'Password Successfully Updated'
+		},
+		msg : {
+			msg1 : 'First name cannot be empty',
+			msg2 : 'Last name cannot be empty',
+			msg3 : 'Phone number cannot be empty',
+			msg4 : 'Email cannot be empty',
+			msg5 : 'Address cannot be empty',
+			msg6 : 'Date of birth cannot be empty',
+			msg7 : 'Nationality cannot be empty',
+			msg8 : 'Occupation cannot be empty',
+			msg9 : 'This field cannot be left empty',
+			msg10 : 'A selection must be made',
+
+
+			msg11 : 'Submission failed, name cannot be empty！',
+			msg12 : 'Submission failed, wechat ID cannot be empty！',
+			msg13 : 'Submission failed, incorrect email address！',
+			msg14 : 'Submission failed, incorrect telephone number！',
+		}
+	}
+}
+
 var cookie_lang = $.cookie('lang');
 if(cookie_lang) {
 	setLang(cookie_lang);
@@ -59,7 +135,6 @@ $('.floatBox>.item-box').on('mouseleave',function(){
 console.log('socket')
 var socket = io(apiUrl);
 
-
 // cookie
 $(function() {
 	var levelToString = function(level) {
@@ -79,7 +154,6 @@ $(function() {
 	if(typeof cookieuser != 'undefined') {
 		var cookie = JSON.parse(cookieuser);
 		var user = JSON.parse(cookieuser).user;
-		console.log('user', user)
 		$('#user_id').val(cookie.user._id);
 		$('#user').html('<a href="profile.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
@@ -107,8 +181,8 @@ $(function() {
 // 注册
 $("#register").on('click',function(){
 
-	
-
+	var lang = $.cookie('lang');
+	var msg = message[lang];
 		
 	var firstName = $('#firstName').val(),
   		lastName = $('#lastName').val(),
@@ -120,80 +194,79 @@ $("#register").on('click',function(){
 
 
   	if(firstName == ''){
-  		$('.firstName').prev().html('First name cannot be empty');
+  		$('.firstName').prev().html(msg.msg.msg1);
 		$('html,body').animate({scrollTop:$('.q1').offset().top},500)
   	}else if(lastName == ''){
-  		$('.lastName').prev().html('Last name cannot be empty');
+  		$('.lastName').prev().html(msg.msg.msg2);
   		$('html,body').animate({scrollTop:$('.q2').offset().top},500)
   	}else if(!phoneReg.test(mobile) || mobile == '') { 
-  		$('.mobile').prev().html('Phone number cannot be empty');
+  		$('.mobile').prev().html(msg.msg.msg3);
   		$('html,body').animate({scrollTop:$('.q3').offset().top},500)
   	}else if(!reg.test(email) || email == ''){
-  		$('.email').prev().html('Email cannot be empty');
+  		$('.email').prev().html(msg.msg.msg4);
   		$('html,body').animate({scrollTop:$('.q4').offset().top},500)
   	}else if($('.address').val() == ''){
-  		$('.address').prev().html('Address cannot be empty');
+  		$('.address').prev().html(msg.msg.msg5);
   		$('html,body').animate({scrollTop:$('.q5').offset().top},500)
   	}else if($('.birth').val() == ''){
-  		$('.birth').prev().html('Date of birth cannot be empty');
+  		$('.birth').prev().html(msg.msg.msg6);
   		$('html,body').animate({scrollTop:$('.q6').offset().top},500)
   	}else if($('.nationality').val() == ''){
-  		$('.nationality').prev().html('Nationality cannot be empty');
+  		$('.nationality').prev().html(msg.msg.msg7);
   		$('html,body').animate({scrollTop:$('.q7').offset().top},500)
   	}else if($('.occupation').val() == ''){
-  		$('.occupation').prev().html('Occupation cannot be empty');
+  		$('.occupation').prev().html(msg.msg.msg8);
   		$('html,body').animate({scrollTop:$('.q8').offset().top},500)
   	}else if($('.howfind').val() == ''){
-  		$('.howfind').prev().html('This field cannot be left empty');
+  		$('.howfind').prev().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q9').offset().top},500)
   	}else if($('.elaborate').val() == ''){
-  		$('.elaborate').prev().html('This field cannot be left empty');
+  		$('.elaborate').prev().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q10').offset().top},500)
   	}else if($('.discipline').val() == ''){
-  		$('.table').prev().html('This field cannot be left empty');
+  		$('.table').prev().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q11').offset().top},500)
   	}else if($('.level').val() == ''){
-  		$('.table').prev().html('This field cannot be left empty');
+  		$('.table').prev().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q11').offset().top},500)
   	}else if($('.experience').val() == ''){
-  		$('.table').prev().html('This field cannot be left empty');
+  		$('.table').prev().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q11').offset().top},500)
   	}else if($('.prior').val() == ''){
-  		$('.prior').prev().html('This field cannot be left empty');
+  		$('.prior').prev().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q12').offset().top},500)
   	}else if($('.share').val() == ''){
-  		$('.share').prev().html('This field cannot be left empty');
+  		$('.share').prev().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q13').offset().top},500)
   	}else if($('.device').val() == ''){
-  		$('.device').prev().html('This field cannot be left empty');
+  		$('.device').prev().html(msg.msg.msg9);
 		$('html,body').animate({scrollTop:$('.q15').offset().top},500)
   	}else if($('input:radio[name="QQ"]:checked').val() == null){
-  		$('.qq').next().html('A selection must be made');
+  		$('.qq').next().html(msg.msg.msg10);
   		$('html,body').animate({scrollTop:$('.q16').offset().top},500)
   	}else if($('input:radio[name="heart_condition"]:checked').val() == null){
-  		$('.heart_condition').next().html('A selection must be made');
+  		$('.heart_condition').next().html(msg.msg.msg10);
   		$('html,body').animate({scrollTop:$('.q17').offset().top},500)
   	}else if($('input:radio[name="workout"]:checked').val() == null){
-  		$('.workout').next().html('A selection must be made');
+  		$('.workout').next().html(msg.msg.msg10);
   		$('html,body').animate({scrollTop:$('.q18').offset().top},500)
   	}else if($('input:radio[name="high_blood"]:checked').val() == null){
-  		$('.high_blood').next().html('A selection must be made');
+  		$('.high_blood').next().html(msg.msg.msg10);
   		$('html,body').animate({scrollTop:$('.q19').offset().top},500)
   	}
 
   	else if($('.wechatid').val() == ''){
-  		$('.wechatid').next().html('This field cannot be left empty');
+  		$('.wechatid').next().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q20').offset().top},500)
   	}else if($('.city').val() == ''){
-  		$('.city').next().html('This field cannot be left empty');
+  		$('.city').next().html(msg.msg.msg9);
   		$('html,body').animate({scrollTop:$('.q21').offset().top},500)
   	}else if($('input:radio[name="lang"]:checked').val() == ''){
-  		$('.lang').next().html('A selection must be made');
+  		$('.lang').next().html(msg.msg.msg10);
   		$('html,body').animate({scrollTop:$('.q22').offset().top},500)
   	}else{
   		var is_checked = $('#agree').is(':checked')
-		console.log('is_checked', is_checked)
-		swal('You must agree with our terms!', '', 'warning')
+		swal(msg.error.agree, '', 'warning')
 		if(!is_checked) return;
 
   		$.ajax({
@@ -204,13 +277,14 @@ $("#register").on('click',function(){
 			async : false,
 			error : function(xhr) {
 				console.log(JSON.stringify(xhr));
-				swal('Oops..', 'Submission failed!', 'error');
+
+				swal(msg.error.title, msg.error.submission, 'error');
 			},
 			success : function(data) {
 				swal({
-					title: "Thank You!",
-					text: "Your application has been submitted to the MYbarre team for approval. If your application is successful you will receive an email in the next 24 hours with your account password.",
-					type: "success",
+					title : msg.success.title,
+					text  : msg.success.msg,
+					type  : "success",
 					confirmButtonColor: "#5bc0de",
 					confirmButtonText: "To Home!"
 				}).then(function(isConfirm){
@@ -234,7 +308,8 @@ $("#login").on('click',function(){
 		data  : body,
 		async : false,
 		error : function(request) {
-			swal('Oops...', 'Login failed！', 'error');
+
+			swal(msg.error.title, msg.error.login, 'error');
 		},
 		success : function(data) {
 			if(data.status) {
@@ -251,7 +326,7 @@ $("#login").on('click',function(){
   				}, 500);
   				
 			}
-			else swal('Oops...', 'Login failed, please try again!', 'error');
+			else swal(msg.error.title, msg.error.login_password, 'error');
 		}
 	});
 });
@@ -282,11 +357,11 @@ $('#change_pwd').on('click',function(){
 			data  : body,
 			async : false,
 			error : function(request) {
-				swal('Request failed！','', 'error');
+				swal(msg.error.request,'', 'error');
 			},
 			success : function(data) {
 				if(data.status) {
-					swal('Done!','Password Successfully Updated','success').then(function(){
+					swal(msg.success.password_title,msg.success.password,'success').then(function(){
 						$.cookie('user', null, { expires: -1 });
 						location.href = "login.html";
 					})
@@ -296,12 +371,13 @@ $('#change_pwd').on('click',function(){
 			}
 		});
 	}else{
-		$('#prompt').html('<font style="color: red">Your new password and confirmed new password do not match.</font>');
+		$('#prompt').html('<font style="color: red">'+msg.error.password_msg+'</font>');
 	} 
 })
 
 // Host Studio
 $('#studio_submit').on('click',function(){
+
 	var body     = $('#train-from').serialize();
 	var name     = $('#name').val(),
 		email    = $('#email').val(),
@@ -311,13 +387,13 @@ $('#studio_submit').on('click',function(){
 		phone    = $('#phone').val();
 
 	if(name == ''){
-		swal('Oops...', 'Submission failed, name cannot be empty！', 'error');
+		swal(msg.error.title, msg.msg.msg11, 'error');
 	}else if(wechat == ''){
-		swal('Oops...', 'Submission failed, wechat ID cannot be empty！', 'error');
+		swal(msg.error.title, msg.msg.msg12, 'error');
 	}else if(!reg.test(email) || email == ''){
-		swal('Oops...', 'Submission failed, incorrect email address！', 'error');
+		swal(msg.error.title, msg.msg.msg13, 'error');
  	}else if(!phoneReg.test(phone) || phone == '') { 
-	    swal('Oops...', 'Submission failed, incorrect telephone number！', 'error');
+	    swal(msg.error.title, msg.msg.msg14, 'error');
 	}else{
 		$.ajax({
 			cache : false,
@@ -326,7 +402,7 @@ $('#studio_submit').on('click',function(){
 			data  : body,
 			async : false,
 			error : function(request) {
-				swal('Request failed！','', 'error');
+				swal(msg.error.request,'', 'error');
 			},
 			success : function(data) {
 				if(data.status) {
