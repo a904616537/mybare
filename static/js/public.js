@@ -22,11 +22,12 @@ var message = {
 			title          : '哎呀...',
 			msg1           : '出错了!',
 			login          : '登陆失败！',
-			login_401      : '你的账户已被锁定！',
+			login_401      : '你的 Mybarre 账户当前为锁定状态！',
+			login_401_desc : '你的账户已被锁定！',
 			login_password : '登录失败，请再试一次!',
 			password_msg   : '你的新密码和确认密码不匹配。',
 			agree          : '你必须同意我们的条款!',
-			submission 	   : '注册失败!',
+			submission     : '注册失败!',
 			request        : '提交失败!'
 		},
 		success : {
@@ -36,6 +37,7 @@ var message = {
 			password       : '密码更新成功'
 		},
 		msg : {
+			login : '登录',
 			msg1 : '姓氏不能为空',
 			msg2 : '名字不能为空',
 			msg3 : '请填写你的手机号码',
@@ -57,7 +59,8 @@ var message = {
 			title          : 'Oops...',
 			msg1           : 'For failure!',
 			login          : 'Login failed！',
-			login_401      : 'Your account is locked!',
+			login_401      : 'Your MYbarre Account is currently locked',
+			login_401_desc : 'If you would like to gain access to your Instructor Videos and unlock your account please email: info@mybarrefitness.com',
 			login_password : 'Login failed, please try again!',
 			password_msg   : 'Your new password and confirmed new password do not match.',
 			agree          : 'You must agree with our terms!',
@@ -72,15 +75,16 @@ var message = {
 			password       : 'Password Successfully Updated'
 		},
 		msg : {
-			msg1 : 'First name cannot be empty',
-			msg2 : 'Last name cannot be empty',
-			msg3 : 'Phone number cannot be empty',
-			msg4 : 'Email cannot be empty',
-			msg5 : 'Address cannot be empty',
-			msg6 : 'Date of birth cannot be empty',
-			msg7 : 'Nationality cannot be empty',
-			msg8 : 'Occupation cannot be empty',
-			msg9 : 'This field cannot be left empty',
+			login : 'Log In',
+			msg1  : 'First name cannot be empty',
+			msg2  : 'Last name cannot be empty',
+			msg3  : 'Phone number cannot be empty',
+			msg4  : 'Email cannot be empty',
+			msg5  : 'Address cannot be empty',
+			msg6  : 'Date of birth cannot be empty',
+			msg7  : 'Nationality cannot be empty',
+			msg8  : 'Occupation cannot be empty',
+			msg9  : 'This field cannot be left empty',
 			msg10 : 'A selection must be made',
 
 
@@ -137,6 +141,8 @@ var socket = io(apiUrl);
 
 // cookie
 $(function() {
+	var lang = $.cookie('lang') || 'zh';;
+	var msg = message[lang];
 	var levelToString = function(level) {
 		switch(level) {
 			case 0:
@@ -156,6 +162,7 @@ $(function() {
 		var user = JSON.parse(cookieuser).user;
 		$('#user_id').val(cookie.user._id);
 		$('#user').html('<a href="profile.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
+		$('#user_login').hide();
 		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#profile').html(cookie.user.first_name +" "+cookie.user.last_name)
 		$('#level').html(levelToString(cookie.user.level))
@@ -166,11 +173,21 @@ $(function() {
 		socket.on('user-level', function(result) {
 			console.log('socket io result:', result)
 			user.level = Number(result.level);
-			$.cookie('user', JSON.stringify({user : user}), { expires: 7 });
+			if(user.level < 0) {
+				$.cookie('user', null, { expires: -1 });
+				swal(msg.error.login_401, msg.error.login_401_desc, 'warning').then(function (text) {
+					window.location.href = homeUrl;
+				});
+			} else {
+				$.cookie('user', JSON.stringify({user : user}), { expires: 7 });
+			}
 		});
 
 	} else {
-		$('#user').html('<a href="login.html" class="login-icon">Log In</a>');
+
+		$('#user_login').show();
+		$('#user').hide();
+		$('#user').html('<a href="login.html" class="login-icon">'+msg.msg.login+'</font></a>');
 		$('#user-grid').html('<a href="login.html" class="login-icon">Instructor Login</a>');
 		$('#video-tip').hide();
 	}
@@ -333,7 +350,7 @@ $("#login").on('click',function(){
 			else {
 				// 账户被锁定!
 				if(data.locking) {
-					swal(msg.error.login_401, '', 'warning');
+					swal(msg.error.login_401, msg.error.login_401_desc, 'warning');
 					return;
 				}
 				swal(msg.error.title, msg.error.login_password, 'error');
