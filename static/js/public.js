@@ -181,7 +181,7 @@ $(function() {
 // 注册
 $("#register").on('click',function(){
 
-	var lang = $.cookie('lang');
+	var lang = $.cookie('lang') || 'zh';;
 	var msg = message[lang];
 		
 	var firstName = $('#firstName').val(),
@@ -300,6 +300,9 @@ $("#register").on('click',function(){
 
 // 登录
 $("#login").on('click',function(){
+	var lang = $.cookie('lang') || 'zh';
+	var msg = message[lang];
+
 	var body = $('#loginfrom').serialize();
 	$.ajax({
 		cache : false,
@@ -312,6 +315,7 @@ $("#login").on('click',function(){
 			swal(msg.error.title, msg.error.login, 'error');
 		},
 		success : function(data) {
+			console.log('data', data)
 			if(data.status) {
 				var user = {user : data.user, first_name : data.user.first_name, last_name:data.user.last_name}
 				if(body.rember === 'no') {
@@ -326,7 +330,14 @@ $("#login").on('click',function(){
   				}, 500);
   				
 			}
-			else swal(msg.error.title, msg.error.login_password, 'error');
+			else {
+				// 账户被锁定!
+				if(data.locking) {
+					swal(msg.error.login_401, '', 'warning');
+					return;
+				}
+				swal(msg.error.title, msg.error.login_password, 'error');
+			}
 		}
 	});
 });
@@ -345,6 +356,8 @@ $("#logOut-grid").on('click',function(){
 
 // 修改密码	
 $('#change_pwd').on('click',function(){
+	var lang = $.cookie('lang') || 'zh';;
+	var msg = message[lang];
 	var pwd 	= $('#pwd').val(),
 		pwd1    = $('#pwd1').val(),
 		body    = $('#pwdfrom').serialize();
@@ -377,7 +390,8 @@ $('#change_pwd').on('click',function(){
 
 // Host Studio
 $('#studio_submit').on('click',function(){
-
+	var lang = $.cookie('lang') || 'zh';;
+	var msg = message[lang];
 	var body     = $('#train-from').serialize();
 	var name     = $('#name').val(),
 		email    = $('#email').val(),
