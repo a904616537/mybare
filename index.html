@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link rel="stylesheet" href="static/css/sweetalert2.min.css" type="text/css" />
+        <link rel="stylesheet" href="static/iconfont/iconfont.css" type="text/css" />
         <link rel="stylesheet" href="static/css/style.css" type="text/css" />
     </head>
 
@@ -27,6 +28,7 @@
         <div class="header">
             <div class="related clearfloat">
                 <div class="item">
+                    <a href="#" class="langToggle"><i class="iconfont icon-fuhao-zhongwen"></i></a>
                     <a href="wechat.html"><i class="fa fa-weixin"></i></a>
                     <a href="https://www.instagram.com/MYbarrefitness/"><i class="fa fa-linkedin"></i></a>
                     <a href="https://www.facebook.com/mybarrefitness/"><i class="fa fa-facebook"></i></a>
@@ -102,7 +104,6 @@
                             <li><a href="user.html"><font class="en">Videos</font><font class="zh">课程视频</font></a></li>
                             <li><a href="set.html"><font class="en">Change Password</font><font class="zh">修改密码</font></a></li>
                             <li><a href="javascript:;" id="logOut"><font class="en">Log Out</font><font class="zh">教练登出</font></a></li>
-                            <li><a href="javascript:;" class="langToggle"></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -117,10 +118,11 @@
                 <!-- <li id="user-grid"><a href="login.html"><i class="fa fa-user"></i></a></li> -->
                 <li id="bar"><a href="#"><i class="fa fa-user"></i></a>
                     <ul class="user-dropdown" id="user-dropdown">
-                        <li><a href="login.html" id="user-grid">
-                            <font class="en">Instructor Login</font>    
-                            <font class="zh">教练登录</font>
-                        </a></li>
+                        
+
+                        <li id="user-grid-login"><a href="login.html"><font class="en">Log In</font><font class="zh">登录</font></a></li>
+                        <li id="user-grid"></li>
+
                         <li><a href="user.html">
                             <font class="en">Videos</font><font class="zh">课程视频</font>
                         </a></li>

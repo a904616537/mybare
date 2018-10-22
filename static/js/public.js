@@ -111,11 +111,11 @@ $('.langToggle').on('click',function(){
 
 function setLang(lang){
 	if(lang == 'en'){
-		$('.langToggle').html('<span class="lang" data="zh">中文</span>');
+		$('.langToggle').html('<span class="lang" data="zh"><i class="iconfont icon-fuhao-zhongwen fontlang"></i></span>');
 		$('.changeLang .zh').hide();
 		$('.changeLang .en').show();
 	}else{
-		$('.langToggle').html('<span class="lang" data="en">English</span>');
+		$('.langToggle').html('<span class="lang" data="en"><i class="iconfont icon-fuhao-yingwen fontlang"></i></span>');
 		$('.changeLang .en').hide();
 		$('.changeLang .zh').show();
 	}
@@ -163,7 +163,10 @@ $(function() {
 		$('#user_id').val(cookie.user._id);
 		$('#user').html('<a href="profile.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
 		$('#user_login').hide();
-		$('#user-grid').html('<a href="user.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
+
+		$('#user-grid').html('<a href="profile.html" class="login-icon">'+ cookie.user.first_name +" "+cookie.user.last_name +'</a>');
+		$('#user-grid-login').hide();
+		
 		$('#profile').html(cookie.user.first_name +" "+cookie.user.last_name)
 		$('#level').html(levelToString(cookie.user.level))
 		$('#email').html(cookie.user.email)
