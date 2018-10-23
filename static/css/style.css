@@ -62,6 +62,11 @@ input:-webkit-autofill {
 	position     : relative;
 	top          : 3px;
 }
+.langimg {
+	width: 18px;
+	height: 14px;
+	margin-bottom: 4px;
+}
 
 
 /*  导航 开始  */

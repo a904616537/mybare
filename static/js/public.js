@@ -111,11 +111,11 @@ $('.langToggle').on('click',function(){
 
 function setLang(lang){
 	if(lang == 'en'){
-		$('.langToggle').html('<span class="lang" data="zh"><i class="iconfont icon-fuhao-zhongwen fontlang"></i></span>');
+		$('.langToggle').html('<span class="lang" data="zh"><img class="langimg" src="/static/img/en.png" /></span>');
 		$('.changeLang .zh').hide();
 		$('.changeLang .en').show();
 	}else{
-		$('.langToggle').html('<span class="lang" data="en"><i class="iconfont icon-fuhao-yingwen fontlang"></i></span>');
+		$('.langToggle').html('<span class="lang" data="en"><img class="langimg" src="/static/img/zh.png" /></span>');
 		$('.changeLang .en').hide();
 		$('.changeLang .zh').show();
 	}
