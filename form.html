@@ -41,69 +41,101 @@
     
     <body>
         <div class="form" id="commentForm" name="form">
-        	<div class="container">
-                <h2>MYbarre Instructor Application Form</h2>
+        	<div class="container changeLang">
+                <h2>
+                    <font class="en">MYbarre Instructor Application Form</font>
+                    <font class="zh">MYbarre教练员申请表格</font>
+                </h2>
                 <form id="myfrom" action="" method="post">
-                    <span class="red-span" style="font-weight: bold;margin: 0px;"> All Fields Mandatory </span>
+                    <span class="red-span" style="font-weight: bold;margin: 0px;"> 
+                        <font class="en"> All Fields Mandatory </font>
+                        <font class="zh">所有选项必须填写</font>
+                    </span>
                     <div class="item">
                         <div class="form-title">
-                            Personal Details 
+                            <font class="en">Personal Details</font>
+                            <font class="zh">个人信息</font>
                         </div>
                         <div class="form-inner">
-                            <p class="q1">First Name: <span class="red-span"></span><input type="text" class="input-type firstName" name="first_name" id="firstName"></p>
-                            <p class="q2">Last Name: <span class="red-span"></span><input type="text" class="input-type lastName" name="last_name" id="lastName"></p>
-                            <p class="q3">Phone Number: <span class="red-span"></span><input type="text" class="input-type mobile" name="phone" id="mobile"></p>
-                            <p class="q4">Email: <span class="red-span"></span><input type="email" class="input-type email" name="email" id="email"></p>
-                            <p class="q20">Wechat ID: <span class="red-span"></span><input type="text" class="input-type wechatid" name="wechatid"></p>
-                            <p class="q5">Address: <span class="red-span"></span><input type="text" class="input-type address" name="address"></p>
-                            <p class="q21">City: <span class="red-span"></span><input type="text" class="input-type city" name="city"></p>
-                            <p class="q6">Date Of Birth: <span class="red-span"></span><input type="text" class="input-type birth" name="birth"></p>
-                            <p class="q7">Nationality: <span class="red-span"></span><input type="text" class="input-type nationality" name="nationality"></p>
-                            <p class="q8">Occupation: <span class="red-span"></span><input type="text" class="input-type occupation" name="occupation"></p>
-                            <p class="q22">Language preferred for training?<input type="radio" value="english" name="lang">english<input type="radio" value="chinese" name="lang" class="vpn">chinese<span class="red-span"></span></p>
+                            <p class="q1"><font class="en">First Name: </font><font class="zh">名: </font><span class="red-span"></span><input type="text" class="input-type firstName" name="first_name" id="firstName"></p>
+                            <p class="q2"><font class="en">Last Name: </font><font class="zh">姓: </font><span class="red-span"></span><input type="text" class="input-type lastName" name="last_name" id="lastName"></p>
+                            <p class="q3"><font class="en">Phone Number: </font><font class="zh">电话: </font><span class="red-span"></span><input type="text" class="input-type mobile" name="phone" id="mobile"></p>
+                            <p class="q4"><font class="en">Email: </font><font class="zh">邮件: </font><span class="red-span"></span><input type="email" class="input-type email" name="email" id="email"></p>
+                            <p class="q20"><font class="en">Wechat ID: </font><font class="zh">微信号: </font><span class="red-span"></span><input type="text" class="input-type wechatid" name="wechatid"></p>
+                            <p class="q5"><font class="en">Address: </font><font class="zh">地址: </font><span class="red-span"></span><input type="text" class="input-type address" name="address"></p>
+                            <p class="q21"><font class="en">City: </font><font class="zh">城市: </font><span class="red-span"></span><input type="text" class="input-type city" name="city"></p>
+                            <p class="q6"><font class="en">Date Of Birth: </font><font class="zh">生日: </font><span class="red-span"></span><input type="text" class="input-type birth" name="birth"></p>
+                            <p class="q7"><font class="en">Nationality: </font><font class="zh">国籍: </font><span class="red-span"></span><input type="text" class="input-type nationality" name="nationality"></p>
+                            <p class="q8"><font class="en">Occupation: </font><font class="zh">职业: </font><span class="red-span"></span><input type="text" class="input-type occupation" name="occupation"></p>
+                            <p class="q22"><font class="en">Language preferred for training?</font><font class="zh">希望培训课程使用的语言? </font><input type="radio" value="english" name="lang"><font class="en">english</font><font class="zh">英文</font><input type="radio" value="chinese" name="lang" class="vpn"><font class="en">chinese</font><font class="zh">中文</font><span class="red-span"></span></p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="form-title">
-                            Studio Details ( if you currently instruct or have plan to launch MYbarre please complete the studios details, if not leave blank )
+                            <font class="en">Studio Details ( if you currently instruct or have plan to launch MYbarre please complete the studios details, if not leave blank )</font>
+                            <font class="zh">工作室信息（如果您目前正在教授课程，或者计划发布MYbarre课程，请完善工作室信息，如果没有上述需求，不必填写）</font>
                         </div>
                         <div class="form-inner">
-                            <p>Studio Name: <input type="text" class="input-type" name="studio_name"></p>
-                            <p>Studio Address: <input type="text" class="input-type" name="studio_address"></p>
-                            <p>Manager Name: <input type="text" class="input-type" name="manager"></p>
-                            <p>Studio Phone Number: <input type="text" class="input-type" name="studio_phone"></p>
-                            <p>Studio website: <input type="text" class="input-type" name="studio_web"></p>
-                            <p>Studio: <input type="text" class="input-type" name="studio"></p>
+                            <p><font class="en">Studio Name: </font><font class="zh">工作室名称: </font><input type="text" class="input-type" name="studio_name"></p>
+                            <p><font class="en">Studio Address: </font><font class="zh">工作室地址: </font><input type="text" class="input-type" name="studio_address"></p>
+                            <p><font class="en">Manager Name: </font><font class="zh">经理姓名: </font><input type="text" class="input-type" name="manager"></p>
+                            <p><font class="en">Studio Phone Number: </font><font class="zh">工作室电话: </font><input type="text" class="input-type" name="studio_phone"></p>
+                            <p><font class="en">Studio website: </font><font class="zh">工作室网站: </font><input type="text" class="input-type" name="studio_web"></p>
+                            <p><font class="en">Studio: </font><font class="zh">工作室: </font><input type="text" class="input-type" name="studio"></p>
                             
                         </div>  
                     </div>  
                     <div class="item">
                         <div class="form-title">
-                            Background and Motivation
+                            <font class="en">Background and Motivation</font>
+                            <font class="zh">背景和目的</font>
                         </div>
                         <div class="form-inner">
-                            <p class="q9">How did you find out about the MYbarre Instructor Training Course?<span class="red-span"></span>
-                            <textarea class="textarea-type howfind" name="motivation1"></textarea></p>
-                            <p class="q10">Please elaborate on your motivation for joining the training?<span class="red-span"></span>
-                            <textarea class="textarea-type elaborate" name="motivation2"></textarea></p>
+                            <p class="q9">
+                                <font class="en">How did you find out about the MYbarre Instructor Training Course?</font>
+                                <font class="zh">你是如何发现MYbarre教练员培训课程的？</font>
+                                <span class="red-span"></span>
+                                <textarea class="textarea-type howfind" name="motivation1"></textarea>
+                            </p>
 
-                            <p class="q23">Are you already teaching? so which classes? Full or Part time?<span class="red-span"></span>
-                            <textarea class="textarea-type elaborate" name="motivation3"></textarea></p>
+                            <p class="q10">
+                                <font class="en">Please elaborate on your motivation for joining the training?</font>
+                                <font class="zh">请详细描述你参加本次培训的目的？</font>
+                                <span class="red-span"></span>
+                                <textarea class="textarea-type elaborate" name="motivation2"></textarea>
+                            </p>
 
-                            <p class="q24">What is your goal after taking the training? (example to teach, top open studio, only for personal learning)<span class="red-span"></span>
-                            <textarea class="textarea-type elaborate" name="motivation4"></textarea></p>
+                            <p class="q23">
+                                <font class="en">Are you already teaching? so which classes? Full or Part time?</font>
+                                <font class="zh">你已经在教授课程了吗？什么样的课程？全职还是兼职？</font>
+                                <span class="red-span"></span>
+                                <textarea class="textarea-type elaborate" name="motivation3"></textarea>
+                            </p>
 
+                            <p class="q24">
+                                <font class="en">What is your goal after taking the training? (example to teach, top open studio, only for personal learning)</font>
+                                <font class="zh">培训结束后，你的目标是什么？（例如，如果是希望培训后能够教学，或者开工作室，或者仅是出于私人学习的目的）</font>
+                                <span class="red-span"></span>
+                                <textarea class="textarea-type elaborate" name="motivation4"></textarea>
+                            </p>
     
-                            <p class="q25">How many barre or MYbarre classes have you taken and where<span class="red-span"></span>
-                            <textarea class="textarea-type elaborate" name="motivation5"></textarea></p>
+                            <p class="q25">
+                                <font class="en">How many barre or MYbarre classes have you taken and where</font>
+                                <font class="zh">你之前参加过多少次barre或者MYbarre的课程？在哪里参加过？</font>
+                                <span class="red-span"></span>
+                                <textarea class="textarea-type elaborate" name="motivation5"></textarea>
+                            </p>
 
-                            <p class="q11">Please list your exercised fitness disciplines, certification level and years of experience.</p>
+                            <p class="q11">
+                                <font class="en">Please list your exercised fitness disciplines, certification level and years of experience.</font>
+                                <font class="zh">请列举你的健身训练领域，认证等级以及工作经验年限。</font>
+                            </p>
                             <span class="red-span"></span>
                             <table cellspacing="0" cellpadding="0" class="table">  
                                 <tr>  
-                                    <td>Discipline</td>  
-                                    <td>Certification / Level</td>  
-                                    <td>Years of experience</td>  
+                                    <td><font class="en">Discipline</font> <font class="zh">健身训练领域</font></td>  
+                                    <td><font class="en">Certification / Level</font> <font class="zh">认证/等级 </font></td>  
+                                    <td><font class="en">Years of experience</font> <font class="zh">工作经验年限</font></td>  
                                 </tr>  
 
                                 <tr> 
@@ -124,61 +156,117 @@
                             </table>  
 
 
-                            <p class="q12">Do you have any prior MYbarre, ballet or pilates experience?<span class="red-span"></span>
-                            <textarea class="textarea-type prior" name="bellet"></textarea></p>
-                            <p class="q13">Is there anything else you would like to share with us about yourself or fitness / dance experience?<span class="red-span"></span>
-                            <textarea class="textarea-type share" name="share_experience"></textarea></p>
+                            <p class="q12">
+                                <font class="en">Do you have any prior MYbarre, ballet or pilates experience?</font>
+                                <font class="zh">除了MYbarre，芭蕾舞和普拉提，还有其他运动经验吗？</font>
+                                <span class="red-span"></span>
+                                <textarea class="textarea-type prior" name="bellet"></textarea>
+                            </p>
+
+                            <p class="q13">
+                                <font class="en">Is there anything else you would like to share with us about yourself or fitness / dance experience?</font>
+                                <font class="zh">关于你自己或者健身/舞蹈经历，还有没有其他方面想与我们分享？</font>
+                                <span class="red-span"></span>
+                                <textarea class="textarea-type share" name="share_experience"></textarea>
+                            </p>
 
                         </div>  
                     </div>  
                     <div class="item">
                         <div class="form-title">
-                            Practical Information
+                            <font class="en">Practical Information</font>
+                            <font class="zh">实用信息</font>
                         </div>
                         <div class="form-inner">
-                            <p class="q15">What device do you use for downloading your music？<span class="red-span"></span><input type="text" class="input-type device" name="music"></p>
-                            <p class="q16">Do you use QQ？<input type="radio" value="Yes" name="QQ">Yes <input type="radio" value="No" name="QQ" class="qq">No<span class="red-span"></span></p>
+                            <p class="q15">
+                                <font class="en">What device do you use for downloading your music？</font>
+                                <font class="zh">你使用什么设备下载你的音乐？</font>
+                                <span class="red-span"></span>
+                                <input type="text" class="input-type device" name="music">
+                            </p>
+                            <p class="q16">
+                                <font class="en">Do you use QQ？</font>
+                                <font class="zh">你使用QQ吗？</font>
+                                <input type="radio" value="Yes" name="QQ"><font class="en">Yes</font><font class="zh">是</font><input type="radio" value="No" name="QQ" class="qq"><font class="en">No</font><font class="zh">否</font>
+                                <span class="red-span"></span>
+                            </p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="form-title">
-                            Medical Information
+                            <font class="en">Medical Information</font>
+                            <font class="zh">身体状况</font>
                         </div>
                         <div class="form-inner">
-                            <p class="q17">Have you ever been told you have a heart condition？<input type="radio" value="Yes" name="heart_condition">Yes <input type="radio" value="No" name="heart_condition" class="heart_condition">No<span class="red-span"></span></p>
-                            <p class="q18">Have you ever experienced chest pain, dizziness or loss of consciousness during or after a physical exercise workout?<input type="radio" value="Yes" name="workout">Yes <input type="radio" value="No" name="workout" class="workout">No<span class="red-span"></span></p>
-                            <p class="q19">Have you or do you currently take any medicines for high blood pressure？<input type="radio" value="Yes" name="high_blood">Yes <input type="radio" value="No" name="high_blood" class="high_blood">No<span class="red-span"></span></p>
-                            <p>In case you have answered any of the above questions positively (with “yes”), please make sure to get cleared by a doctor before attending the MYbarre Instructor Training Course.</p>
+                            <p class="q17">
+                                <font class="en">Have you ever been told you have a heart condition？</font>
+                                <font class="zh">你是否被告知有心脏方面的问题？</font>
+                                <input type="radio" value="Yes" name="heart_condition"><font class="en">Yes</font><font class="zh">是</font><input type="radio" value="No" name="heart_condition" class="heart_condition"><font class="en">No</font><font class="zh">否</font><span class="red-span"></span>
+                            </p>
+                            <p class="q18">
+                                <font class="en">Have you ever experienced chest pain, dizziness or loss of consciousness during or after a physical exercise workout?</font>
+                                <font class="zh">你之前是否在训练过程中或者训练结束后，经历过胸部疼痛，眩晕或者意识丧失？</font>
+                                <input type="radio" value="Yes" name="workout"><font class="en">Yes</font><font class="zh">是</font><input type="radio" value="No" name="workout" class="workout"><font class="en">No</font><font class="zh">否</font><span class="red-span"></span>
+                            </p>
+                            <p class="q19">
+                                <font class="en">Have you or do you currently take any medicines for high blood pressure？</font>
+                                <font class="zh">你是否曾经服用过，或者现在正在服用降血压的药物？</font>
+                                <input type="radio" value="Yes" name="high_blood"><font class="en">Yes</font><font class="zh">是</font><input type="radio" value="No" name="high_blood" class="high_blood"><font class="en">No</font><font class="zh">否</font><span class="red-span"></span>
+                            </p>
+                            <p>
+                                <font class="en">In case you have answered any of the above questions positively (with “yes”), please make sure to get cleared by a doctor before attending the MYbarre Instructor Training Course.</font>
+                                <font class="zh">如果上述问题你的全部回答都是“是”，那么请在参加MYbarre教练员培训课程前咨询你的医生。</font>
+                            </p>
                         </div>
                     </div>
                     <div class="item">
                         <div class="form-title">
-                            MYbarre Intructor Training & Licence Terms and Conditions.
+                            <font class="en">MYbarre Intructor Training & Licence Terms and Conditions.</font>
+                            <font class="zh">MYbarre教练员培训 & 许可条件和条款</font>
                         </div>
                         <div class="form-inner">
                             <p>
-                                Please read the document below and mark the box to agree to the terms and conditions.
+                                <font class="en">Please read the document below and mark the box to agree to the terms and conditions.</font>
+                                <font class="zh">请阅读下面内容，并勾选方框同意条款和条件。</font>
                             </p>
                             <p>
-                            Non-compete MYbarre Education, Training & Licence: You are agreeing to a “non compete” to the Instructor Training, meaning that the Recipient shall not own, manage, operate, consult or instruct a business utilising or delivering training for a barre workout program in a manner substantially similar to, or competitive with, the present business of the (MYbarre) Company during the term of this Agreement. On completion of the MYbarre course, passing exam you agree to purchase the annual license purchase where you will become a MYbarre Licenced Instructor. The license grants you the non transferable right to teach MYbarre classes for up to one year (12 months from the date of issue) During this time you will be issued with continued education class plans, choreography and digital training guides that can only be used to deliver the MYbarre core format, this is only to be viewed and used by the Licence Trainer, sharing videos and training information will be seen as a breach of contract. You will not use any materials or teaching principles you have learned or receive to teach anything except MYbarre class. While a qualified and licensed MYbarre instructor you are not allowed to teach any other barre/ballet fitness class or barre fitness programme.
+                            <font class="en">Non-compete MYbarre Education, Training & Licence: You are agreeing to a “non compete” to the Instructor Training, meaning that the Recipient shall not own, manage, operate, consult or instruct a business utilising or delivering training for a barre workout program in a manner substantially similar to, or competitive with, the present business of the (MYbarre) Company during the term of this Agreement. On completion of the MYbarre course, passing exam you agree to purchase the annual license purchase where you will become a MYbarre Licenced Instructor. The license grants you the non transferable right to teach MYbarre classes for up to one year (12 months from the date of issue) During this time you will be issued with continued education class plans, choreography and digital training guides that can only be used to deliver the MYbarre core format, this is only to be viewed and used by the Licence Trainer, sharing videos and training information will be seen as a breach of contract. You will not use any materials or teaching principles you have learned or receive to teach anything except MYbarre class. While a qualified and licensed MYbarre instructor you are not allowed to teach any other barre/ballet fitness class or barre fitness programme.</font>
+                            <font class="zh">MYbarre教育，培训&许可竞业禁止：本文件中使用的术语“竞业禁止”是指在本协议有效期内，收取人不得以在实质上同（MYbarre）公司当前业务类似或具有竞争性的方式拥有、管理、经营、咨询或指导采用或提供barre锻炼计划培训的业务。在完成MYbarre课程、通过考试并购买年度许可之后，您将成为一名MYbarre许可教练。该许可授予您在一年期内（自签发日起12个月）教授MYbarre课程的、不可转让的权利。在此期间，我们会向您发出只可以用于提供MYbarre核心模式的持续教育课程计划、编排和数字培训指导。这仅能被持有许可的教练员阅读和使用，分享传播视频和培训信息将会视为违反合同约定。您不应当将您学到或接受过的任何教材或教学原则用于教授MYbarre课程以外的任何内容。作为一名合格的、有许可的MYbarre教练，不允许您教授任何其他的barre/芭蕾舞健身课程或barre健身计划。</font>
                             </p>
                             <p>
-                            Use of name/brand/logo: As a licensed MYbarre instructor you can use the word ‘MYbarre' on studio class schedules and class/marketing communications. It must be displayed using capital ‘MY’ and lowercase ‘barre’. You must pay your Instructor License Fee to MYbarre to keep the license current, if the annual payment is outstanding longer than 30 days the licence will be revoked and all rights to teach MYbarre as above and access to the logo, name, trademarks is revoked.</p>
-                            <p>
-                            Non Disclosure & Confidential Information: 1. That all rights of copyright in and to the material contained in the Company curriculum documents, lesson plans, training material, marketing materials, audiovisual components, emails, handouts, workshop presentations (oral and written) and anything else with the Company logo will vest exclusively in the Company (MYbarre Fitness) 2. That all rights of ownership in or to any other written or audio-visual material, trademarks, know-how, techniques, devices as well as other intellectual property relating directly or indirectly to MYbarre or the MYbarre method of instructing and teaching, will vest exclusively in the Company. 3. The Material contains confidential and proprietary information of the Company. 4. Recipient hereby agrees that all Materials will be used solely for the purpose of instructing the MYbarre under the MYbarre name , and that such information will be
+                            <font class="en">Use of name/brand/logo: As a licensed MYbarre instructor you can use the word ‘MYbarre' on studio class schedules and class/marketing communications. It must be displayed using capital ‘MY’ and lowercase ‘barre’. You must pay your Instructor License Fee to MYbarre to keep the license current, if the annual payment is outstanding longer than 30 days the licence will be revoked and all rights to teach MYbarre as above and access to the logo, name, trademarks is revoked.</font>
+                            <font class="zh">名称/品牌/标识的使用：作为一位许可MYbarre教练，您可以在工作室课程表和课堂/营销传播中使用“MYbarre”一词。该词语必须使用大写的“MY”和小写的“barre”来表示。您必须向MYbarre支付教练许可费，以确保许可有效；如果超过30天没有清偿年度款项，则许可将被吊销，而上述教授MYbarre的所有权利都将被取消，并且不可以使用标识、名称和商标。</font>
                             </p>
-                            <p>kept confidential by Recipient. Recipient agrees to receive and hold the Materials in strict confidence and, except as contemplated herein, not to ever disclose, disseminate, publish, copy, reproduce or otherwise use the Materials in any manner whatsoever.</p>
-                            <p>Representation: You are not permitted to represent MYbarre in the press without prior written approval from MYbarre Head Office and may not teach or present MYbarre at a conference or fitness convention where continuing education credits are offered or prior approval from the MYbarre Head Office.</p>
-                            <p>Medical & Health Waiver: I understand and acknowledge that participation in the MYbarre Instructor Training (the “Activity”) may result in injury. I understand that there are risks involved in the use of any equipment/props used for the Activity (the “Equipment”), and that injuries may occur as a result of my use of the Equipment. In recognition of the inherent risks of the Activity that I will engage in, I confirm that I am physically and mentally capable of participating in the Activity and/or using the Equipment. I participate willingly and voluntarily and assume full responsibility for personal injury, accidents, or illness, including death. I also assume responsibility for damage to or loss of personal property as the result of an accident. I assume the risk(s) of personal injury, accidents and/or illness, and acknowledge that during the Activity I may experience fatigue and/or other issues that may increase the risk of an injury. I hereby authorise all medical treatment deemed necessary in the event of any injury while participating in the Activity. I either have appropriate insurance or, in its absence, agree to pay all costs of rescue and/or medical services as may be incurred on my/our behalf.</p>
-                            <p>Photograph/Media/Use of Images: I acknowledge that during the in person course of the Activity, MYbarre / Z&B Fitness may take my photograph or video. I hereby grant MYbarre permission to use any such photograph or video in materials promoting MYbarre. Such use may include publication in program, general advertising, posters, flyers, television, internet, WeChat and any other media that may be distributed or shown to or otherwise seen by large numbers of individuals and potential patrons of MYbarre. I waive all rights to any financial remuneration of any kind. In consideration of the Activity provided, I, for myself and my heirs, personal representatives or assigns, do hereby waive, release, discharge, hold harmless, and indemnify Z&B Fitness, MYbarre Fitness, MYbarre Training Group, any related entities, and their shareholders, officers, directors, members, managers, agents, employees, and volunteers (the “Releasees”), from any and all liability, claims, cause(s) of action, present or future, and waive any claims for economic damages, personal injury damages, emotional distress damages and all other damages arising from my participation in the Activity, even if they arise from or are increased as a result of the negligence of the Releasees.</p>
-                            <p>I have had sufficient opportunity to read this entire agreement. I understand it and agree to be bound by its terms. I understand that by signing this document, i may be waiving legal rights. I further agree that i am bound by this agreement by signing it in person or electronically.</p>
+                            <p>
+                            <font class="en">Non Disclosure & Confidential Information: 1. That all rights of copyright in and to the material contained in the Company curriculum documents, lesson plans, training material, marketing materials, audiovisual components, emails, handouts, workshop presentations (oral and written) and anything else with the Company logo will vest exclusively in the Company (MYbarre Fitness) 2. That all rights of ownership in or to any other written or audio-visual material, trademarks, know-how, techniques, devices as well as other intellectual property relating directly or indirectly to MYbarre or the MYbarre method of instructing and teaching, will vest exclusively in the Company. 3. The Material contains confidential and proprietary information of the Company. 4. Recipient hereby agrees that all Materials will be used solely for the purpose of instructing the MYbarre under the MYbarre name , and that such information will be</font>
+                            <font class="zh">非公开与保密信息：1.在公司课程文件、课程计划、培训材料、营销材料、视听材料、电子邮件、讲义、研讨会报告（口头和书面）以及其他任何带有公司标识的文件中所包含材料的所有版权权利应当全部归公司所有；2.同MYbarre或MYbarre教授和教学方法直接或间接相关的任何其他任何书面或视听材料、商标、专有技术、技术、设备以及其他知识产权中的所有版权权利应当全部归公司所有；3.材料包含公司的机密和专有信息；4.接受人在此同意，所有的材料仅用于在MYbarre的名义下教授MYbarre，并且接受人应当对该类信息予以保密。接受人同意接受材料并对材料予以严格保密；除了本协议中的规定之外，接受人不应当以任何其他方式披露、传播、公开、复制、复印或以任何方式使用该类材料。</font>
+                            </p>
+                            <p>
+                            <font class="en">kept confidential by Recipient. Recipient agrees to receive and hold the Materials in strict confidence and, except as contemplated herein, not to ever disclose, disseminate, publish, copy, reproduce or otherwise use the Materials in any manner whatsoever.</font>
+                            </p>
+                            <p>
+                            <font class="en">Representation: You are not permitted to represent MYbarre in the press without prior written approval from MYbarre Head Office and may not teach or present MYbarre at a conference or fitness convention where continuing education credits are offered or prior approval from the MYbarre Head Office.</font>
+                            <font class="zh">声明：未经MYbarre总部的预先书面批准，您不得在媒体上代表MYbarre，也不得在会议或健身大会上教授或介绍MYbarre，而MYbarre总部可以提供持续教育信贷或预先批准。</font>
+                            </p>
+                            <p>
+                            <font class="en">Medical & Health Waiver: I understand and acknowledge that participation in the MYbarre Instructor Training (the “Activity”) may result in injury. I understand that there are risks involved in the use of any equipment/props used for the Activity (the “Equipment”), and that injuries may occur as a result of my use of the Equipment. In recognition of the inherent risks of the Activity that I will engage in, I confirm that I am physically and mentally capable of participating in the Activity and/or using the Equipment. I participate willingly and voluntarily and assume full responsibility for personal injury, accidents, or illness, including death. I also assume responsibility for damage to or loss of personal property as the result of an accident. I assume the risk(s) of personal injury, accidents and/or illness, and acknowledge that during the Activity I may experience fatigue and/or other issues that may increase the risk of an injury. I hereby authorise all medical treatment deemed necessary in the event of any injury while participating in the Activity. I either have appropriate insurance or, in its absence, agree to pay all costs of rescue and/or medical services as may be incurred on my/our behalf.</font>
+                            <font class="zh">医疗&健康豁免：本人理解并确认，参加MYbarre教练培训（“活动”）可能会导致受伤。本人明白，使用有关活动的任何设备/道具（“设备”）都会产生风险，而且由于本人使用该类设备可能会造成伤害。为了确认本人所从事的活动存在的内在风险，本人确认自己在身体和精神上都有能力参与到活动中和/或使用设备。本人愿意并且自愿参加，并承担个人伤害、意外事故或疾病的全部责任，包括死亡。本人同样负责承担事故所造成的个人财产损坏或损失。本人承担个人伤害、事故和/或疾病风险，并承认在活动期间，本人可能会感觉到疲劳和/或其他可能增加受伤风险的问题。本人在此授权在参加活动过程中发生任何伤害时进行所有必要的医疗救助。本人拥有适当的保险；如果不存在保险，则本人同意支付本人/代表本人所发生的所有救援和/或医疗服务费用。</font>
+                            </p>
+                            <p>
+                            <font class="en">Photograph/Media/Use of Images: I acknowledge that during the in person course of the Activity, MYbarre / Z&B Fitness may take my photograph or video. I hereby grant MYbarre permission to use any such photograph or video in materials promoting MYbarre. Such use may include publication in program, general advertising, posters, flyers, television, internet, WeChat and any other media that may be distributed or shown to or otherwise seen by large numbers of individuals and potential patrons of MYbarre. I waive all rights to any financial remuneration of any kind. In consideration of the Activity provided, I, for myself and my heirs, personal representatives or assigns, do hereby waive, release, discharge, hold harmless, and indemnify Z&B Fitness, MYbarre Fitness, MYbarre Training Group, any related entities, and their shareholders, officers, directors, members, managers, agents, employees, and volunteers (the “Releasees”), from any and all liability, claims, cause(s) of action, present or future, and waive any claims for economic damages, personal injury damages, emotional distress damages and all other damages arising from my participation in the Activity, even if they arise from or are increased as a result of the negligence of the Releasees.</font>
+                            <font class="zh">照片/媒体/图片使用豁免：本人承认，在亲自参加活动的过程中，MYbarre/Z&B Fitness可以拍摄本人的照片或视频。本人在此授权MYbarre将任何此类照片或视频用于MYbarre的宣传材料。该类使用包括在传播、显示给大量个人和潜在MYbarre顾客、或可以由大量个人和潜在MYbarre顾客看到的节目、一般广告、海报、传单、电视、互联网、微信以及任何其他媒体上予以发表。本人放弃对于任何形式的任何经济报酬的权利。考虑到所提供的活动，本人针对自己以及本人的继承人、个人代表或受让人在此放弃、免除、解除当前或未来的任何及所有责任、索赔、诉讼理由，并使Z&B Fitness、MYbarre培训集团、任何相关实体、及其股东、官员、董事、成员、管理人、代理人、员工、和志愿者（“被免除人”）免受其损害、并对其予以赔偿，并且放弃对本人参加活动所产生的经济损失、个人伤害损失、情绪损害以及所有其他损害提出的任何索赔，即使该类损失是由于被免除人的疏忽所引起或由于被免除人的疏忽而导致增加。</font>
+                            </p>
+                            <p>
+                            <font class="en">I have had sufficient opportunity to read this entire agreement. I understand it and agree to be bound by its terms. I understand that by signing this document, i may be waiving legal rights. I further agree that i am bound by this agreement by signing it in person or electronically.</font>
+                            <font class="zh">本人有足够的机会阅读整个协议。本人理解协议内容，并同意受协议条款的约束。本人明白，通过签署本文件，本人可能会放弃合法权利。本人进一步同意，本人在亲自或以电子方式签署本协议之后，应当受本协议的约束。 </font>
+                            </p>
                         </div>
-                        <input type="checkbox" value="true" id="agree" style="margin: 20px 0;" /> I agree with the terms and conditions
+                        <input type="checkbox" value="true" id="agree" style="margin: 20px 0;" /> <font class="en"> I agree with the terms and conditions</font> <font class="zh">我同意以上条件和条款</font>
                     </div>          
                 
                     <!-- submit -->
-                    <button type="button" id="register" class="btn btn-info">Register</button>
-                    <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);">Back</button>
+                    <button type="button" id="register" class="btn btn-info"><font class="en">Register</font><font class="zh">注册</font></button>
+                    <button type="button" class="btn btn-default" onclick="javascript:history.back(-1);"><font class="en">Back</font><font class="zh">返回</font></button>
                 </form>
             </div>
         </div>
