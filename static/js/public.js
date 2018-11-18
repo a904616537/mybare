@@ -22,8 +22,8 @@ var message = {
 			title          : '哎呀...',
 			msg1           : '出错了!',
 			login          : '登陆失败！',
-			login_401      : '你的 Mybarre 账户当前为锁定状态！',
-			login_401_desc : '你的账户已被锁定！',
+			login_401      : '你好！ 你的MYbarre教练培训账户暂时不能使用。',
+			login_401_desc : '请发邮件到info@mybarrefitness.com重新进行激活。</br>真诚的问候</br>MYbarre团队',
 			login_password : '登录失败，请再试一次!',
 			password_msg   : '你的新密码和确认密码不匹配。',
 			agree          : '你必须同意我们的条款!',
@@ -55,12 +55,19 @@ var message = {
 		}
 	},
 	en : {
+		Hi! 
+
+
+
+
+
+
 		error : {
 			title          : 'Oops...',
 			msg1           : 'For failure!',
 			login          : 'Login failed！',
-			login_401      : 'Your MYbarre Account is currently locked',
-			login_401_desc : 'If you would like to gain access to your Instructor Videos and unlock your account please email: info@mybarrefitness.com',
+			login_401      : 'Hi! Access to your MYbarre Instructor Account has been temporarily suspended. ',
+			login_401_desc : 'Please email us at info@mybarrefitness.com to reactivate this.</br>Regards </br>The MYbarre Team',
 			login_password : 'Login failed, please try again!',
 			password_msg   : 'Your new password and confirmed new password do not match.',
 			agree          : 'You must agree with our terms!',
