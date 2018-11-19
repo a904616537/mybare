@@ -1043,7 +1043,7 @@ input:-webkit-autofill {
     word-wrap : break-word;
 }
 .profile-content .profile-img{
-	background      : url(../img/profile.jpg) no-repeat;
+	background      : url(../img/box3.jpg) no-repeat;
 	background-size : cover;
 	width           : 60%; 
 	padding         : 24%;
@@ -1250,19 +1250,23 @@ input:-webkit-autofill {
 	    font-size  : 16px;
 	}
 	.profile-content .inner{
-		width   : 40%;    
-		padding : 0 14px;       
+		width   : 100%;    
+		padding : 0 14px;
+		float: none;
 	}
 	.profile-content .inner .user{
 	    font-size   : 20px;
-	    margin-top  : 100px;
+	    margin-top  : 20px;
 	}
 	.profile-content .inner .level{
 	    line-height : 60px;
 	}    
 	.profile-content .profile-img{
+		float: none;
 		background-position : center center;
 		height              : 500px;
+		width: 100%;
+		margin-top: 20px;
 	} 
 	.profile-content .to-schedule{
 		display : none;
@@ -1274,6 +1278,7 @@ input:-webkit-autofill {
 		font-size   : 14px;
 		line-height : 40px;
 		padding     : 0 5px;
+		margin-top: 20px;
 	}
 }
 
