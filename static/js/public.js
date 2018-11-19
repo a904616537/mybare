@@ -55,12 +55,6 @@ var message = {
 		}
 	},
 	en : {
-		Hi! 
-
-
-
-
-
 
 		error : {
 			title          : 'Oops...',
@@ -111,18 +105,16 @@ if(cookie_lang) {
 }
 
 $('.langToggle').on('click',function(){
-	var lang = $('.langToggle .lang').attr('data');
+	var lang = $(this).attr('data');
 	$.cookie('lang', lang, { expires: 7 });
 	setLang(lang);
 });
 
 function setLang(lang){
 	if(lang == 'en'){
-		$('.langToggle').html('<span class="lang" data="zh"><img class="langimg" src="/static/img/en.png" /></span>');
 		$('.changeLang .zh').hide();
 		$('.changeLang .en').show();
 	}else{
-		$('.langToggle').html('<span class="lang" data="en"><img class="langimg" src="/static/img/zh.png" /></span>');
 		$('.changeLang .en').hide();
 		$('.changeLang .zh').show();
 	}
