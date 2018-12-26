@@ -140,7 +140,7 @@ var socket = io(apiUrl);
 
 // cookie
 $(function() {
-	var lang = $.cookie('lang') || 'zh';;
+	var lang = $.cookie('lang') || 'zh';
 	var msg = message[lang];
 	var levelToString = function(level) {
 		switch(level) {
@@ -186,7 +186,7 @@ $(function() {
 		});
 
 	} else {
-
+		console.log('msg', msg)
 		$('#user_login').show();
 		$('#user').hide();
 		$('#user').html('<a href="login.html" class="login-icon">'+msg.msg.login+'</font></a>');
