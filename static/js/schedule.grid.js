@@ -26,7 +26,7 @@ $(function() {
 				console.log('data.sign_user.length >= data.limit', d1 , d2)
 				if(data.sign_user.length >= data.limit) {
 					status = 'COMPLETED';
-					isRegister = '<a class="full-btn">Class Fulled</a>';
+					isRegister = '<a class="full-btn">Registration Ended</a>';
 				} else if(d1 < d2){
 					status = 'COMPLETED';
 					isRegister = '<a class="full-btn">Registration Ended</a>';
